@@ -1,0 +1,5 @@
+{
+  "date": "2026-03-14T22:30:27.820Z",
+  "eiaSummary": "EIA_API_KEY missing - using placeholder data. Expected draw of 1.2M barrels.",
+  "rigCountSummary": "Baker Hughes Rig Count: 479 Active Rigs (Mock implementation active)"
+}

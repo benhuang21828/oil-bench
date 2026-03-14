@@ -1,0 +1,15 @@
+{
+  "date": "2026-02-17T00:00:00.000Z",
+  "cl": {
+    "symbol": "CL=F",
+    "price": 62.33000183105469,
+    "previousClose": 62.88999938964844,
+    "percentChange": -0.8904397583535746
+  },
+  "dxy": {
+    "symbol": "DX-Y.NYB",
+    "price": 97.16000366210938,
+    "previousClose": 0,
+    "percentChange": 0
+  }
+}
