@@ -1,0 +1,2 @@
+:HL["/oil-bench/_next/static/chunks/6a9123e29bcd8b06.css","style"]
+0:{"buildId":"QcDFoowBVR53o84zwzKzg","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
