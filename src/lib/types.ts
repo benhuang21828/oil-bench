@@ -31,3 +31,17 @@ export interface FundamentalData {
   eiaSummary: string;
   rigCountSummary: string;
 }
+
+export interface PredictionResult {
+  date: string;
+  model: string;
+  predict_target_price: number;
+  reasoning: string;
+}
+
+export interface DailyPredictionOutput {
+  targetDate: string;
+  actual_close?: number;
+  delta?: number;
+  prediction: PredictionResult;
+}
