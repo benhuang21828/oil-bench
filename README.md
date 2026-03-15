@@ -20,30 +20,43 @@ The system evaluates the exact error (Absolute Delta) between the LLM's Day `N+1
 
 ---
 
-## Instructions for Local Developers
+## Getting Started Locally
 
-### Setup
-First, install the dependencies:
+### 1. Installation & Environment
+First, clone the repository and install dependencies:
 \`\`\`bash
 npm install
 \`\`\`
 
-You will need the following API Keys in `.env`:
+Create an `.env` file containing your API keys for the data providers:
 \`\`\`bash
 OPENROUTER_KEY=your_key        # Target LLM via OpenRouter
 SERPER_KEY=your_key            # News Search
-EIA_API_KEY=your_key           # U.S. Fundamentals
 LLM_MODEL_NAME=google/gemini-2.5-flash # Evaluated LLM String
 \`\`\`
 
-### Run the Benchmark CLI Pipeline
-1. Ingest Data: \`npx tsx scripts/backfill-historical.ts\`
-2. Query LLM Targets: \`npx tsx scripts/backfill-inference.ts\` 
-3. Evaluate Tracking Error: \`npx tsx scripts/run-evaluator.ts\`
+### 2. Run the Benchmark CLI Pipeline
+\`\`\`bash
+# 1. Scrape real-world historical data
+npx tsx scripts/backfill-historical.ts
 
-### Local Next.js UI Dashboard
+# 2. Query target LLM to predict closing prices
+npx tsx scripts/backfill-inference.ts 
+
+# 3. Grade the LLM's absolute variance
+npx tsx scripts/run-evaluator.ts
+\`\`\`
+
+### 3. Start the Next.js Dashboard
 To run the React benchmarking interface locally:
 \`\`\`bash
 npm run dev
 # Open http://localhost:3000
 \`\`\`
+
+---
+
+## Contributing New Models
+OilBench is designed to track multiple LLMs in parallel. If you'd like to benchmark an entirely new model (e.g. `claude-3-opus`, `gpt-4o`) and submit its score to the Leaderboard:
+
+📚 **Read the [How to Add and Benchmark a New LLM Guide](./Docs/adding-new-models.md) for step-by-step instructions.**
