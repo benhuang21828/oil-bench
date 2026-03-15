@@ -115,41 +115,29 @@ export default async function Home() {
           </div>
         </header>
 
-        {/* Top Grid: Leaderboard & Stats */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-           <div className="lg:col-span-1 min-h-[22rem] lg:h-[24rem] w-full flex flex-col">
-             <Leaderboard />
-           </div>
-           
-           <div className="lg:col-span-2 min-h-[22rem] lg:h-[24rem] bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-2xl flex flex-col justify-center">
-              <h3 className="text-lg font-semibold mb-4 text-white">Interactive Inference Timeline</h3>
-              <p className="text-sm text-slate-400 mb-6 leading-relaxed max-w-xl">
-                The chart below overlays the actual official daily settlement price of WTI Crude on the NYMEX against the exact target price predicted by the LLM. 
-                <strong className="text-emerald-400 font-medium ml-1">Hover over any day</strong> to view the contextual news, fundamentals, and economic reasoning the model generated to derive its prediction exactly 24 hours prior.
-              </p>
-              
-              <div className="flex gap-6 mt-auto">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.5)]"></div>
-                  <span className="text-sm font-medium text-slate-300">Actual Close (Ground Truth)</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 rounded-full bg-rose-400 shadow-[0_0_10px_rgba(251,113,133,0.5)]"></div>
-                  <span className="text-sm font-medium text-slate-300">LLM Predicted Target</span>
-                </div>
-              </div>
-           </div>
+        {/* Leaderboard Section */}
+        <div className="w-full">
+           <Leaderboard />
         </div>
 
         {/* Main Chart Area */}
-        <div className="h-[500px] w-full mt-8 relative z-10">
-          {chartData.length > 0 ? (
-            <PriceChart data={chartData} />
-          ) : (
-            <div className="w-full h-full bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center">
-              <p className="text-slate-500">No prediction data available. Run the backfill-inference script!</p>
-            </div>
-          )}
+        <div className="w-full mt-12 relative z-10">
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold mb-2 text-white tracking-tight">Interactive Inference Timeline</h3>
+            <p className="text-sm text-slate-400 leading-relaxed max-w-3xl">
+              The chart below overlays the actual official daily settlement price of WTI Crude on the NYMEX against the exact target price predicted by the LLM. 
+              <strong className="text-emerald-400 font-medium ml-1">Hover over any day</strong> to view the contextual news, fundamentals, and economic reasoning the model generated to derive its prediction exactly 24 hours prior.
+            </p>
+          </div>
+          <div className="h-[500px] w-full">
+            {chartData.length > 0 ? (
+              <PriceChart data={chartData} />
+            ) : (
+              <div className="w-full h-full bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center">
+                <p className="text-slate-500">No prediction data available. Run the backfill-inference script!</p>
+              </div>
+            )}
+          </div>
         </div>
 
       </div>
