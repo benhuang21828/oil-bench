@@ -93,10 +93,11 @@ export default async function Home() {
                 href="https://github.com/benhuang21828/oil-bench" 
                 target="_blank" 
                 rel="noreferrer"
-                className="text-slate-400 hover:text-white transition-colors duration-200 mt-1"
+                className="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors duration-200 mt-1"
                 aria-label="GitHub Repository"
               >
-                <Github size={24} />
+                <Github size={20} />
+                <span className="text-sm font-semibold tracking-wide">Repo</span>
               </a>
             </div>
             <p className="text-slate-400 mt-2 font-medium">LLM WTI Crude Prediction Benchmark</p>
