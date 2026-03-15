@@ -18,6 +18,7 @@ export interface ChartDataPoint {
   prediction?: {
     model: string;
     predict_target_price: number;
+    portfolio_allocation: number;
     reasoning: string;
     delta: number;
   };
@@ -54,11 +55,18 @@ export default function PriceChart({ data }: PriceChartProps) {
                   <span className="text-rose-400 font-medium tracking-wide">Predicted Close:</span> 
                   <span className="text-white ml-2">${dataPoint.prediction.predict_target_price.toFixed(2)}</span>
                 </p>
-                <p className="text-xs mt-2 text-slate-400 font-medium">
-                  Model Delta Error: <span className={dataPoint.prediction.delta > 0 ? "text-rose-400" : "text-emerald-400"}>
-                    ${Math.abs(dataPoint.prediction.delta).toFixed(2)}
-                  </span>
-                </p>
+                <div className="flex items-center gap-4 mt-2">
+                  <p className="text-xs text-slate-400 font-medium">
+                    Model Delta Error: <span className={dataPoint.prediction.delta > 0 ? "text-rose-400" : "text-emerald-400"}>
+                      ${Math.abs(dataPoint.prediction.delta).toFixed(2)}
+                    </span>
+                  </p>
+                  <div className="h-3 w-px bg-white/20"></div>
+                  <p className="text-xs text-slate-400 font-medium whitespace-nowrap">
+                    Oil Exposure: <span className="text-emerald-400">{dataPoint.prediction.portfolio_allocation}%</span>
+                    <span className="text-slate-500 ml-1">({100 - dataPoint.prediction.portfolio_allocation}% Cash)</span>
+                  </p>
+                </div>
               </>
             )}
           </div>

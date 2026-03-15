@@ -66,6 +66,7 @@ export default async function Home() {
       prediction: {
         model,
         predict_target_price: p.prediction.predict_target_price,
+        portfolio_allocation: p.prediction.portfolio_allocation ?? 50,
         reasoning: p.prediction.reasoning,
         delta: p.delta as number,
       },
