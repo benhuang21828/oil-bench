@@ -153,7 +153,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
                 key={m}
                 type="monotone" 
                 name={`${m} Target`}
-                dataKey={`predictions.${m}.predict_target_price`}
+                dataKey={(row) => row.predictions?.[m]?.predict_target_price}
                 stroke={COLORS[idx % COLORS.length]}
                 strokeWidth={2}
                 strokeDasharray="5 5"
