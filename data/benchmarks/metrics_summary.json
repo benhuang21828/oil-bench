@@ -1,9 +1,9 @@
 [
   {
     "model": "google/gemini-2.5-flash",
-    "totalPredictions": 17,
-    "mae": 1.1988234127269066,
-    "rmse": 1.5646989160763327,
-    "averageDeltaVal": -0.003529133516198696
+    "totalPredictions": 52,
+    "mae": 1.916923170823318,
+    "rmse": 2.882421232177607,
+    "averageDeltaVal": 0.15192350534292365
   }
 ]
