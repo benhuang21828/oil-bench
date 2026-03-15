@@ -10,9 +10,9 @@
   {
     "model": "google/gemini-3-flash-preview",
     "totalPredictions": 52,
-    "mae": 1.3842307985745943,
-    "rmse": 2.0724655666861946,
-    "averageDeltaVal": 0.14500042841984714,
-    "simulatedPnL": 15390
+    "mae": 6.924038578913762,
+    "rmse": 18.652575165310896,
+    "averageDeltaVal": -4.644038033118615,
+    "simulatedPnL": 15449.04
   }
 ]
