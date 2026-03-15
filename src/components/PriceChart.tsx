@@ -37,7 +37,7 @@ export default function PriceChart({ data }: PriceChartProps) {
       const fmtDate = format(new Date(dataPoint.date), 'MMM do, yyyy');
 
       return (
-        <div className="bg-slate-900 border border-white/10 rounded-xl p-4 shadow-2xl max-w-sm max-w-md backdrop-blur-md">
+        <div className="bg-slate-900 border border-white/10 rounded-xl p-4 shadow-2xl max-w-md backdrop-blur-md relative z-[1000]">
           <p className="font-semibold text-slate-200 border-b border-white/10 pb-2 mb-3">
             {fmtDate}
           </p>
@@ -123,7 +123,7 @@ export default function PriceChart({ data }: PriceChartProps) {
               tickFormatter={(val) => `$${val}`}
               dx={-10}
             />
-            <Tooltip content={<CustomTooltip />} />
+            <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 1000, outline: 'none' }} />
             <Legend wrapperStyle={{ paddingTop: '20px' }} iconType="circle" />
             
             <Line 

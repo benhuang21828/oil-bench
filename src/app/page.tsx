@@ -103,11 +103,11 @@ export default async function Home() {
 
         {/* Top Grid: Leaderboard & Stats */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-           <div className="lg:col-span-1 h-80">
+           <div className="lg:col-span-1 min-h-[22rem] lg:h-[24rem] w-full flex flex-col">
              <Leaderboard />
            </div>
            
-           <div className="lg:col-span-2 h-80 bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-2xl flex flex-col justify-center">
+           <div className="lg:col-span-2 min-h-[22rem] lg:h-[24rem] bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-2xl flex flex-col justify-center">
               <h3 className="text-lg font-semibold mb-4 text-white">Interactive Inference Timeline</h3>
               <p className="text-sm text-slate-400 mb-6 leading-relaxed max-w-xl">
                 The chart below overlays the actual official daily settlement price of WTI Crude on the NYMEX against the exact target price predicted by the LLM. 
