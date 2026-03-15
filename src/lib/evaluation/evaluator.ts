@@ -33,6 +33,9 @@ export async function evaluatePredictions(modelName: string): Promise<MetricsSum
   let sumAbsoluteError = 0;
   let sumSquaredError = 0;
   let sumDelta = 0; // track raw delta just to see overall bias
+  
+  // Simulated Trading P&L starting with 10k
+  let simulatedPnL = 10000;
 
   for (let i = 0; i < predictions.length; i++) {
     const pred = predictions[i];
@@ -51,6 +54,11 @@ export async function evaluatePredictions(modelName: string): Promise<MetricsSum
     const nextPricePath = path.join(pricesDir, `${nextDateFmt}.json`);
     const nextPriceData = JSON.parse(await fs.readFile(nextPricePath, 'utf-8'));
     
+    // Read Day N price file to calculate true daily return
+    const currPricePath = path.join(pricesDir, `${targetDateFmt}.json`);
+    const currPriceData = JSON.parse(await fs.readFile(currPricePath, 'utf-8'));
+
+    const currClose = currPriceData.cl.price;
     const actualClose = nextPriceData.cl.price;
     const predictedTarget = pred.prediction.predict_target_price;
 
@@ -61,6 +69,16 @@ export async function evaluatePredictions(modelName: string): Promise<MetricsSum
     // Mutate the object to include the graded truth
     pred.actual_close = actualClose;
     pred.delta = delta;
+    
+    // Portfolio Logic
+    const allocPercent = pred.prediction.portfolio_allocation ?? 50; // default 50% if missing
+    const oilPortion = simulatedPnL * (allocPercent / 100);
+    const cashPortion = simulatedPnL - oilPortion;
+    
+    const trueAssetReturn = (actualClose - currClose) / currClose;
+    const newOilPortion = oilPortion * (1 + trueAssetReturn);
+    
+    simulatedPnL = newOilPortion + cashPortion;
 
     sumAbsoluteError += absoluteError;
     sumSquaredError += (absoluteError * absoluteError);
@@ -84,7 +102,8 @@ export async function evaluatePredictions(modelName: string): Promise<MetricsSum
     totalPredictions,
     mae,
     rmse,
-    averageDeltaVal
+    averageDeltaVal,
+    simulatedPnL: parseFloat(simulatedPnL.toFixed(2))
   };
 
   // Save metrics summary globally

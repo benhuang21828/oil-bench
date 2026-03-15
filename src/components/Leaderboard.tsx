@@ -53,6 +53,14 @@ export default async function Leaderboard() {
                     Root Mean Square Error (RMSE): Penalizes larger misses more heavily. A higher risk means the model occasionally makes very wrong predictions.
                   </div>
                 </th>
+                <th className="px-4 py-3 whitespace-nowrap group relative">
+                  <div className="cursor-help flex items-center gap-1 w-max border-b border-dashed border-slate-500 pb-[1px]">
+                    Simulated P&L <span className="text-slate-500 text-[10px] bg-slate-800 rounded-full px-1">(?)</span>
+                  </div>
+                  <div className="pointer-events-none absolute opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 top-full left-4 mt-2 w-56 p-2 bg-slate-800 text-slate-300 text-xs rounded shadow-xl border border-white/10 z-[100] normal-case font-normal whitespace-normal">
+                    Ending balance of a $10,000 algorithmic portfolio based entirely on the LLM's daily asset allocation decisions.
+                  </div>
+                </th>
                 <th className="px-4 py-3 whitespace-nowrap">Inferences</th>
               </tr>
             </thead>
@@ -70,6 +78,7 @@ export default async function Leaderboard() {
                   <td className="px-4 py-3 font-medium text-slate-200 whitespace-nowrap">{m.model.split('/').pop() || m.model}</td>
                   <td className="px-4 py-3 text-emerald-400 font-medium whitespace-nowrap">${m.mae.toFixed(2)}</td>
                   <td className="px-4 py-3 text-rose-400 text-xs whitespace-nowrap">${m.rmse.toFixed(2)}</td>
+                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${m.simulatedPnL >= 10000 ? 'text-emerald-400' : 'text-rose-400'}`}>${m.simulatedPnL?.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) || '10,000.00'}</td>
                   <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">{m.totalPredictions}</td>
                 </tr>
               ))}

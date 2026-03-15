@@ -4,22 +4,24 @@
     "prediction": {
       "date": "2026-01-01T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 56.85,
-      "reasoning": "Given the news of the '2026 Crude Oil Market Outlook' forecasting a significant glut, coupled with reports of oil prices experiencing the 'steepest annual fall since Covid pandemic' and high global output, downward pressure on crude oil prices is evident. The increase in US crude oil ending stocks further reinforces this bearish sentiment, indicating ample supply. Despite some long-term forecasts for higher prices in 2026 due to AI demand and geopolitical risks, the immediate outlook points to a continuation of the declining trend."
+      "predict_target_price": 56.95,
+      "portfolio_allocation": 20,
+      "reasoning": "Despite mixed signals, the overwhelming short-term sentiment from recent news points to a bearish outlook for oil, with forecasts of a 2026 glut and annual falls impacting current sentiment, leading to a slight price dip. While some news hints at future price spikes, the immediate market context and the large crude oil stock build suggest continued downward pressure. Given the prevailing bearish sentiment for the near term, a cautious allocation is warranted to mitigate potential losses."
     },
     "actual_close": 57.31999969482422,
-    "delta": -0.46999969482421733
+    "delta": -0.3699996948242159
   },
   {
     "targetDate": "2026-01-02",
     "prediction": {
       "date": "2026-01-02T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 57.15,
-      "reasoning": "OPEC+ is widely expected to maintain current output levels, which, combined with slowing US production, aligns with an outlook of continued pressure on crude prices discussed in recent news. While WTI holds near the $57 support, the upward trend in the DXY could provide some headwinds. These factors, alongside the consistent inventory levels, suggest a slight downward correction from yesterday's close."
+      "predict_target_price": 57.55,
+      "portfolio_allocation": 60,
+      "reasoning": "OPEC+ is expected to maintain current output levels despite internal tensions, providing a floor for prices. Recent news suggests WTI is holding near $57 support, implying a slight upward bias, but overall market sentiment points to crude prices remaining under pressure due to slowing US production and diverging forecasts. The slight DXY increase could temper gains, leading to a modest upward prediction with a moderately bullish allocation."
     },
     "actual_close": 57.31999969482422,
-    "delta": -0.16999969482422017
+    "delta": 0.2300003051757784
   },
   {
     "targetDate": "2026-01-03",
@@ -27,7 +29,8 @@
       "date": "2026-01-03T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 58.15,
-      "reasoning": "Despite a slight rise in the DXY and yesterday's marginal dip for WTI, the overarching geopolitical news points to significant upward pressure on oil prices. The news of a Middle East conflict causing supply shock jitters and the highly impactful, albeit speculative, news of the US taking control of Venezuela's oil reserves and Maduro's capture, introduce considerable uncertainty and potential for supply disruption, fueling a bullish sentiment. While OPEC+ is likely to maintain current output, these external factors are more dominant in pushing prices higher."
+      "portfolio_allocation": 75,
+      "reasoning": "The recent geopolitical news, particularly the Middle East conflict stoking supply shock jitters and the US involvement in Venezuela's oil, strongly suggests upward pressure on oil prices, overshadowing the minor DXY increase and steady OPEC+ output. While OPEC+ maintenance of output policy might be a moderating factor, the US actions in Venezuela introduce significant uncertainty and potential supply disruptions due to political instability, despite Venezuela's current low production. The overall sentiment is bullish due to heightened geopolitical risks impacting supply, supporting a higher allocation to capture potential gains."
     },
     "actual_close": 57.130001068115234,
     "delta": 1.0199989318847642
@@ -37,11 +40,12 @@
     "prediction": {
       "date": "2026-01-06T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 56.45,
-      "reasoning": "The prevailing sentiment from recent news points to ample global supply and declining prices, with several articles highlighting these trends and Venezuelan uncertainties adding to bearish pressures. Despite a strong dollar, which typically weighs on oil, the primary drivers are the supply outlook and geopolitical concerns that are already factored as price-negative. Therefore, I anticipate a further modest decline from yesterday's close, reflecting the continued downward momentum."
+      "predict_target_price": 56.55,
+      "portfolio_allocation": 20,
+      "reasoning": "The prevailing market sentiment indicates a downward pressure on oil prices, driven by expectations of ample global supply and the recent decline in Brent crude prices. While Venezuelan uncertainties exist, the overall supply outlook and the U.S. crude oil ending stocks suggest a bearish bias. Coupled with a rising DXY, I anticipate a modest further decline in WTI, allocating a small long position for potential short-term volatility capture."
     },
     "actual_close": 55.9900016784668,
-    "delta": 0.45999832153320597
+    "delta": 0.5599983215332003
   },
   {
     "targetDate": "2026-01-07",
@@ -49,7 +53,8 @@
       "date": "2026-01-07T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 54.85,
-      "reasoning": "The prevailing market sentiment indicates a supply glut, reinforced by news of OPEC+ deepening compensation cuts to address oversupply and robust global oil supplies, all pointing to downward pressure on prices. Additionally, the increasing US Rig Count and the significant U.S. Ending Stocks of Crude Oil suggest ample domestic supply. Despite some geopolitical noise around Venezuela and potential guarantees for investment, the immediate impact appears to be overshadowed by the fundamental oversupply, further compounded by a rising US Dollar which typically weighs on dollar-denominated commodities."
+      "portfolio_allocation": 30,
+      "reasoning": "The prevailing market sentiment suggests continued oversupply with OPEC+ deepening cuts attempting to rein in the glut, and US crude oil ending stocks remaining high. Geopolitical news regarding Venezuela and US actions, while creating some uncertainty for future supply, initially points to more oil potentially entering the market, further pressuring prices. The overall supply-side pressures, coupled with yesterday's significant decline, lead to a bearish outlook for the upcoming session, hence a lower predictive close and a reduced portfolio allocation to mitigate risk."
     },
     "actual_close": 57.7599983215332,
     "delta": -2.9099983215332017
@@ -59,22 +64,24 @@
     "prediction": {
       "date": "2026-01-08T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 58.55,
-      "reasoning": "Oil prices are currently experiencing upward pressure due to strong energy demand and index buying of oil futures, coupled with the latest news indicating Iraq's significant oil project coming online in 2026, which will add to supply but also signifies robust global demand anticipation. While the rising DXY and increased US crude stocks (EIA report) could exert some bearish pressure, the overall sentiment points towards a continued rally given headline news emphasizing demand strength and geopolitical factors affecting supply. Therefore, I anticipate a modest but definite increase from yesterday's close, reflecting the current momentum while integrating potential counter-factors."
+      "predict_target_price": 58.95,
+      "portfolio_allocation": 80,
+      "reasoning": "The recent crude oil rally, fueled by strong energy demand and index buying, suggests continued upward momentum. Geopolitical tensions, including the US seizure of tankers and potential confrontation with Russia, add a bullish risk premium despite new supply projects from Iraq. A rising DXY could slightly temper gains, but the overall sentiment from news and yesterday's close remains positive for crude."
     },
     "actual_close": 59.119998931884766,
-    "delta": -0.5699989318847685
+    "delta": -0.16999893188476278
   },
   {
     "targetDate": "2026-01-09",
     "prediction": {
       "date": "2026-01-09T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 59.85,
-      "reasoning": "The news indicates a complex supply-demand outlook with potential for both increases (Venezuela deal) and decreases (Russia sanctions). However, the significant Venezuelan export deal, coupled with declining Russian production due to sanctions, points towards a net tightening of supply, overriding the slight dollar strength. Additionally, the EIA data indicating consistent crude oil stock levels suggests underlying demand stability, supporting a modest upward price movement."
+      "predict_target_price": 60.25,
+      "portfolio_allocation": 70,
+      "reasoning": "The recent news indicates a tightening supply outlook due to Russian production cuts and ongoing challenges with Venezuelan output despite new deals, which should positively impact crude prices. While US crude oil stocks remain substantial, the decreasing US dollar trend mitigates downward pressure on commodities. Given the confluence of supply-side constraints and a weakening dollar, I anticipate WTI crude to trade higher."
     },
     "actual_close": 59.119998931884766,
-    "delta": 0.7300010681152358
+    "delta": 1.1300010681152344
   },
   {
     "targetDate": "2026-01-10",
@@ -82,7 +89,8 @@
       "date": "2026-01-10T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 59.55,
-      "reasoning": "Despite a slight uptick in the US Dollar Index, the recent EIA report shows a decrease in U.S. crude oil ending stocks, suggesting stronger demand or tighter supply. Geopolitical news regarding potential shifts in Venezuelan and Iranian oil sanctions enforcement creates uncertainty, but the narrative implies the potential for increased supply, yet this sentiment is balanced by Iran's current geopolitical critical role. Considering the overall supply-demand dynamics and geopolitical ambiguities, a modest increase in WTI crude oil prices is anticipated."
+      "portfolio_allocation": 70,
+      "reasoning": "Despite a slight strengthening of the dollar, the geopolitical news, particularly concerning Iran's significant oil reserves and strategic importance, and the diminishing factors that reduced Iran's oil exports in 2019, suggest potential upward pressure on crude prices. The EIA report shows ample crude stocks which could be a dampener, but the overall geopolitical landscape hints at tighter supply concerns or price firmness. Therefore, I anticipate a modest increase in WTI crude, warranting a relatively bullish but not maximum allocation."
     },
     "actual_close": 61.150001525878906,
     "delta": -1.600001525878909
@@ -92,44 +100,48 @@
     "prediction": {
       "date": "2026-01-13T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.75,
-      "reasoning": "Escalating geopolitical tensions in Iran are a dominant bullish factor, directly impacting supply fears and driving crude oil prices higher. Despite the DXY showing an upward trend which typically adds bearish pressure, the magnitude of the supply concerns from the Middle East appears to outweigh this. The long-term news regarding Venezuelan oil production suggests no immediate supply relief, reinforcing the upward price momentum."
+      "predict_target_price": 62.45,
+      "portfolio_allocation": 75,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, particularly concerning Iran's supply and coupled with a general upward trend in oil prices and a strengthening US Dollar, are strong bullish indicators. While Venezuelan oil output unlocking is a long-term factor, immediate supply fears outweigh it. Therefore, I anticipate a notable increase in WTI Crude prices, leading to a significant but not full allocation to oil given the inherent volatility."
     },
     "actual_close": 62.02000045776367,
-    "delta": 0.7299995422363281
+    "delta": 0.42999954223633097
   },
   {
     "targetDate": "2026-01-14",
     "prediction": {
       "date": "2026-01-14T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.85,
-      "reasoning": "The recent OPEC outlook consistently projects steady oil demand growth into 2027, signaling a more resilient long-term market than previously anticipated. This positive sentiment from a key producer organization, combined with yesterday's modest gain and a stable DXY, suggests upward pressure on crude prices. Therefore, a push slightly higher than yesterday's close is anticipated, reflecting the optimistic demand outlook despite current stock levels."
+      "predict_target_price": 62.75,
+      "portfolio_allocation": 80,
+      "reasoning": "OPEC's consistent positive outlook for global oil demand growth into 2027, as highlighted in multiple news reports, provides a strong bullish fundamental signal. This sustained demand, coupled with the current US Rig count and EIA inventory data not indicating an immediate oversupply, supports an upward price movement. The US Dollar Index being up does not present a strong enough headwind to negate the positive demand outlook, justifying a significant, but not full, allocation to oil."
     },
     "actual_close": 59.189998626708984,
-    "delta": 3.660001373291017
+    "delta": 3.5600013732910156
   },
   {
     "targetDate": "2026-01-15",
     "prediction": {
       "date": "2026-01-15T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 59.45,
-      "reasoning": "Despite yesterday's significant decline, the overall sentiment from recent OPEC reports suggests continued global oil demand growth through 2027, potentially underpinning prices. The slight upward trend in the US Dollar Index could exert some downward pressure, but the market's focus on future demand may counteract this. The relatively stable rig count and U.S. crude oil ending stocks, while not immediately bullish, don't indicate a significant oversupply pressure to continue yesterday's steep sell-off today, leading to a modest rebound as the market digests the longer-term demand outlook described in the OPEC reports."
+      "predict_target_price": 58.75,
+      "portfolio_allocation": 40,
+      "reasoning": "Despite OPEC's optimistic long-term demand outlook for 2027, the immediate market context shows a significant drop in WTI crude oil and strengthening US dollar. The high crude oil ending stocks further suggest ample supply in the short term, putting downward pressure on prices. Given the conflicting signals, a conservative allocation and a slight downward price adjustment are warranted."
     },
     "actual_close": 59.439998626708984,
-    "delta": 0.010001373291018467
+    "delta": -0.6899986267089844
   },
   {
     "targetDate": "2026-01-16",
     "prediction": {
       "date": "2026-01-16T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 59.85,
-      "reasoning": "The Strengthening Middle East crude market, coupled with OPEC's view of a broadly balanced supply and demand in 2026, suggests upward price pressure. While the US Dollar Index is trending up, which can be a headwind, ongoing geopolitical stress and robust demand in India (evidenced by OPEC regaining market share) are strong tailwinds. Given yesterday's close and these factors, a moderate increase is anticipated."
+      "predict_target_price": 60.15,
+      "portfolio_allocation": 75,
+      "reasoning": "Despite a slight increase in US crude stocks, the underlying market sentiment is bullish due to persistent geopolitical tensions, particularly from the Middle East, and OPEC's regained market share in India, which signal robust demand. The DXY trend being up suggests some headwind, but the overall geopolitical risk premium and anticipated balanced supply/demand outlook by OPEC will likely push prices higher. Given the fundamental strength and geopolitical stress, I am moderately bullish on WTI, allocating 75% of the portfolio."
     },
     "actual_close": 59.439998626708984,
-    "delta": 0.41000137329101705
+    "delta": 0.7100013732910142
   },
   {
     "targetDate": "2026-01-17",
@@ -137,7 +149,8 @@
       "date": "2026-01-17T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 58.75,
-      "reasoning": "The prevailing sentiment points to a return of the 'glut narrative' and easing geopolitical tensions, which typically puts downward pressure on crude prices. Despite China's continued reliance on Iranian oil, the overall market is focused on rising inventories and oversupply, as indicated by recent news and declining Brent crude. With the US Dollar trending up, further dampening commodity appeal, a modest decline from yesterday's close is anticipated."
+      "portfolio_allocation": 20,
+      "reasoning": "The overarching narrative from news sources points to an oversupply of oil, with rising inventories and sanctioned crude impacting prices, driving a general bearish sentiment. Despite China's reliance on Iranian oil, the market seems to be more focused on the supply glut rather than geopolitical supply risks easing concerns. The slight uplift in the US Dollar Index also provides a minor headwind for dollar-denominated commodities like crude oil, suggesting a further modest decline."
     },
     "actual_close": 60.34000015258789,
     "delta": -1.5900001525878906
@@ -147,33 +160,36 @@
     "prediction": {
       "date": "2026-01-20T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 61.12,
-      "reasoning": "The combination of rising oil production in the Middle East, as described by accelerating growth, and reports of Black Sea oil production disruptions, creates a mixed but generally upward pressure on prices. While OPEC's smallest producer seeks prepaid deals, suggesting some financial strain, the overall market sentiment from yesterday's rally due to a falling dollar and disruptions indicates continued bullish momentum. Given yesterday's significant gain and the ongoing geopolitical factors, a modest increase in the settlement price is anticipated, tempered by the long-term oversupply outlook from Fitch."
+      "predict_target_price": 61.2,
+      "portfolio_allocation": 70,
+      "reasoning": "The recent rally driven by a falling dollar and Black Sea disruptions, coupled with positive Middle East growth forecasts and OPEC's smallest producer seeking prepaid deals, suggests upward momentum for WTI crude. However, increasing US crude stocks and the general sentiment of an oversupplied global market according to Fitch temper the bullish outlook, preventing a full allocation. Therefore, a moderately bullish stance with a 70% allocation and a target price reflecting a continued but limited climb is appropriate."
     },
     "actual_close": 60.619998931884766,
-    "delta": 0.5000010681152318
+    "delta": 0.5800010681152372
   },
   {
     "targetDate": "2026-01-21",
     "prediction": {
       "date": "2026-01-21T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 59.85,
-      "reasoning": "The recent IEA reports predominantly highlight an anticipated 'significant surplus' in the first quarter of 2026, leading to a bearish sentiment despite a slight upward revision in long-term demand growth projections. This oversupply, coupled with stable US crude ending stocks and an increasing US Dollar Index, suggests downward pressure on WTI prices. Therefore, I anticipate a retreat from yesterday's close, reflecting the market's absorption of the bearish supply-side news."
+      "predict_target_price": 60.15,
+      "portfolio_allocation": 20,
+      "reasoning": "The recent IEA reports consistently point towards a significant oil market surplus in Q1 2026 and increasing global oil demand growth, which could exert downward pressure on prices. Despite the geopolitical news regarding Venezuela, the market appears 'numb to geopolitics' due to oversupply concerns. Given the strong indication of oversupply and the slightly rising DXY, a moderate price decline is anticipated, leading to a conservative portfolio allocation due to the prevailing bearish sentiment from supply-side fundamentals."
     },
     "actual_close": 59.36000061035156,
-    "delta": 0.4899993896484389
+    "delta": 0.7899993896484361
   },
   {
     "targetDate": "2026-01-22",
     "prediction": {
       "date": "2026-01-22T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 59.05,
-      "reasoning": "Despite a weaker US Dollar, which typically supports oil prices, the recent news flow suggests downward pressure. Trump toning down threats against Iran and Greenland, combined with the Saudi Aramco CEO dismissing an oil 'glut' narrative (which suggests a surplus perception exists), likely contributes to a bearish sentiment. Yesterday's 2% drop extends into today's prediction, albeit at a slower pace due to some underlying support."
+      "predict_target_price": 58.85,
+      "portfolio_allocation": 60,
+      "reasoning": "Despite declining US crude stocks and the Saudi Aramco CEO dismissing an oil glut, softening geopolitical tensions and continued USD weakness suggest modest downward pressure. Venezuela's proposed oil reform could increase supply, contrasting with the Middle East's future energy focus. Therefore, I anticipate a slight decrease in WTI crude, maintaining a moderately bullish portfolio allocation given the underlying demand arguments."
     },
     "actual_close": 61.06999969482422,
-    "delta": -2.0199996948242216
+    "delta": -2.2199996948242173
   },
   {
     "targetDate": "2026-01-23",
@@ -181,7 +197,8 @@
       "date": "2026-01-23T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 63.85,
-      "reasoning": "Yesterday's WTI close of $61.07 was followed by significant hawkish geopolitical news regarding U.S. threats to Iran, a major oil producer, which typically leads to an upward movement in crude prices due to supply disruption fears. Aramco's CEO also downplayed global oil glut fears and highlighted strong demand, further supporting a bullish outlook amid stable U.S. crude stocks and a falling DXY, which makes oil cheaper for foreign buyers. Therefore, factoring in the strong geopolitical premium and sustained demand, WTI crude is expected to see a substantial rebound and close higher today."
+      "portfolio_allocation": 85,
+      "reasoning": "Ongoing geopolitical tensions driven by Trump's renewed threats towards Iran are providing significant bullish momentum, as evidenced by news indicating immediate price rebounds. This strong fundamental support, coupled with Aramco's CEO downplaying oil glut fears and existing low inventory data, suggests upward price pressure. Despite a negative DXY trend, the prevailing geopolitical risk premium is expected to be a stronger driver, leading to a higher settlement price and a high conviction allocation."
     },
     "actual_close": 61.06999969482422,
     "delta": 2.7800003051757827
@@ -191,132 +208,144 @@
     "prediction": {
       "date": "2026-01-24T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.75,
-      "reasoning": "Robust geopolitical tensions, specifically the US sending ships to Iran and imposing new sanctions, are the primary drivers for a significant price increase. This is further supported by the general trend of oil prices edging higher week-on-week due to these tensions and increased demand. While the EIA report on crude oil stocks is a fundamental data point, the immediate market reaction is more heavily influenced by the aggressive geopolitical developments, leading to a bullish prediction."
+      "predict_target_price": 62.15,
+      "portfolio_allocation": 80,
+      "reasoning": "Heightened geopolitical tensions with potential US action against Iran and Libya hosting an energy summit are strong bullish signals for crude oil prices. Despite a slightly increased weekly inventory, the overall market sentiment, driven by supply fears and increased demand, suggests an upward movement. Given these factors, I anticipate a notable increase in WTI Crude prices, warranting a significant long allocation."
     },
     "actual_close": 62.38999938964844,
-    "delta": 0.3600006103515625
+    "delta": -0.23999938964843892
   },
   {
     "targetDate": "2026-01-27",
     "prediction": {
       "date": "2026-01-27T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 61.5,
-      "reasoning": "Despite eased US supply disruptions, broader market sentiment remains negative due to weak demand and a pessimistic outlook for Middle Eastern oil producers in 2026, as evidenced by news reports. The drop in oil prices below key levels, even with lingering Middle East risks, indicates demand-side weakness is currently overshadowing supply concerns. Therefore, WTI Crude is likely to see a further decline from yesterday's close, reflecting continued downward pressure."
+      "predict_target_price": 61.85,
+      "portfolio_allocation": 40,
+      "reasoning": "Despite positive crude oil stock changes and a slight downtick in the US Dollar (DXY) which typically supports commodities, persistent geopolitical risks in the Middle East coupled with easing supply disruptions are creating a volatile environment, as highlighted by multiple news articles indicating downward pressure on WTI. News suggesting a 'tough year for Middle Eastern oil producers' and crude dropping 'below key levels' due to weak demand signal a bearish sentiment. Therefore, I anticipate a slight decrease in the settlement price and will maintain a cautious, moderately bullish allocation."
     },
     "actual_close": 63.209999084472656,
-    "delta": -1.7099990844726562
+    "delta": -1.3599990844726548
   },
   {
     "targetDate": "2026-01-28",
     "prediction": {
       "date": "2026-01-28T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 66.55,
-      "reasoning": "Recent news strongly indicates upward pressure on oil prices, with reports of a winter storm disrupting U.S. crude output by 15%, causing prices to surge to a four-month high of $66.91. Although the DXY is up, geopolitical factors and significant supply disruptions are the dominant drivers. Therefore, I anticipate WTI crude oil will settle near the upper bound of the recent surge, reflecting substantial supply-side shocks."
+      "predict_target_price": 65.5,
+      "portfolio_allocation": 85,
+      "reasoning": "Despite a slightly stronger DXY, recent news highlights a significant bullish sentiment for crude oil, driven by supply disruptions from a severe US winter storm, which has knocked out 15% of US production, and a general climb in prices to four-month highs. While Saudi Arabia may offer discounts on Arab Light, the immediate supply-side shocks in the US and geopolitical tensions surrounding Iran are strong factors in WTI's favor. Therefore, considering the bullish momentum and supply constraints, I predict a moderate increase in WTI crude oil prices and recommend a substantial oil allocation."
     },
     "actual_close": 65.41999816894531,
-    "delta": 1.1300018310546847
+    "delta": 0.0800018310546875
   },
   {
     "targetDate": "2026-01-29",
     "prediction": {
       "date": "2026-01-29T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 68.15,
-      "reasoning": "Oil prices are experiencing significant upward pressure due to escalating Middle East tensions and concerns about potential U.S. action against Iran, driving fears of supply disruptions. News headlines consistently report substantial surges and a weak dollar further supports higher prices. While a 'superglut' is mentioned for 2026, the immediate geopolitical risks and market sentiment suggest a continuing rally for today's close."
+      "predict_target_price": 68.95,
+      "portfolio_allocation": 90,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, specifically concerns about a potential U.S. strike on Iran, are driving significant upward pressure on crude oil prices due to supply disruption fears. This is further supported by a weakening U.S. Dollar, making oil more attractive to international buyers. Despite a slight increase in U.S. crude oil stocks, the overwhelming geopolitical risk and news sentiment strongly suggest a continued surge in prices, warranting a high allocation to oil."
     },
     "actual_close": 65.20999908447266,
-    "delta": 2.9400009155273494
+    "delta": 3.7400009155273466
   },
   {
     "targetDate": "2026-01-30",
     "prediction": {
       "date": "2026-01-30T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 66.15,
-      "reasoning": "The prevailing news indicates OPEC+ is likely to maintain current production levels, which, coupled with rising geopolitical tensions (specifically Iran) and a weak dollar, is creating upward pressure on crude oil prices. Despite the recent EIA report showing robust crude oil stocks, the market sentiment appears to be driven by supply-side concerns and a strengthening demand outlook. Therefore, I anticipate crude oil to experience a modest increase from yesterday's close, reflecting these bullish catalysts."
+      "predict_target_price": 66.5,
+      "portfolio_allocation": 85,
+      "reasoning": "OPEC+ is widely expected to maintain its oil production pause for March, which historically provides price support, especially with Brent crude already surpassing $70 and Iran tensions underpinning the market. Despite a slightly stronger US Dollar and a minor dip in yesterday's WTI close, the overwhelming news points to supply restraint and continued geopolitical risk, suggesting an upward price movement. The substantial bullish sentiment from OPEC+ news and geopolitical risks outweighs the negative DXY trend, justifying a strong allocation to long oil."
     },
     "actual_close": 65.20999908447266,
-    "delta": 0.9400009155273494
+    "delta": 1.2900009155273438
   },
   {
     "targetDate": "2026-01-31",
     "prediction": {
       "date": "2026-01-31T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 66.15,
-      "reasoning": "Geopolitical tensions between the US and Iran are a significant bullish factor, consistently driving oil prices higher as reported in multiple news headlines. OPEC's decision to maintain current oil output despite rising prices above $70 alongside India's projected strong demand growth further tightens the supply-demand outlook. Though yesterday's close was down, the strong bullish fundamental and geopolitical catalysts suggest a rebound and a significant upward move today, pushing prices towards the $66-67 range."
+      "predict_target_price": 66.5,
+      "portfolio_allocation": 80,
+      "reasoning": "Escalating US-Iran tensions and OPEC's decision to maintain current output levels are strong bullish catalysts, signaling potential supply disruptions and sustained high demand, particularly from India. The slight increase in the US Dollar Index is a minor headwind, but geopolitical factors are currently dominant. Therefore, I anticipate crude oil prices to rise significantly and recommend an 80% allocation to capitalize on this upward momentum."
     },
     "actual_close": 63.209999084472656,
-    "delta": 2.9400009155273494
+    "delta": 3.2900009155273438
   },
   {
     "targetDate": "2026-02-03",
     "prediction": {
       "date": "2026-02-03T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.85,
-      "reasoning": "The prevailing sentiment from market news suggests a bearish outlook, with warnings of persistent oversupply and demand headwinds, alongside a prediction for prices to trade lower in the $55-$65 range. While geopolitical tensions in the Middle East are usually supportive of oil prices (as indicated by gold's surge), the specific news on 'Peak Oil' and rapid rise of renewables overshadows this, pointing to long-term demand destruction. Additionally, the increasing US oil ending stocks, despite a stable rig count, suggests ample supply, reinforcing the downward pressure despite a weakening dollar."
+      "predict_target_price": 62.55,
+      "portfolio_allocation": 30,
+      "reasoning": "Despite declining US Dollar Index and geopolitical tensions supporting safe havens like gold, the key overriding factor for WTI crude is the reported global oversupply and demand headwinds, as highlighted by expert analysis predicting a $55-$65 range. The 'Peak Oil' narrative further reinforces long-term bearish sentiment, while the recent increase in UAE non-oil private sector growth doesn't directly translate to significant crude demand uplift. Therefore, a slight downward adjustment to the previous close is warranted with a moderate allocation reflecting the mixed, but fundamentally bearish, outlook."
     },
     "actual_close": 65.13999938964844,
-    "delta": -2.289999389648436
+    "delta": -2.5899993896484403
   },
   {
     "targetDate": "2026-02-04",
     "prediction": {
       "date": "2026-02-04T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 64.25,
-      "reasoning": "The recent news highlights a consistent downward pressure on oil prices due to de-escalating US-Iran tensions and the agreement to hold talks, which is easing supply concerns. Despite some re-emerging uncertainties, the prevailing sentiment from multiple sources is that the prospect of dialogue reduces the geopolitical risk premium in oil. Therefore, a modest decline from yesterday's close is anticipated as the market reacts to reduced supply disruption fears."
+      "predict_target_price": 64.05,
+      "portfolio_allocation": 20,
+      "reasoning": "The recent news indicates a significant easing of U.S.-Iran tensions as both countries have agreed to hold talks, which historically leads to downward pressure on oil prices due to reduced supply risk premium. Despite a slight uptick in DXY yesterday, the dominant narrative of de-escalation suggests a continued decline in WTI. Therefore, I anticipate crude oil prices to fall, leading to a conservative allocation."
     },
     "actual_close": 63.290000915527344,
-    "delta": 0.9599990844726562
+    "delta": 0.7599990844726534
   },
   {
     "targetDate": "2026-02-05",
     "prediction": {
       "date": "2026-02-05T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.75,
-      "reasoning": "Despite positive sentiment from Standard Chartered regarding market rebalancing and declining U.S. inventories, several factors point to downward pressure. The market is adjusting to a slowdown in US shale growth, forcing servicers to the Middle East, alongside news of potential U.S.-Iran talks which historically ease supply concerns. Increased U.S. crude oil ending stocks further contribute to an oversupply narrative, suggesting a slight drop from yesterday's close."
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 60,
+      "reasoning": "Despite yesterday's significant</li><li>drop in WTI and an uptick in the DXY, news from Standard Chartered and the focus of oil servicers on Middle Eastern growth suggest an improving sentiment for crude beyond immediate supply easing. Slowing US shale growth and declining US inventories are bullish long-term signals, even as near-term geopolitical talks and potential Venezuelan crude supply pressure heavy crude differentials, which could slightly temper WTI’s recovery. Therefore, I anticipate a modest rebound from yesterday's sharp decline, but not a full recovery, and will maintain a moderately bullish allocation."
     },
     "actual_close": 63.54999923706055,
-    "delta": -0.7999992370605469
+    "delta": -0.6999992370605455
   },
   {
     "targetDate": "2026-02-06",
     "prediction": {
       "date": "2026-02-06T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 63.25,
-      "reasoning": "The predominant market sentiment is bearish due to ongoing US-Iran nuclear negotiations, which are easing fears of supply disruptions from a major OPEC producer. Despite Middle East tensions, news headlines consistently point to these talks as a ceiling on oil prices. The decline in the DXY might offer some minor support, but the overwhelming focus on a potential increase in Iranian supply outweighs this factor, pushing prices slightly lower from yesterday's close."
+      "predict_target_price": 62.95,
+      "portfolio_allocation": 20,
+      "reasoning": "The prevailing news indicates that U.S.-Iran nuclear talks are easing supply disruption fears, leading to a bearish sentiment in the oil market. Despite a slight recovery in some reports, the overall trend points to a decline due to anticipated increased supply from Iran. Given the negative DXY trend, this would normally support oil, but the dominant influence from potential Iranian supply suggests a continued downward pressure on prices, hence a cautious allocation."
     },
     "actual_close": 63.54999923706055,
-    "delta": -0.2999992370605469
+    "delta": -0.599999237060544
   },
   {
     "targetDate": "2026-02-07",
     "prediction": {
       "date": "2026-02-07T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 64.95,
-      "reasoning": "The recent news highlights strong upward pressures on WTI crude, with dollar weakness and escalating geopolitical risks concerning Iran-US conflict pushing prices higher. While the EIA data indicates ample supply, the market seems to be more focused on short-term support from easing oversupply and geopolitical tensions. Given yesterday's close and these prevailing bullish factors, a notable increase is anticipated."
+      "predict_target_price": 64.15,
+      "portfolio_allocation": 80,
+      "reasoning": "The recent EIA report indicates a healthy crude oil stock level, but it comes with a lag from early February. Geopolitical tensions involving Iran and a weaker US dollar provide significant upward momentum for crude prices, as highlighted by multiple news articles. Additionally, reports of easing oversupply early in the year offer short-term support, prompting an aggressive yet not fully exposed allocation due to past data lags."
     },
     "actual_close": 63.959999084472656,
-    "delta": 0.9900009155273466
+    "delta": 0.19000091552734943
   },
   {
     "targetDate": "2026-02-10",
     "prediction": {
       "date": "2026-02-10T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 64.55,
-      "reasoning": "Despite a slight decline in WTI yesterday and a weakening dollar, positive news from OPEC maintaining demand forecasts, coupled with ongoing Middle East tensions reported to be impacting oil prices, suggests upward pressure. Additionally, the reported increase in US crude oil ending stocks usually would contribute to a bearish sentiment; however, global demand projections and geopolitical factors likely outweigh this in the short term, leading to a modest price increase. The shift in US drilling focus to the Middle East, alongside the existing tensions, implies tightening supply relative to demand over time, supporting a slightly higher settlement today."
+      "predict_target_price": 64.25,
+      "portfolio_allocation": 70,
+      "reasoning": "While EIA ending stocks are high and the US drilling rig count is stable, geopolitical tensions in the Middle East, along with OPEC maintaining its demand forecasts, provide upward price pressure. The slight softening of the DXY also supports a marginally higher oil price. Therefore, I anticipate a modest gain and recommend a bullish, but not fully exposed, portfolio allocation."
     },
     "actual_close": 64.62999725341797,
-    "delta": -0.07999725341797159
+    "delta": -0.37999725341796875
   },
   {
     "targetDate": "2026-02-11",
@@ -324,7 +353,8 @@
       "date": "2026-02-11T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 65.35,
-      "reasoning": "The recent news largely emphasizes escalating geopolitical tensions in the Middle East, with multiple sources indicating this concern is driving oil prices higher. This geopolitical risk is offsetting concerns about a large US crude stock build. Additionally, an OPEC production decline further tightens supply, suggesting continued upward pressure on WTI crude prices."
+      "portfolio_allocation": 80,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, particularly between the U.S. and Iran, are the primary driver for a price increase, despite the large U.S. crude stock build. Reports of declining OPEC+ production further support an upward price movement by tightening supply. Given these strong bullish catalysts, I am allocating a significant portion of the portfolio to WTI Crude."
     },
     "actual_close": 62.84000015258789,
     "delta": 2.5099998474121037
@@ -334,11 +364,12 @@
     "prediction": {
       "date": "2026-02-12T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 61.95,
-      "reasoning": "The recent EIA report indicating high U.S. crude oil ending stocks, paired with the IEA's lowered global oil demand outlook and news of WTI dropping on inventory surges, points to significant bearish pressure. While Middle East tensions might offer some downside protection, the dominant narrative from recent news is one of oversupply and weakening demand growth. Therefore, a further decline from yesterday's close is anticipated."
+      "predict_target_price": 62,
+      "portfolio_allocation": 20,
+      "reasoning": "The recent EIA report indicating a large inventory of US crude oil, coupled with the IEA lowering global oil demand outlooks for 2026, suggests significant downward pressure on WTI crude prices. Although Middle East tensions provide some floor, the fundamental oversupply and demand concerns outweigh geopolitical support in the short term. Given the bearish sentiment and the previous day's decline, a further drop in price is anticipated, leading to a conservative portfolio allocation."
     },
     "actual_close": 62.88999938964844,
-    "delta": -0.9399993896484347
+    "delta": -0.8899993896484375
   },
   {
     "targetDate": "2026-02-13",
@@ -346,7 +377,8 @@
       "date": "2026-02-13T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 61.55,
-      "reasoning": "The predominant market sentiment points to a downward trend for WTI Crude. Multiple news sources highlight OPEC+ considering output increases from April, growing US inventories, and a softening demand outlook. These factors, alongside receding geopolitical risk and a falling DXY, suggest significant downward pressure on crude prices despite yesterday's flat close."
+      "portfolio_allocation": 20,
+      "reasoning": "The dominant theme is increasing supply from OPEC+ starting in April, compounded by rising US inventories and a weaker demand outlook. This, alongside receding geopolitical risk and a stable dollar, suggests downward pressure on WTI crude prices. Although prices stabilized slightly, the overarching supply-demand dynamics point to a bearish short-term outlook."
     },
     "actual_close": 62.88999938964844,
     "delta": -1.3399993896484403
@@ -356,33 +388,36 @@
     "prediction": {
       "date": "2026-02-14T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.75,
-      "reasoning": "While upward pressure from OPEC+ potentially increasing output and rising demand (IEA) could initially support prices, larger supply growth (2.4mb/d) outstripping more modest demand growth, and particularly the IEA's projection of global supply exceeding demand by 3.73mbpd in 2026, suggest a bearish sentiment. This is reinforced by the building crude oil inventories (419,815 MB), and a slightly weaker DXY, which in combination with the overarching supply surplus narrative, is likely to put downward pressure on WTI prices for the upcoming session, overriding the impact of geopolitical tensions."
+      "predict_target_price": 62.45,
+      "portfolio_allocation": 20,
+      "reasoning": "The fundamental data and news suggest a bearish outlook for WTI Crude. The IEA's projections of global oil supply exceeding demand significantly in 2026, coupled with rising inventories, point to downward price pressure. While OPEC+ considers output increases and demand edges higher, the overall supply surplus and contained geopolitical incidents, along with a slightly down DXY, favor a cautious allocation."
     },
     "actual_close": 62.33000183105469,
-    "delta": 0.4199981689453125
+    "delta": 0.11999816894531534
   },
   {
     "targetDate": "2026-02-17",
     "prediction": {
       "date": "2026-02-17T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 62.78,
-      "reasoning": "Oil is holding steady with an upward bias as markets eye crucial US-Iran talks that could ease Middle East tensions. Major Western energy firms are also securing new Libyan oil blocks to increase output, but the immediate impact is likely offset by ongoing geopolitical premiums. Given yesterday's close and the mix of supportive geopolitical factors and potential supply increases, a modest upward adjustment is expected as traders weigh these developments."
+      "predict_target_price": 62.15,
+      "portfolio_allocation": 40,
+      "reasoning": "The recent EIA report shows relatively high U.S. crude oil ending stocks, and the Baker Hughes Rig Count suggests an active supply side. Geopolitical news about US-Iran talks could stabilize prices, but general mentions of a 'worldwide supply glut' and falling gasoline prices suggest downward pressure. Given these mixed signals, with a slight bearish tilt from supply and consumption data, I anticipate a modest decline in WTI crude, leading to a conservative portfolio allocation."
     },
     "actual_close": 65.19000244140625,
-    "delta": -2.410002441406249
+    "delta": -3.0400024414062514
   },
   {
     "targetDate": "2026-02-18",
     "prediction": {
       "date": "2026-02-18T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 66.85,
-      "reasoning": "Escalating U.S.-Iran tensions are the primary driver, directly pushing oil prices higher as geopolitical risk premium increases. Strong Asian demand, particularly from China and India, further supports upward price movement. While US-Iran talks introduce some cautious optimism, the dominant narrative remains the heightened geopolitical risk which will likely lead to a modest increase in today's settlement price."
+      "predict_target_price": 67.5,
+      "portfolio_allocation": 90,
+      "reasoning": "Escalating US-Iran tensions are the primary driver for a significant upward movement in oil prices, supported by yesterday's 4% jump and the continued geopolitical premium. While there is cautious optimism on US-Iran talks, the immediate market reaction to tension escalation overshadows this and the DXY trend is less impactful than geopolitical risk. Additionally, surging Asian demand and declining US crude oil stocks further tighten supply, warranting a highly bullish stance and substantial portfolio allocation."
     },
     "actual_close": 66.43000030517578,
-    "delta": 0.41999969482421307
+    "delta": 1.0699996948242188
   },
   {
     "targetDate": "2026-02-19",
@@ -390,7 +425,8 @@
       "date": "2026-02-19T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 68.25,
-      "reasoning": "Despite fundamental data showing a significant decline in global oil demand in December, the overriding market sentiment is driven by escalating geopolitical tensions. News reports highlight intense fears of a potential U.S.-Iran conflict, which historically drives oil prices higher due to supply disruption risks in the Middle East. Therefore, the market is likely to price in a substantial risk premium, pushing WTI crude higher, albeit tempered slightly by the demand slump context."
+      "portfolio_allocation": 85,
+      "reasoning": "Despite the news of a December oil demand slump, the overwhelming geopolitical tensions between the US and Iran are driving significant upside momentum for WTI crude, as evidenced by recent spikes. The intensified fears of conflict, coupled with strong overnight rallies, suggest a continued upward trend. While Deutsche Bank's long-term outlook is bearish, the immediate short-term catalyst of supply disruption risk outweighs demand concerns, warranting a significant, but not full, allocation to oil."
     },
     "actual_close": 66.38999938964844,
     "delta": 1.8600006103515625
@@ -400,110 +436,120 @@
     "prediction": {
       "date": "2026-02-20T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 67.55,
-      "reasoning": "Geopolitical tensions around a potential US attack on Iran, a major oil producer, are significantly escalating, as indicated by multiple news sources, creating a strong bullish impetus for crude oil prices. This outweighs the previous day's marginal decline and the slightly negative US Dollar trend. The market is likely to price in a substantial risk premium due to the implied disruption to global oil supplies and heightened instability in the Middle East."
+      "predict_target_price": 68.25,
+      "portfolio_allocation": 90,
+      "reasoning": "Heightened geopolitical tensions surrounding potential US military action against Iran, a major oil producer, are expected to drive significant upward pressure on WTI crude prices, despite the recent slight DXY decline. The market is likely to price in a substantial risk premium given the serious implications for global oil supply. Therefore, a strong allocation to crude oil is warranted."
     },
     "actual_close": 66.38999938964844,
-    "delta": 1.1600006103515597
+    "delta": 1.8600006103515625
   },
   {
     "targetDate": "2026-02-21",
     "prediction": {
       "date": "2026-02-21T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 67.25,
-      "reasoning": "Despite concerns of a supply glut mentioned by analysts, recent geopolitical tensions, specifically rising US-Iran tensions and potential US airstrikes, are acting as strong upward catalysts for WTI. The market is reacting to heightened risk premiums, as evidenced by articles stating oil hitting a seven-month high. Furthermore, a declining US Dollar (DXY) typically supports commodity prices, suggesting further upward pressure against the backdrop of reduced supply concerns and strong demand signals."
+      "predict_target_price": 67.55,
+      "portfolio_allocation": 85,
+      "reasoning": "Despite yesterday's flat close and a slight DXY dip, significant geopolitical tensions surrounding US-Iran and reports of oil rising to a seven-month high on this risk are strong bullish signals. Persistent analyst views of a supply glut not translating to lower prices, coupled with robust demand sentiment from the geopolitical environment, suggest upward price pressure. While the US crude inventories remain substantial and rig count stable, the immediate catalyst for higher prices appears dominant, justifying a moderately high allocation to oil."
     },
     "actual_close": 65.62999725341797,
-    "delta": 1.6200027465820312
+    "delta": 1.9200027465820284
   },
   {
     "targetDate": "2026-02-24",
     "prediction": {
       "date": "2026-02-24T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 67.25,
-      "reasoning": "Geopolitical tensions, particularly the escalating Middle East situation and the simulated US-Venezuela conflict, are creating a significant risk premium for oil. High tanker costs and soaring Middle East exports, despite India looking for Russian alternatives, indicate strong demand and supply chain constraints. Given these factors, I anticipate a notable upward movement in WTI crude prices."
+      "predict_target_price": 67.85,
+      "portfolio_allocation": 85,
+      "reasoning": "Escalating geopolitical tensions in both the Middle East and Venezuela, alongside surging tanker costs and robust Middle East exports, create a strong bullish environment for crude oil prices. While the US Dollar is up and US crude stocks are healthy, the dominant news flow points to supply disruptions and increased risk premiums. Therefore, a significant portfolio allocation to oil is justified given the strong upward price catalysts."
     },
     "actual_close": 65.41999816894531,
-    "delta": 1.8300018310546875
+    "delta": 2.430001831054682
   },
   {
     "targetDate": "2026-02-25",
     "prediction": {
       "date": "2026-02-25T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 66.15,
-      "reasoning": "Despite the large US crude stock build, the market is heavily influenced by geopolitical tensions and potential supply disruptions due to fears of a US-Iran conflict and Saudi Arabia's reported plans to increase output in anticipation. The OPEC+ potential output increase is moderate and may not fully offset the supply disruption fears, especially considering the current stability despite inventory builds. Therefore, the market is likely to price in a risk premium, leading to an increase from yesterday's close."
+      "predict_target_price": 65.65,
+      "portfolio_allocation": 70,
+      "reasoning": "The slight decrease in the US Dollar Index typically provides some upward pressure on crude oil prices. However, the EIA report showing high U.S. crude oil stocks (435,804 Thousand Barrels) and news of OPEC+ potentially increasing output by 137,000 bpd for April could cap significant price increases. Geopolitical tensions, particularly fears of Iran-US conflict and Saudi Arabia's plans to boost exports, introduce volatility but suggest underlying support for prices, leading to a modest upward prediction with a moderately aggressive allocation."
     },
     "actual_close": 65.20999908447266,
-    "delta": 0.9400009155273494
+    "delta": 0.44000091552734943
   },
   {
     "targetDate": "2026-02-26",
     "prediction": {
       "date": "2026-02-26T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 65.55,
-      "reasoning": "While the DXY is slightly up, pressuring oil, the predominant geopolitical headlines suggest increased supply risks and potential for disruption, particularly regarding Iran and Gulf petrostates rushing to export. OPEC+'s cautious stance on output hikes amid geopolitical friction also indicates restrained supply growth. These factors are likely to provide upward pressure on WTI prices, slightly offsetting the previous day's small decline and DXY strength."
+      "predict_target_price": 65.85,
+      "portfolio_allocation": 70,
+      "reasoning": "Heightened geopolitical tensions surrounding OPEC+ output, potential US strikes on Iran, and general instability in key oil-producing regions suggest upward price pressure. While the US Dollar is up, concerns over supply disruptions and the incentive for petrostates to export crude quickly will likely outweigh this. Therefore, I anticipate a modest rise in WTI crude, warranting a significant but not full allocation given ongoing negotiation uncertainty."
     },
     "actual_close": 67.0199966430664,
-    "delta": -1.469996643066409
+    "delta": -1.169996643066412
   },
   {
     "targetDate": "2026-02-27",
     "prediction": {
       "date": "2026-02-27T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 68.15,
-      "reasoning": "Despite a slight decline in the DXY and an oversupply concern, significant geopolitical risks and their impact on supply outlooks are strong bullish drivers. News indicating the return of a war risk premium and analysts raising forecasts due to these tensions are likely to outweigh OPEC+ potential output hikes. Therefore, WTI crude is expected to see an upward movement, likely reclaiming and potentially surpassing key resistance levels."
+      "predict_target_price": 67.85,
+      "portfolio_allocation": 70,
+      "reasoning": "Despite a slight decrease in the US Dollar Index, geopolitical risks from various fronts are consistently being highlighted as a significant upward driver for oil prices, leading analysts to raise forecasts. While there are underlying concerns about oversupply and potential OPEC+ output hikes, the immediate sentiment is dominated by war risk premiums and persistent geopolitical uncertainty. Given the strong surge in WTI crude noted and the reclamation of key technical levels, I anticipate a modest rise for today's close, warranting a moderately bullish portfolio allocation."
     },
     "actual_close": 67.0199966430664,
-    "delta": 1.1300033569335994
+    "delta": 0.8300033569335881
   },
   {
     "targetDate": "2026-02-28",
     "prediction": {
       "date": "2026-02-28T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 68.25,
-      "reasoning": "The dominant factor is the U.S.-Israeli attack on Iran, introducing significant geopolitical risk and potential for major oil supply disruption. This escalates a risk premium on crude prices, despite OPEC+ potentially considering a larger output increase. While the DXY is down, the immediate supply-side shock from Iran will likely push WTI higher, but not excessively due to potential OPEC+ actions."
+      "predict_target_price": 70.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The recent geopolitical escalation with the US-Israeli attack on Iran and the potential for a larger OPEC+ output hike create opposing pressures on oil prices. However, the immediate market reaction to an attack on a major oil producer like Iran, especially given its strategic location and the risks to supply disruptions, is likely to prioritize a significant risk premium. While OPEC+ may increase output, the ongoing conflict suggests an upward bias due to heightened supply concerns."
     },
     "actual_close": 74.55999755859375,
-    "delta": -6.30999755859375
+    "delta": -3.7099975585937557
   },
   {
     "targetDate": "2026-03-03",
     "prediction": {
       "date": "2026-03-03T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 79.15,
-      "reasoning": "The overwhelming geopolitical news points to a significant upward pressure on oil prices, driven by an intensified Middle East conflict, attacks on oil facilities, and disruptions to shipping. This strong bullish sentiment, coupled with yesterday's substantial gain and an upward trending US Dollar, suggests a considerable price increase. While Russian oil continues to flow to India, potentially offsetting some demand for mainstream crude, the immediate supply concerns and geopolitical risk premium will dominate, pushing prices higher."
+      "predict_target_price": 79.03,
+      "portfolio_allocation": 90,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, particularly the conflict involving Iran and its impact on shipping and production facilities, are driving significant market volatility and supply concerns, directly pushing oil prices higher. Despite a strong dollar, the magnitude of the supply risk from a widening war outweighs this traditional headwind, suggesting a material upward move. Therefore, a substantial allocation to WTI crude is warranted given the current fundamental and geopolitical backdrop, anticipating further price appreciation."
     },
     "actual_close": 74.66000366210938,
-    "delta": 4.489996337890631
+    "delta": 4.369996337890626
   },
   {
     "targetDate": "2026-03-04",
     "prediction": {
       "date": "2026-03-04T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 76.1,
-      "reasoning": "The recent geopolitical news heavily emphasizes rising Middle East tensions and potential disruptions to oil supplies, particularly concerning the Strait of Hormuz and Asia's reliance on Middle Eastern crude. These factors, combined with the news of oil prices already surging above $85/bbl previously due to similar concerns, suggest upward pressure on WTI crude. The observed downward trend in the US Dollar Index (DXY) further supports a higher crude oil price, as a weaker dollar typically makes dollar-denominated commodities more attractive."
+      "predict_target_price": 76.85,
+      "portfolio_allocation": 90,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, particularly concerns over Strait of Hormuz disruptions, are driving oil prices higher, as evidenced by recent surges above $85/bbl. The news context consistently points to supply vulnerabilities and increased demand for alternative sources like Russian oil, limiting downside potential despite high US crude stocks. Given the strong bullish momentum from geopolitical risks, I am predicting a further increase in WTI Crude and am allocating a significant portion of the portfolio to capitalize on this trend."
     },
     "actual_close": 81.01000213623047,
-    "delta": -4.910002136230474
+    "delta": -4.160002136230474
   },
   {
     "targetDate": "2026-03-05",
     "prediction": {
       "date": "2026-03-05T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 83.55,
-      "reasoning": "The multiple news reports indicate a severe disruption of Middle Eastern crude supply, particularly impacting heavy crude and threatening the Strait of Hormuz. This geopolitical risk, combined with the inability of U.S. shale to replace lost supply, creates significant upward price pressure. Despite a stronger DXY, the supply-side shock from the conflict will likely drive WTI prices substantially higher from yesterday's close."
+      "predict_target_price": 84.5,
+      "portfolio_allocation": 90,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, particularly the conflict in Iran and threats to the Strait of Hormuz, are severely disrupting global crude supply, leading to significant price surges for heavy crude and making the US shale unable to compensate for potential losses. The U.S. having to grant waivers for Russian oil to India underscores the severity of the supply shock, while rising DXY suggests broader inflationary pressures. Therefore, I anticipate a notable increase in WTI Crude due to these persistent supply concerns and geopolitical risk premiums."
     },
     "actual_close": 90.9000015258789,
-    "delta": -7.350001525878909
+    "delta": -6.400001525878906
   },
   {
     "targetDate": "2026-03-06",
@@ -511,7 +557,8 @@
       "date": "2026-03-06T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 93.75,
-      "reasoning": "The multitude of geopolitical factors, particularly escalating Middle East tensions and ongoing disruptions to supply chains, strongly suggest upward pressure on crude prices. News of Asian buyers seeking US oil and increasing shipping costs further tightens the market. While the slight DXY dip offers minor support, the dominant narrative of supply risk and potential impacts on global economies from an Iran conflict outweighs other factors, pointing to a significant price increase above yesterday's close."
+      "portfolio_allocation": 90,
+      "reasoning": "Given yesterday's significant price surge and the predominant geopolitical tensions in the Middle East, illustrated by news of supply chain disruptions, soaring shipping costs, and the potential for a U.S.-Israel war with Iran, there's strong upward pressure on crude prices. The reported shifts in Middle East oil pricing further amplify this volatility, suggesting continued premium for oil. While US crude inventories are ample, the demand from Asia for US oil barrels in response to these tensions points to robust buying interest that will likely outweigh domestic supply, thus I am allocating a significant portion of my portfolio to long WTI."
     },
     "actual_close": 90.9000015258789,
     "delta": 2.8499984741210938
@@ -522,7 +569,8 @@
       "date": "2026-03-07T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 93.75,
-      "reasoning": "The escalation of Middle East conflict, specifically Iranian threats impacting the Strait of Hormuz and leading to Kuwaiti production cuts, creates significant supply risk and geopolitical premium. This strong bullish driver is further supported by oil's steepest weekly gain since 2020 and surging US gas prices. Although the DXY is slightly down, the overwhelming supply-side fears and conflict-driven sentiment indicate a substantial increase in crude oil prices."
+      "portfolio_allocation": 90,
+      "reasoning": "Given yesterday's significant jump and the ongoing geopolitical tensions, particularly the news of Kuwait cutting production and threats to the Strait of Hormuz, upward pressure on WTI crude is highly probable. The broad market news consistently points to oil prices being driven higher by Middle East conflict, influencing not only crude but also driving up gasoline prices. While yesterday's close was a large move, the escalating situation suggests further upside, warranting a strong bullish position."
     },
     "actual_close": 94.7699966430664,
     "delta": -1.0199966430664062
@@ -533,7 +581,8 @@
       "date": "2026-03-09T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 95.82,
-      "reasoning": "The prevailing sentiment from geopolitical news indicates continued upward pressure on crude prices due to ongoing Middle East tensions fueling supply concerns and higher freight rates. While there was a brief mention of oil moving lower on Trump's statement, the overall consensus points to prices staying hot. Considering yesterday's significant jump and the continued positive catalyst from geopolitical risks, a moderate increase from yesterday's close is anticipated, factoring in potential intraday volatility but sustained underlying strength."
+      "portfolio_allocation": 75,
+      "reasoning": "Despite some softening rhetoric from President Trump, the overarching geopolitical tension in the Middle East continues to signal bullish pressure on crude oil prices, as highlighted by multiple news sources linking regional conflict to higher energy and agricultural commodity prices. The EIA report indicates a significant level of crude oil stocks, but the market's focus appears to be more on supply disruption risks and increased demand from the biodiesel sector spurred by higher crude. Given the strong rally yesterday and persistent fundamental upside drivers, a modest upward continuation is expected, warranting a significant but not fully leveraged allocation."
     },
     "actual_close": 83.44999694824219,
     "delta": 12.370003051757806
@@ -543,22 +592,24 @@
     "prediction": {
       "date": "2026-03-10T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 86.85,
-      "reasoning": "The overwhelming geopolitical news points to significant supply disruptions and heightened tensions in the Middle East, which historically drives oil prices higher, as evidenced by recent price jumps mentioned in the news. Despite yesterday's sharp decline, the severity of the conflict and supply constraints, especially with reports of oil surging past $100 and a $2.90 increase already, strongly suggests a rebound. Therefore, factoring in the strong upward pressure from geopolitical events and recent price movements, a substantial increase in WTI crude oil is anticipated today."
+      "predict_target_price": 89.15,
+      "portfolio_allocation": 80,
+      "reasoning": "Despite yesterday's significant sell-off for WTI Crude, the escalating Middle East conflict and the widening scope of U.S.-Israeli attacks on Iran are creating severe supply constraints and geopolitical risk premiums. News reports confirm oil prices above $100 in the broader market and significant intra-day jumps in US oil prices due to these supply fears, indicating a strong rebound is imminent. Although the Saudi pipeline offers a bypass for some supply, it does not alleviate overall shortages and instead introduces new risks, reinforcing a bullish stance on crude for the upcoming session."
     },
     "actual_close": 87.25,
-    "delta": -0.4000000000000057
+    "delta": 1.9000000000000057
   },
   {
     "targetDate": "2026-03-11",
     "prediction": {
       "date": "2026-03-11T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 90.5,
-      "reasoning": "Escalating geopolitical tensions in the Middle East, including reports of Iranian strikes and a significant emergency oil release signaling a prolonged conflict, are the primary bullish drivers. Despite OPEC holding demand forecasts steady, market anxiety over supply disruptions is paramount, pushing prices upwards. The combination of sustained demand, heightened geopolitical risk premiums, and recent price surges to above $100 in some benchmarks suggests a robust increase from yesterday's close, despite a stronger dollar and high ending stocks."
+      "predict_target_price": 86.85,
+      "portfolio_allocation": 60,
+      "reasoning": "Despite OPEC holding demand forecasts steady and reports of a Saudi production hike, the escalating Middle East conflict, significant releases of emergency reserves, and crude topping $100 again indicate persistent supply concerns. However, the unexpected high close yesterday and a strengthening US Dollar (DXY up 0.40%) might exert some downward pressure. Given these counteracting forces, I anticipate a slight retracement from yesterday's sharp rise, but maintain a bullish bias while cautiously factoring in the market's reaction to the DXY and the previous day's gain."
     },
     "actual_close": 95.7300033569336,
-    "delta": -5.230003356933594
+    "delta": -8.8800033569336
   },
   {
     "targetDate": "2026-03-12",
@@ -566,7 +617,8 @@
       "date": "2026-03-12T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
       "predict_target_price": 99.85,
-      "reasoning": "The overwhelming news of the largest-ever oil supply disruption due to the Middle East war, as repeatedly highlighted by the IEA, creates substantial upward pressure on crude prices. Despite a vast emergency stock release, market fears about a supply crunch persist, suggesting that demand concerns take a backseat to severe supply constraints. The strong upward momentum from yesterday's close (9.72%) combined with the critical supply news points towards a significant increase, further amplified by a rising US Dollar Index which often positively correlates with commodity prices during geopolitical uncertainties."
+      "portfolio_allocation": 90,
+      "reasoning": "The overwhelming news of the 'largest-ever oil supply disruption' due to the Middle East war, explicitly highlighted by the IEA and major news outlets, points to significant upward pressure on crude prices. Despite a historic emergency stock release, widespread fears of a supply crunch persist, implying strong bullish sentiment. Given yesterday's substantial gain and the escalating geopolitical tensions severely limiting supply, I anticipate a further significant increase, justifying a high allocation to oil."
     },
     "actual_close": 98.71,
     "delta": 1.1400000000000006
@@ -576,8 +628,9 @@
     "prediction": {
       "date": "2026-03-14T00:00:00.000Z",
       "model": "google/gemini-2.5-flash",
-      "predict_target_price": 101.35,
-      "reasoning": "The recent geopolitical news highlights a significant oil supply disruption in the Middle East, with the IEA reporting cuts of at least 10 million bpd, which should exert strong upward pressure on prices. While OPEC held demand forecasts steady, the actual supply disruptions are paramount. Considering yesterday's strong close and the ongoing supply concerns, a further increase is anticipated despite the slight DXY uptick and the ambiguous EIA draw."
+      "predict_target_price": 101.5,
+      "portfolio_allocation": 80,
+      "reasoning": "Geopolitical tensions in the Middle East are causing significant supply disruptions, with the IEA reporting the largest-ever disruption and Gulf countries cutting production. This strong supply shock, combined with steady OPEC demand forecasts and an expected EIA draw, points to a notable upward price movement despite a slightly stronger dollar. Therefore, I anticipate crude oil prices to rise, and I am increasing my portfolio allocation to capture this potential upside."
     }
   }
 ]

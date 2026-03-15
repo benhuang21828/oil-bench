@@ -4,4 +4,5 @@ export interface MetricsSummary {
   mae: number;
   rmse: number;
   averageDeltaVal: number;
+  simulatedPnL: number;
 }

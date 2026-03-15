@@ -46,7 +46,7 @@ export async function buildPromptForDate(targetDateFmt: string): Promise<string>
   const dxyTrend = prices.dxy.percentChange >= 0 ? "Up" : "Down";
 
   // Build the string
-  const prompt = `System Prompt: You are an expert quantitative commodities analyst. Your task is to predict the official daily settlement price (the Close) of WTI Crude Oil (CL=F) for the upcoming trading session.
+  const prompt = `System Prompt: You are an expert quantitative commodities analyst and portfolio manager. Your task is to predict the official daily settlement price (the Close) of WTI Crude Oil (CL=F) for the upcoming trading session and decide how to allocate your $10,000 portfolio.
 
 Market Context (Yesterday's Close):
 * WTI Crude closed at: $${prices.cl.price.toFixed(2)} (${clPctChange}% from previous day)
@@ -59,7 +59,11 @@ Fundamental Data (Last 24h/Recent):
 Geopolitical & Market News (via Serper):
 ${formattedNews.length > 0 ? formattedNews : "No significant news returned."}
 
-Task: Based on this information, predict the EXACT DOLLAR VALUE of the official daily settlement price (the Close) on the NYMEX for WTI Crude today, given yesterday's settlement price of $${prices.cl.price.toFixed(2)}. Provide a 3-sentence reasoning in JSON format returning {"predict_target_price": number, "reasoning": "string"}.`;
+Task: Based on this information:
+1. Predict the EXACT DOLLAR VALUE of the official daily settlement price (the Close) on the NYMEX for WTI Crude today.
+2. Decide your \`portfolio_allocation\` as an integer from 0 to 100. This represents what percentage of your $10,000 portfolio you want to allocate into Oil for the next day (0 = all cash, 100 = all oil, 50 = half oil / half cash).
+
+Provide a 3-sentence reasoning in JSON format returning {"predict_target_price": number, "portfolio_allocation": number, "reasoning": "string"}.`;
 
   return prompt;
 }

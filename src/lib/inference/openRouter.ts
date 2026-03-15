@@ -48,6 +48,7 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
       date: new Date(targetDateFmt).toISOString(),
       model: model,
       predict_target_price: parsed.predict_target_price || 0,
+      portfolio_allocation: typeof parsed.portfolio_allocation === 'number' ? parsed.portfolio_allocation : 50,
       reasoning: parsed.reasoning || "Failed to parse reasoning."
     };
 

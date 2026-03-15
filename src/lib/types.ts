@@ -36,6 +36,7 @@ export interface PredictionResult {
   date: string;
   model: string;
   predict_target_price: number;
+  portfolio_allocation: number;
   reasoning: string;
 }
 
