@@ -8,41 +8,24 @@ OilBench forces the LLM to act as a Commodities Analyst. For a given day `N`, it
 
 ---
 
-## Getting Started Locally
+## Key Metrics & Trading Tracking
 
-### 1. Installation & Environment
-First, clone the repository and install dependencies:
-\`\`\`bash
-npm install
-\`\`\`
+### Avg Daily Miss
+**Mean Absolute Error (MAE):** The average dollar amount the model's prediction missed the actual closing price on any given day. 
+- *Why it matters:* This represents the base accuracy of the model's price-targeting. A lower number indicates the model is generally closer to the pin.
 
-Create an `.env` file containing your API keys for the data providers:
-\`\`\`bash
-OPENROUTER_KEY=your_key        # Target LLM via OpenRouter
-SERPER_KEY=your_key            # News Search
-LLM_MODEL_NAME=google/gemini-2.5-flash # Evaluated LLM String
-\`\`\`
+### Consistency Risk
+**Root Mean Square Error (RMSE):** Penalizes larger misses exponentially more heavily than smaller ones. 
+- *Why it matters:* A model might have a decent average miss, but occasionally make wildly incorrect predictions. A higher Consistency Risk warns that the model is prone to severe, unpredictable errors. Lower is better.
 
-### 2. Run the Benchmark CLI Pipeline
-\`\`\`bash
-# 1. Scrape real-world historical data
-npx tsx scripts/backfill-historical.ts
-
-# 2. Query target LLM to predict closing prices
-npx tsx scripts/backfill-inference.ts 
-
-# 3. Grade the LLM's absolute variance
-npx tsx scripts/run-evaluator.ts
-\`\`\`
-
-### 3. Start the Next.js Dashboard
-To run the React benchmarking interface locally:
-\`\`\`bash
-npm run dev
-# Open http://localhost:3000
-\`\`\`
+### Simulated P&L
+**Algorithmic Algorithmic Tracking:** The ending balance of a $10,000 algorithmic portfolio based entirely on the LLM's daily asset allocation decisions (0-100% Oil) over the benchmark period. 
+- *Why it matters:* Price prediction alone doesn't equal profit. This metric forces the model to measure its own conviction; it proves whether the LLM can actually compound capital by betting heavily when it's right and holding cash when it's wrong. Higher is better.
 
 ---
+
+## Local Development Note
+The Next.js dashboard uses a static `out` export for GitHub Pages native deployment. Running `npm run dev` locally is no longer supported for this architectured pipeline. Data updates trigger a full site rebuild via GitHub Actions automatically.
 
 ## Contributing New Models
 OilBench is designed to track multiple LLMs in parallel. If you'd like to benchmark an entirely new model (e.g. `claude-3-opus`, `gpt-4o`) and submit its score to the Leaderboard:
