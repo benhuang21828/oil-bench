@@ -131,7 +131,12 @@ export default function PriceChart({ data }: PriceChartProps) {
               tickFormatter={(val) => `$${val}`}
               dx={-10}
             />
-            <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 1000, outline: 'none' }} />
+            <Tooltip 
+              content={<CustomTooltip />} 
+              wrapperStyle={{ zIndex: 1000, outline: 'none' }} 
+              allowEscapeViewBox={{ x: false, y: true }}
+              position={{ y: -50 }}
+            />
             <Legend wrapperStyle={{ paddingTop: '20px' }} iconType="circle" />
             
             <Line 
