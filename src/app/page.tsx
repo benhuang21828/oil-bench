@@ -136,6 +136,37 @@ export default async function Home() {
           </div>
         </div>
 
+        {/* Metric Explanations */}
+        <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-xl">
+            <h4 className="text-slate-200 font-semibold mb-3 flex items-center gap-2">
+              Avg Daily Miss
+              <span className="text-slate-500 text-[10px] bg-white/5 rounded-full px-1.5 border border-white/10 font-bold tracking-wider">(?)</span>
+            </h4>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Mean Absolute Error (MAE): The average dollar amount the model's prediction missed the actual closing price on any given day. <br/><span className="text-emerald-400/80 mt-2 block font-medium">Lower is better.</span>
+            </p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-xl">
+            <h4 className="text-slate-200 font-semibold mb-3 flex items-center gap-2">
+              Consistency Risk
+              <span className="text-slate-500 text-[10px] bg-white/5 rounded-full px-1.5 border border-white/10 font-bold tracking-wider">(?)</span>
+            </h4>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Root Mean Square Error (RMSE): Penalizes larger misses more heavily. A higher risk means the model occasionally makes very wrong predictions.<br/><span className="text-emerald-400/80 mt-2 block font-medium">Lower is better.</span>
+            </p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-xl">
+            <h4 className="text-slate-200 font-semibold mb-3 flex items-center gap-2">
+              Simulated P&L
+              <span className="text-slate-500 text-[10px] bg-white/5 rounded-full px-1.5 border border-white/10 font-bold tracking-wider">(?)</span>
+            </h4>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              Ending balance of a $10,000 algorithmic portfolio based entirely on the LLM's daily asset allocation decisions (0-100% Oil) over the benchmark period. <br/><span className="text-emerald-400/80 mt-2 block font-medium">Higher is better.</span>
+            </p>
+          </div>
+        </div>
+
       </div>
     </main>
   );
