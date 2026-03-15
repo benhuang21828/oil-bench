@@ -77,24 +77,24 @@ export default async function Home() {
   chartData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   return (
-    <main className="min-h-screen bg-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-black to-black text-slate-200 p-8 font-sans">
+    <main className="min-h-screen bg-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-black to-black text-slate-200 p-4 md:p-8 font-sans">
       
       <div className="max-w-7xl mx-auto space-y-8">
         
         {/* Header Section */}
-        <header className="flex flex-col md:flex-row items-baseline justify-between gap-4 border-b border-white/10 pb-6">
+        <header className="flex flex-col md:flex-row items-start md:items-baseline justify-between gap-4 border-b border-white/10 pb-6">
           <div>
             <h1 className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-500 tracking-tighter">
               OilBench
             </h1>
             <p className="text-slate-400 mt-2 font-medium">LLM WTI Crude Prediction Benchmark</p>
           </div>
-          <div className="flex gap-4">
-            <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+          <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
+            <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm flex items-center">
               <span className="text-xs text-slate-500 uppercase tracking-wider font-bold mr-2">Target Asset</span>
               <span className="text-sm font-semibold text-emerald-400 border border-emerald-400/20 bg-emerald-400/10 px-2 py-0.5 rounded">CL=F (WTI)</span>
             </div>
-            <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm">
+            <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-sm flex items-center">
               <span className="text-xs text-slate-500 uppercase tracking-wider font-bold mr-2">Active Model</span>
               <span className="text-sm font-semibold tracking-wide text-rose-400">{model.split('/').pop() || model}</span>
             </div>

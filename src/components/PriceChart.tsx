@@ -105,7 +105,7 @@ export default function PriceChart({ data }: PriceChartProps) {
         <p className="text-sm text-slate-400">Hover over the timeline to view predictions against actual settlements</p>
       </div>
 
-      <div className="flex-1 min-h-0 min-w-0 -ml-4">
+      <div className="flex-1 min-h-0 min-w-0 -ml-6 sm:-ml-4">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
