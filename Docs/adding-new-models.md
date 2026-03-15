@@ -41,9 +41,9 @@ npx tsx scripts/run-evaluator.ts
 The evaluator will automatically detect your new model folder, cross-reference its targets against the actual NYMEX settlement prices, calculate its `MAE` and `RMSE`, and officially add it to `data/benchmarks/metrics_summary.json`.
 
 **Step 5. Test and Submit**
-Run the local dev server (`npm run dev`) and make sure your new model appears securely on the Modal Leaderboard and interactive timeline chart at `localhost:3000`.
+*(Note: Because the Next.js dashboard uses a static `out` export for GitHub Pages, `npm run dev` is no longer supported for local viewing.)*
 
-To get it on the live site, just commit the new prediction folder and the updated `metrics_summary.json` to a branch and open a Pull Request!
+To get your model on the live site, just commit the new prediction folder and the updated `metrics_summary.json` to a branch and open a Pull Request!
 ```bash
 git add data/prediction/
 git add data/benchmarks/
