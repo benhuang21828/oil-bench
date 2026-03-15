@@ -15,22 +15,24 @@ import { format } from 'date-fns';
 export interface ChartDataPoint {
   date: string;
   actual_close: number;
-  prediction?: {
-    model: string;
+  predictions: Record<string, {
     predict_target_price: number;
     portfolio_allocation: number;
     reasoning: string;
     delta: number;
-  };
+  }>;
   news?: { title: string; snippet: string }[];
   eiaSummary?: string;
 }
 
 interface PriceChartProps {
   data: ChartDataPoint[];
+  models: string[];
 }
 
-export default function PriceChart({ data }: PriceChartProps) {
+const COLORS = ['#fb7185', '#60a5fa', '#a78bfa', '#fbbf24', '#34d399'];
+
+export default function PriceChart({ data, models }: PriceChartProps) {
   
   const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
@@ -48,37 +50,35 @@ export default function PriceChart({ data }: PriceChartProps) {
               <span className="text-emerald-400 font-medium tracking-wide">Actual Close:</span> 
               <span className="text-white ml-2">${dataPoint.actual_close.toFixed(2)}</span>
             </p>
-            
-            {dataPoint.prediction && (
-              <>
-                <p className="text-sm">
-                  <span className="text-rose-400 font-medium tracking-wide">Predicted Close:</span> 
-                  <span className="text-white ml-2">${dataPoint.prediction.predict_target_price.toFixed(2)}</span>
-                </p>
-                <div className="flex items-center gap-4 mt-2">
-                  <p className="text-xs text-slate-400 font-medium">
-                    Model Delta Error: <span className={dataPoint.prediction.delta > 0 ? "text-rose-400" : "text-emerald-400"}>
-                      ${Math.abs(dataPoint.prediction.delta).toFixed(2)}
-                    </span>
+            {models.map((model, idx) => {
+              const pred = dataPoint.predictions?.[model];
+              if (!pred) return null;
+              const color = COLORS[idx % COLORS.length]; 
+              return (
+                <div key={model} className="mt-3 pt-3 border-t border-white/5">
+                  <p className="text-sm font-semibold mb-1" style={{ color }}>{model}</p>
+                  <p className="text-sm">
+                    <span className="text-slate-400">Predicted Close:</span> 
+                    <span className="text-white ml-2">${pred.predict_target_price.toFixed(2)}</span>
                   </p>
-                  <div className="h-3 w-px bg-white/20"></div>
-                  <p className="text-xs text-slate-400 font-medium whitespace-nowrap">
-                    Oil Exposure: <span className="text-emerald-400">{dataPoint.prediction.portfolio_allocation}%</span>
-                    <span className="text-slate-500 ml-1">({100 - dataPoint.prediction.portfolio_allocation}% Cash)</span>
+                  <div className="flex items-center gap-4 mt-1">
+                    <p className="text-xs text-slate-400 font-medium">
+                      Error: <span className={pred.delta > 0 ? "text-rose-400" : "text-emerald-400"}>
+                        ${Math.abs(pred.delta).toFixed(2)}
+                      </span>
+                    </p>
+                    <div className="h-3 w-px bg-white/20"></div>
+                    <p className="text-xs text-slate-400 font-medium whitespace-nowrap">
+                      Oil Exposure: <span className="text-emerald-400">{pred.portfolio_allocation}%</span>
+                    </p>
+                  </div>
+                  <p className="text-xs text-slate-500 italic leading-tight mt-2 line-clamp-2">
+                    "{pred.reasoning}"
                   </p>
                 </div>
-              </>
-            )}
+              );
+            })}
           </div>
-
-          {dataPoint.prediction && (
-            <div className="mt-4 pt-3 border-t border-white/5">
-              <p className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">LLM Reasoning</p>
-              <p className="text-xs text-slate-300 italic leading-relaxed">
-                "{dataPoint.prediction.reasoning}"
-              </p>
-            </div>
-          )}
 
           {dataPoint.eiaSummary && (
              <div className="mt-3 pt-3 border-t border-white/5">
@@ -148,16 +148,19 @@ export default function PriceChart({ data }: PriceChartProps) {
               dot={{ r: 4, fill: '#064e3b', strokeWidth: 2, stroke: '#34d399' }}
               activeDot={{ r: 6, fill: '#34d399', strokeWidth: 0 }}
             />
-            <Line 
-              type="monotone" 
-              name="Gemini Target Price"
-              dataKey="prediction.predict_target_price" 
-              stroke="#fb7185" 
-              strokeWidth={2}
-              strokeDasharray="5 5"
-              dot={{ r: 3, fill: '#881337', strokeWidth: 1, stroke: '#fb7185' }}
-              activeDot={{ r: 5, fill: '#fb7185', strokeWidth: 0 }}
-            />
+            {models.map((m, idx) => (
+              <Line 
+                key={m}
+                type="monotone" 
+                name={`${m} Target`}
+                dataKey={`predictions.${m}.predict_target_price`}
+                stroke={COLORS[idx % COLORS.length]}
+                strokeWidth={2}
+                strokeDasharray="5 5"
+                dot={{ r: 3, fill: '#1e293b', strokeWidth: 1, stroke: COLORS[idx % COLORS.length] }}
+                activeDot={{ r: 5, fill: COLORS[idx % COLORS.length], strokeWidth: 0 }}
+              />
+            ))}
           </LineChart>
         </ResponsiveContainer>
       </div>

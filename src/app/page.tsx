@@ -6,25 +6,36 @@ import { DailyPredictionOutput } from '@/lib/types';
 import { Github } from 'lucide-react';
 
 export default async function Home() {
-  const model = process.env.LLM_MODEL_NAME || "google/gemini-2.5-flash";
-  const dirModelName = model.replace(/[^a-zA-Z0-9_-]/g, '_');
-  
-  const predictionsPath = path.join(process.cwd(), 'data', 'prediction', dirModelName, 'predictions.json');
+  const predictionsDir = path.join(process.cwd(), 'data', 'prediction');
   const pricesDir = path.join(process.cwd(), 'data', 'raw', 'prices');
   const newsDir = path.join(process.cwd(), 'data', 'raw', 'news');
   const fundamentalsDir = path.join(process.cwd(), 'data', 'raw', 'fundamentals');
 
-  let rawPredictions: DailyPredictionOutput[] = [];
-  try {
-    const data = await fs.readFile(predictionsPath, 'utf8');
-    rawPredictions = JSON.parse(data);
-  } catch (e) {
-    // No predictions available yet
+  // Load all model predictions
+  const dEntries = await fs.readdir(predictionsDir, { withFileTypes: true });
+  const modelFolders = dEntries.filter(e => e.isDirectory()).map(e => e.name);
+  
+  const modelDataMap = new Map<string, DailyPredictionOutput[]>();
+  const availableModels: string[] = [];
+  let masterPredictions: DailyPredictionOutput[] = [];
+
+  for (const folder of modelFolders) {
+    try {
+      const data = await fs.readFile(path.join(predictionsDir, folder, 'predictions.json'), 'utf8');
+      const parsed = JSON.parse(data) as DailyPredictionOutput[];
+      if (parsed.length > 0) {
+         const mName = parsed[0].prediction?.model || folder;
+         modelDataMap.set(mName, parsed);
+         availableModels.push(mName);
+         if (parsed.length > masterPredictions.length) {
+             masterPredictions = parsed;
+         }
+      }
+    } catch(e) {}
   }
 
   // We only want to plot days where we have an actual_close
-  // The evaluator populated actual_close meaning the true "N+1" day had happened!
-  const validPredictions = rawPredictions.filter(p => p.actual_close !== undefined);
+  const validPredictions = masterPredictions.filter(p => p.actual_close !== undefined);
   
   // Format data for Recharts
   const chartData: ChartDataPoint[] = await Promise.all(validPredictions.map(async (p) => {
@@ -60,16 +71,24 @@ export default async function Home() {
     const currentIndex = sortedDates.indexOf(targetDate);
     const nextDate = currentIndex > -1 && currentIndex < sortedDates.length - 1 ? sortedDates[currentIndex + 1] : targetDate;
 
+    const predictionsObj: Record<string, any> = {};
+    for (const m of availableModels) {
+       const modelPreds = modelDataMap.get(m);
+       const specificPred = modelPreds?.find(mp => mp.targetDate === targetDate);
+       if (specificPred && specificPred.actual_close !== undefined) {
+          predictionsObj[m] = {
+            predict_target_price: specificPred.prediction.predict_target_price,
+            portfolio_allocation: specificPred.prediction.portfolio_allocation ?? 50,
+            reasoning: specificPred.prediction.reasoning,
+            delta: specificPred.delta as number,
+          };
+       }
+    }
+
     return {
       date: nextDate, // Plot this point on N+1's timeline!
       actual_close: p.actual_close as number,
-      prediction: {
-        model,
-        predict_target_price: p.prediction.predict_target_price,
-        portfolio_allocation: p.prediction.portfolio_allocation ?? 50,
-        reasoning: p.prediction.reasoning,
-        delta: p.delta as number,
-      },
+      predictions: predictionsObj,
       news,
       eiaSummary
     };
@@ -127,7 +146,7 @@ export default async function Home() {
           </div>
           <div className="h-[500px] w-full">
             {chartData.length > 0 ? (
-              <PriceChart data={chartData} />
+              <PriceChart data={chartData} models={availableModels} />
             ) : (
               <div className="w-full h-full bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center">
                 <p className="text-slate-500">No prediction data available. Run the backfill-inference script!</p>

@@ -6,5 +6,13 @@
     "rmse": 2.9602772335047387,
     "averageDeltaVal": 0.20730812072753851,
     "simulatedPnL": 15390
+  },
+  {
+    "model": "google/gemini-3-flash-preview",
+    "totalPredictions": 52,
+    "mae": 1.3842307985745943,
+    "rmse": 2.0724655666861946,
+    "averageDeltaVal": 0.14500042841984714,
+    "simulatedPnL": 15390
   }
 ]
