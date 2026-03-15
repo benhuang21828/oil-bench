@@ -208,24 +208,24 @@
     "prediction": {
       "date": "2026-01-24T00:00:00.000Z",
       "model": "google/gemini-3-flash-preview",
-      "predict_target_price": 0,
-      "portfolio_allocation": 50,
-      "reasoning": "Failed to parse reasoning."
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The recent 3% rally triggered by US sanctions on Iran and the deployment of naval assets creates significant geopolitical risk premiums that typically drive short-term momentum. A weakening US Dollar Index further supports higher dollar-denominated crude prices, while relatively lean US ending stocks suggest a tightening supply-demand balance. I expect volatility to remain high but directional bias to stay positive as markets price in increased Middle East supply disruption risks."
     },
     "actual_close": 62.38999938964844,
-    "delta": -62.38999938964844
+    "delta": 0.4600006103515639
   },
   {
     "targetDate": "2026-01-27",
     "prediction": {
       "date": "2026-01-27T00:00:00.000Z",
       "model": "google/gemini-3-flash-preview",
-      "predict_target_price": 0,
-      "portfolio_allocation": 50,
-      "reasoning": "Failed to parse reasoning."
+      "predict_target_price": 61.25,
+      "portfolio_allocation": 35,
+      "reasoning": "The bearish news regarding surplus production and weak global demand outweighs the support from a weaker US Dollar, suggesting a correction toward the $61 level is likely. While geopolitical risks in the Middle East provide a potential floor, the easing of supply disruptions and recent downward price pressure create a bearish technical setup. I am maintaining a defensive 35% allocation to capitalize on volatility while mitigating risk from the prevailing downward trend."
     },
     "actual_close": 63.209999084472656,
-    "delta": -63.209999084472656
+    "delta": -1.9599990844726562
   },
   {
     "targetDate": "2026-01-28",
@@ -472,12 +472,12 @@
     "prediction": {
       "date": "2026-02-25T00:00:00.000Z",
       "model": "google/gemini-3-flash-preview",
-      "predict_target_price": 0,
-      "portfolio_allocation": 50,
-      "reasoning": "Failed to parse reasoning."
+      "predict_target_price": 64.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The potential OPEC+ output increase of 137,000 bpd and a large U.S. crude stock build of over 435 million barrels exert significant downward pressure on prices. While geopolitical tensions involving Iran and potential supply shocks offer a floor, the bearish physical market data currently outweighs the risk premium. This suggests a slight pullback in price, warranting a cautious, defensive allocation of 35% until geopolitical volatility clarifies."
     },
     "actual_close": 65.20999908447266,
-    "delta": -65.20999908447266
+    "delta": -0.35999908447266193
   },
   {
     "targetDate": "2026-02-26",
@@ -508,12 +508,12 @@
     "prediction": {
       "date": "2026-02-28T00:00:00.000Z",
       "model": "google/gemini-3-flash-preview",
-      "predict_target_price": 0,
-      "portfolio_allocation": 50,
-      "reasoning": "Failed to parse reasoning."
+      "predict_target_price": 79.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The recent military action against Iran by the U.S. and Israel introduces a significant geopolitical risk premium, with analysts warning of potential supply disruptions across the Strait of Hormuz. While OPEC+ is considering production increases to offset volatility, the immediate threat to Iranian infrastructure and the existing low rig count support a sharp upward price correction. The combination of a weakening U.S. Dollar and heightened war risk justifies a heavy allocation to capitalize on expected short-term volatility and upward momentum."
     },
     "actual_close": 74.55999755859375,
-    "delta": -74.55999755859375
+    "delta": 5.290002441406244
   },
   {
     "targetDate": "2026-03-03",
@@ -628,9 +628,9 @@
     "prediction": {
       "date": "2026-03-14T00:00:00.000Z",
       "model": "google/gemini-3-flash-preview",
-      "predict_target_price": 0,
-      "portfolio_allocation": 50,
-      "reasoning": "Failed to parse reasoning."
+      "predict_target_price": 106.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The IEA report of a 10 million bpd supply disruption constitutes the largest shock in history, far outweighing the dampening effects of a stronger US Dollar and energy efficiency trends. While an EIA draw of 1.2M barrels is relatively minor, the massive geopolitical risk premium in the Middle East justifies a significant bullish breakout from the previous close. I have allocated 85% of the portfolio to capitalize on this volatility while maintaining a cash buffer for extreme margin requirements."
     }
   }
 ]
