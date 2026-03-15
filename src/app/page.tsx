@@ -3,6 +3,7 @@ import path from 'path';
 import Leaderboard from '@/components/Leaderboard';
 import PriceChart, { ChartDataPoint } from '@/components/PriceChart';
 import { DailyPredictionOutput } from '@/lib/types';
+import { Github } from 'lucide-react';
 
 export default async function Home() {
   const model = process.env.LLM_MODEL_NAME || "google/gemini-2.5-flash";
@@ -84,9 +85,20 @@ export default async function Home() {
         {/* Header Section */}
         <header className="flex flex-col md:flex-row items-start md:items-baseline justify-between gap-4 border-b border-white/10 pb-6">
           <div>
-            <h1 className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-500 tracking-tighter">
-              OilBench
-            </h1>
+            <div className="flex items-center gap-4">
+              <h1 className="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-500 tracking-tighter">
+                OilBench
+              </h1>
+              <a 
+                href="https://github.com/benhuang21828/oil-bench" 
+                target="_blank" 
+                rel="noreferrer"
+                className="text-slate-400 hover:text-white transition-colors duration-200 mt-1"
+                aria-label="GitHub Repository"
+              >
+                <Github size={24} />
+              </a>
+            </div>
             <p className="text-slate-400 mt-2 font-medium">LLM WTI Crude Prediction Benchmark</p>
           </div>
           <div className="flex flex-wrap gap-4 mt-4 md:mt-0">
