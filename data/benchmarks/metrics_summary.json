@@ -70,5 +70,13 @@
     "rmse": 2.943403403418421,
     "averageDeltaVal": 0.03942350534292443,
     "simulatedPnL": 14490.98
+  },
+  {
+    "model": "openai/gpt-5.4",
+    "totalPredictions": 52,
+    "mae": 1.7780771930401131,
+    "rmse": 2.9337162395091165,
+    "averageDeltaVal": -0.5473072638878448,
+    "simulatedPnL": 14596.23
   }
 ]
