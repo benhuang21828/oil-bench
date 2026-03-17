@@ -36,20 +36,28 @@ const COLORS = ['#fb7185', '#60a5fa', '#a78bfa', '#fbbf24', '#34d399'];
 
 export default function PriceChart({ data, models }: PriceChartProps) {
   const [selectedPoint, setSelectedPoint] = useState<ChartDataPoint | null>(null);
+  const [hoveredDate, setHoveredDate] = useState<string | null>(null);
 
-  const DateIndicator = ({ active, payload }: any) => {
-    if (active && payload && payload.length) {
-      const dataPoint = payload[0].payload as ChartDataPoint;
-      const fmtDate = format(new Date(dataPoint.date), 'MMM do, yyyy');
-
-      return (
-        <div className="absolute top-4 right-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium px-4 py-2 rounded-lg text-sm backdrop-blur-md pointer-events-none animate-in fade-in zoom-in duration-200">
-          {fmtDate} • Click any dot for details
-        </div>
-      );
+  // We find the full data point from the state to pass to the modal
+  const handleChartClick = () => {
+    if (hoveredDate) {
+      const point = data.find(d => d.date === hoveredDate);
+      if (point) setSelectedPoint(point);
     }
-    return null;
   };
+
+  const handleMouseMove = (e: any) => {
+    if (e && e.activePayload && e.activePayload.length) {
+      setHoveredDate(e.activePayload[0].payload.date);
+    } else {
+      setHoveredDate(null);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredDate(null);
+  };
+
 
   return (
     <div className="w-full h-full bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-4 shadow-2xl flex flex-col">
@@ -58,17 +66,21 @@ export default function PriceChart({ data, models }: PriceChartProps) {
         <p className="text-sm text-slate-400">Hover over the timeline to view predictions against actual settlements</p>
       </div>
 
-      <div className="flex-1 min-h-0 min-w-0 -ml-6 sm:-ml-4">
+      <div className="flex-1 min-h-0 min-w-0 -ml-6 sm:-ml-4 relative" onClick={handleChartClick}>
+        
+        {hoveredDate && (
+          <div className="absolute top-2 right-6 z-[100] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium px-4 py-2 rounded-lg text-sm backdrop-blur-md pointer-events-none animate-in fade-in zoom-in duration-200 shadow-xl">
+            {format(new Date(hoveredDate), 'MMM do, yyyy')} • Click for details
+          </div>
+        )}
+
         <ResponsiveContainer width="100%" height="100%">
           <LineChart 
             data={data} 
             margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
-            onClick={(e: any) => {
-              if (e && e.activePayload && e.activePayload.length) {
-                setSelectedPoint(e.activePayload[0].payload);
-              }
-            }}
-            style={{ cursor: 'pointer' }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{ cursor: hoveredDate ? 'pointer' : 'default' }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
             <XAxis 
@@ -86,8 +98,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
               dx={-10}
             />
             <Tooltip 
-              content={<DateIndicator />} 
-              wrapperStyle={{ zIndex: 100, outline: 'none' }} 
+              content={() => null} // We render our own absolute overlay above
               cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2 }}
             />
             <Legend wrapperStyle={{ paddingTop: '20px' }} iconType="circle" />
@@ -98,7 +109,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
               dataKey="actual_close" 
               stroke="#34d399" 
               strokeWidth={3}
-              activeDot={{ r: 8, fill: '#34d399', strokeWidth: 0, cursor: 'pointer', onClick: (dotProps: any) => setSelectedPoint(dotProps.payload) }}
+              activeDot={{ r: 8, fill: '#34d399', strokeWidth: 0 }}
               dot={false}
             />
             {models.map((m, idx) => (
@@ -110,7 +121,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
                 stroke={COLORS[idx % COLORS.length]}
                 strokeWidth={2}
                 strokeDasharray="5 5"
-                activeDot={{ r: 8, fill: COLORS[idx % COLORS.length], strokeWidth: 0, cursor: 'pointer', onClick: (dotProps: any) => setSelectedPoint(dotProps.payload) }}
+                activeDot={{ r: 8, fill: COLORS[idx % COLORS.length], strokeWidth: 0 }}
                 dot={false}
               />
             ))}
