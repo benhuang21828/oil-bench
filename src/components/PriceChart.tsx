@@ -37,17 +37,14 @@ const COLORS = ['#fb7185', '#60a5fa', '#a78bfa', '#fbbf24', '#34d399'];
 export default function PriceChart({ data, models }: PriceChartProps) {
   const [selectedPoint, setSelectedPoint] = useState<ChartDataPoint | null>(null);
 
-  const CustomTooltip = ({ active, payload }: any) => {
+  const DateIndicator = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       const dataPoint = payload[0].payload as ChartDataPoint;
       const fmtDate = format(new Date(dataPoint.date), 'MMM do, yyyy');
 
       return (
-        <div className="bg-slate-900 border border-emerald-500/30 rounded-lg py-2 px-4 shadow-2xl backdrop-blur-md relative z-[1000] text-center flex flex-col items-center gap-1 pointer-events-none">
-          <p className="font-semibold text-slate-200 text-sm whitespace-nowrap">{fmtDate}</p>
-          <p className="text-xs font-bold uppercase tracking-wider text-emerald-400 animate-pulse whitespace-nowrap">
-            Click to View Reasoning
-          </p>
+        <div className="absolute top-4 right-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium px-4 py-2 rounded-lg text-sm backdrop-blur-md pointer-events-none animate-in fade-in zoom-in duration-200">
+          {fmtDate} • Click any dot for details
         </div>
       );
     }
@@ -89,12 +86,11 @@ export default function PriceChart({ data, models }: PriceChartProps) {
               dx={-10}
             />
             <Tooltip 
-              content={<CustomTooltip />} 
+              content={<DateIndicator />} 
               wrapperStyle={{ zIndex: 100, outline: 'none' }} 
-              allowEscapeViewBox={{ x: false, y: true }}
               cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2 }}
             />
-            <Legend wrapperStyle={{ paddingTop: '20px', cursor: 'pointer' }} iconType="circle" />
+            <Legend wrapperStyle={{ paddingTop: '20px' }} iconType="circle" />
             
             <Line 
               type="monotone" 
@@ -102,7 +98,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
               dataKey="actual_close" 
               stroke="#34d399" 
               strokeWidth={3}
-              activeDot={{ r: 8, fill: '#34d399', strokeWidth: 0 }}
+              activeDot={{ r: 8, fill: '#34d399', strokeWidth: 0, cursor: 'pointer', onClick: (dotProps: any) => setSelectedPoint(dotProps.payload) }}
               dot={false}
             />
             {models.map((m, idx) => (
@@ -114,7 +110,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
                 stroke={COLORS[idx % COLORS.length]}
                 strokeWidth={2}
                 strokeDasharray="5 5"
-                activeDot={{ r: 6, fill: COLORS[idx % COLORS.length], strokeWidth: 0 }}
+                activeDot={{ r: 8, fill: COLORS[idx % COLORS.length], strokeWidth: 0, cursor: 'pointer', onClick: (dotProps: any) => setSelectedPoint(dotProps.payload) }}
                 dot={false}
               />
             ))}
