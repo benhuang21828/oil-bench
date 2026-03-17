@@ -22,5 +22,13 @@
     "rmse": 2.8514179018495738,
     "averageDeltaVal": -0.17557649465707664,
     "simulatedPnL": 14636.94
+  },
+  {
+    "model": "anthropic/claude-sonnet-4.6",
+    "totalPredictions": 52,
+    "mae": 1.7321153376652654,
+    "rmse": 2.508498541491411,
+    "averageDeltaVal": 0.1975004284198468,
+    "simulatedPnL": 15292.54
   }
 ]
