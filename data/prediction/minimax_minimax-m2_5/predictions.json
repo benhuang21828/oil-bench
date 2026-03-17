@@ -504,6 +504,18 @@
     "delta": 0.7300033569335938
   },
   {
+    "targetDate": "2026-02-28",
+    "prediction": {
+      "date": "2026-02-28T00:00:00.000Z",
+      "model": "minimax/minimax-m2.5",
+      "predict_target_price": 68.8,
+      "portfolio_allocation": 65,
+      "reasoning": "The attack on Iran raises the risk of supply disruption, supporting an upward move in WTI. A weaker US dollar and elevated geopolitical risk premium offset the potential for a larger OPEC+ output increase. Given the uncertain but potentially bullish environment, a moderate allocation of 65% captures upside while preserving cash for volatility."
+    },
+    "actual_close": 74.55999755859375,
+    "delta": -5.759997558593753
+  },
+  {
     "targetDate": "2026-03-03",
     "prediction": {
       "date": "2026-03-03T00:00:00.000Z",
