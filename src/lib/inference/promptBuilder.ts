@@ -63,7 +63,8 @@ Task: Based on this information:
 1. Predict the EXACT DOLLAR VALUE of the official daily settlement price (the Close) on the NYMEX for WTI Crude today.
 2. Decide your \`portfolio_allocation\` as an integer from 0 to 100. This represents what percentage of your $10,000 portfolio you want to allocate into Oil for the next day (0 = all cash, 100 = all oil, 50 = half oil / half cash).
 
-Provide a 3-sentence reasoning in JSON format returning {"predict_target_price": number, "portfolio_allocation": number, "reasoning": "string"}.`;
+IMPORTANT INSTRUCTION: YOU MUST OUTPUT ONLY VALID JSON. NO CONVERSATIONAL TEXT, NO MARKDOWN TAGS. ONLY RAW JSON.
+Provide a 3-sentence reasoning in JSON format returning exactly: {"predict_target_price": number, "portfolio_allocation": number, "reasoning": "string"}`;
 
   return prompt;
 }

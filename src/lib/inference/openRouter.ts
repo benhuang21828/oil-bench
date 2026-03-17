@@ -25,11 +25,12 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json'
-      }
+      },
+      timeout: 60000 // 60 second timeout to prevent infinite hangs
     });
 
     const completion = response.data.choices?.[0]?.message?.content;
-    
+
     if (!completion) {
       throw new Error(`OpenRouter returned empty response for ${targetDateFmt}`);
     }
@@ -38,7 +39,7 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
     let parsed: any;
     try {
       parsed = JSON.parse(completion);
-    } catch(e) {
+    } catch (e) {
       // In case the model wrapped it in markdown codeblocks
       const cleaned = completion.replace(/^```json/m, '').replace(/^```/m, '').trim();
       parsed = JSON.parse(cleaned);
@@ -62,16 +63,16 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
     const dirModelName = model.replace(/[^a-zA-Z0-9_-]/g, '_');
     const dirPath = path.join(process.cwd(), 'data', 'prediction', dirModelName);
     await fs.mkdir(dirPath, { recursive: true });
-    
+
     // We append to a consolidated predictions.json file as an array
     const predictionsFilePath = path.join(dirPath, 'predictions.json');
     let existingPredictions: DailyPredictionOutput[] = [];
-    
+
     try {
       const existingData = await fs.readFile(predictionsFilePath, 'utf-8');
       existingPredictions = JSON.parse(existingData);
       if (!Array.isArray(existingPredictions)) existingPredictions = [];
-    } catch(e) {
+    } catch (e) {
       // File doesn't exist yet, we will create it
     }
 

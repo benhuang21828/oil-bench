@@ -5,7 +5,7 @@ import { buildPromptForDate } from '../src/lib/inference/promptBuilder';
 import { runInference } from '../src/lib/inference/openRouter';
 
 async function run() {
-  const dateFmt = '2026-02-28';
+  const dateFmt = '2026-02-05';
   console.log(`Running Inference for: ${dateFmt}`);
   try {
     const prompt = await buildPromptForDate(dateFmt);

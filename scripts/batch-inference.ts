@@ -9,41 +9,46 @@ const CONCURRENCY = 15;
 const MAX_RETRIES = 3;
 
 async function run() {
-  const model = process.env.LLM_MODEL_NAME || "google/gemini-2.5-flash";
-  const dirModelName = model.replace(/[^a-zA-Z0-9_-]/g, '_');
-  const predictionsPath = path.join(process.cwd(), 'data', 'prediction', dirModelName, 'predictions.json');
+  const model = process.env.LLM_MODEL_NAME || "moonshotai/kimi-k2.5";
   const pricesDir = path.join(process.cwd(), 'data', 'raw', 'prices');
-  
-  // Create dir
-  await fs.mkdir(path.dirname(predictionsPath), { recursive: true });
-
-  let existingDates = new Set<string>();
-  let existingPredictions: DailyPredictionOutput[] = [];
-  try {
-     const data = await fs.readFile(predictionsPath, 'utf8');
-     existingPredictions = JSON.parse(data);
-     for (const p of existingPredictions) {
-         if (p.prediction && p.prediction.predict_target_price > 0) {
-             existingDates.add(p.targetDate);
-         }
-     }
-  } catch(e) {}
-
   let files: string[] = [];
+
   try {
     files = await fs.readdir(pricesDir);
   } catch (e) {
-    console.error('No price data found');
+    console.error(`Could not read ${pricesDir}`);
     return;
   }
 
-  const dates = files
+  // Find all available dates
+  const allDates = files
     .filter(f => f.endsWith('.json'))
     .map(f => f.replace('.json', ''))
-    .sort((a, b) => new Date(a).getTime() - new Date(b).getTime())
-    .filter(d => !existingDates.has(d));
+    .sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
 
-  console.log(`Found ${dates.length} historical dates to process concurrently for ${model}.`);
+  // Load existing predictions to correctly resume
+  const dirModelName = model.replace(/[^a-zA-Z0-9_-]/g, '_');
+  const predictionsPath = path.join(process.cwd(), 'data', 'prediction', dirModelName, 'predictions.json');
+
+  let existingDates = new Set<string>();
+  try {
+    const data = await fs.readFile(predictionsPath, 'utf8');
+    const parsed = JSON.parse(data);
+    for (const p of parsed) {
+      if (p.prediction && p.prediction.predict_target_price > 0) {
+        existingDates.add(p.targetDate);
+      }
+    }
+  } catch(e) {}
+
+  const datesToProcess = allDates.filter(d => !existingDates.has(d));
+
+  if (datesToProcess.length === 0) {
+    console.log("No new dates to process.");
+    return;
+  }
+
+  console.log(`Found ${datesToProcess.length} historical dates to process concurrently for ${model}.`);
 
   const apiKey = process.env.OPENROUTER_KEY;
 
@@ -107,27 +112,42 @@ async function run() {
   }
 
   // Chunk processing
-  let results: DailyPredictionOutput[] = [];
-  for (let i = 0; i < dates.length; i += CONCURRENCY) {
-    const chunk = dates.slice(i, i + CONCURRENCY);
-    console.log(`Processing batch ${i/CONCURRENCY + 1} of ${Math.ceil(dates.length/CONCURRENCY)}`);
-    const chunkResults = await Promise.all(chunk.map(d => processDate(d)));
-    results.push(...chunkResults.filter(Boolean) as DailyPredictionOutput[]);
+  const chunks = [];
+  for (let i = 0; i < datesToProcess.length; i += CONCURRENCY) {
+    chunks.push(datesToProcess.slice(i, i + CONCURRENCY));
   }
 
-  // Merge and save
-  for (const newPred of results) {
-    const existingIndex = existingPredictions.findIndex(p => p.targetDate === newPred.targetDate);
-    if (existingIndex > -1) {
-      existingPredictions[existingIndex] = newPred;
-    } else {
-      existingPredictions.push(newPred);
+  const results: DailyPredictionOutput[] = [];
+
+  for (let i = 0; i < chunks.length; i++) {
+    console.log(`Processing batch ${i + 1} of ${chunks.length}`);
+    const chunkDates = chunks[i];
+
+    const promises = chunkDates.map(date => processDate(date));
+    const chunkResults = await Promise.all(promises);
+
+    for (const res of chunkResults) {
+      if (res) results.push(res);
     }
   }
 
-  existingPredictions.sort((a, b) => new Date(a.targetDate).getTime() - new Date(b.targetDate).getTime());
-  await fs.writeFile(predictionsPath, JSON.stringify(existingPredictions, null, 2));
-  console.log("Saved all predictions.");
+  // Append to existing file
+  const dirPath = path.dirname(predictionsPath);
+  await fs.mkdir(dirPath, { recursive: true });
+
+  let allPredictions: DailyPredictionOutput[] = [];
+  try {
+    const existingData = await fs.readFile(predictionsPath, 'utf8');
+    allPredictions = JSON.parse(existingData);
+  } catch(e) {}
+
+  allPredictions.push(...results);
+  allPredictions.sort((a, b) => new Date(a.targetDate).getTime() - new Date(b.targetDate).getTime());
+
+  await fs.writeFile(predictionsPath, JSON.stringify(allPredictions, null, 2));
+  console.log(`\n============================`);
+  console.log(`Successfully batch-saved ${results.length} predictions for ${model}!`);
+  console.log(`============================`);
 }
 
 run().catch(console.error);
