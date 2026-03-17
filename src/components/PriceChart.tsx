@@ -40,7 +40,7 @@ export default function PriceChart({ data, models }: PriceChartProps) {
       const fmtDate = format(new Date(dataPoint.date), 'MMM do, yyyy');
 
       return (
-        <div className="bg-slate-900 border border-white/10 rounded-xl p-4 shadow-2xl max-w-md backdrop-blur-md relative z-[1000]">
+        <div className="bg-slate-900 border border-white/10 rounded-xl p-4 shadow-2xl max-w-md max-h-[80vh] overflow-y-auto backdrop-blur-md relative z-[1000] scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
           <p className="font-semibold text-slate-200 border-b border-white/10 pb-2 mb-3">
             {fmtDate}
           </p>
