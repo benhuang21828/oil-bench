@@ -14,5 +14,13 @@
     "rmse": 2.856769399781796,
     "averageDeltaVal": 0.5251927361121553,
     "simulatedPnL": 16121.05
+  },
+  {
+    "model": "minimax/minimax-m2.5",
+    "totalPredictions": 9,
+    "mae": 1.0444437662760424,
+    "rmse": 1.3699793329100245,
+    "averageDeltaVal": -0.5088889227973105,
+    "simulatedPnL": 10340.27
   }
 ]
