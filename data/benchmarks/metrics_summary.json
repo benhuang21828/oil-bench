@@ -38,5 +38,13 @@
     "rmse": 2.526222313297901,
     "averageDeltaVal": -0.013268802349383026,
     "simulatedPnL": 14952.46
+  },
+  {
+    "model": "anthropic/claude-opus-4.6",
+    "totalPredictions": 52,
+    "mae": 1.600192172710712,
+    "rmse": 2.5927866231969365,
+    "averageDeltaVal": -0.37903803311861384,
+    "simulatedPnL": 14852.07
   }
 ]
