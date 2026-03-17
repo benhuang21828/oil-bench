@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import {
   LineChart,
   Line,
@@ -9,7 +10,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend
+  Legend,
 } from 'recharts';
 import { format } from 'date-fns';
 import { X } from 'lucide-react';
@@ -34,197 +35,222 @@ interface PriceChartProps {
 
 const COLORS = ['#fb7185', '#60a5fa', '#a78bfa', '#fbbf24', '#34d399'];
 
+// Custom tooltip shown on hover — minimal, just prompts user to click
+const HoverTooltip = ({ active, payload }: any) => {
+  if (!active || !payload || !payload.length) return null;
+  const point = payload[0]?.payload as ChartDataPoint;
+  if (!point) return null;
+  return (
+    <div
+      style={{ pointerEvents: 'none' }}
+      className="bg-slate-800/95 border border-white/20 text-white text-xs font-medium px-3 py-2 rounded-lg shadow-xl backdrop-blur-md"
+    >
+      <p className="text-slate-300 font-semibold mb-0.5">
+        {format(new Date(point.date), 'MMM do, yyyy')}
+      </p>
+      <p className="text-emerald-400">Click for more detail →</p>
+    </div>
+  );
+};
+
 export default function PriceChart({ data, models }: PriceChartProps) {
   const [selectedPoint, setSelectedPoint] = useState<ChartDataPoint | null>(null);
-  const [hoveredDate, setHoveredDate] = useState<string | null>(null);
 
-  // We find the full data point from the state to pass to the modal
-  const handleChartClick = () => {
-    if (hoveredDate) {
-      const point = data.find(d => d.date === hoveredDate);
-      if (point) setSelectedPoint(point);
+  const handleDotClick = (dotProps: any) => {
+    // dotProps.payload is the full ChartDataPoint row
+    const point: ChartDataPoint = dotProps?.payload ?? dotProps;
+    if (point && point.date) {
+      setSelectedPoint(point);
     }
   };
-
-  const handleMouseMove = (e: any) => {
-    if (e && e.activePayload && e.activePayload.length) {
-      setHoveredDate(e.activePayload[0].payload.date);
-    } else {
-      setHoveredDate(null);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredDate(null);
-  };
-
 
   return (
-    <div className="w-full h-full bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-4 shadow-2xl flex flex-col">
+    <div className="w-full h-full relative bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-4 shadow-2xl flex flex-col">
       <div className="mb-4 px-2">
         <h2 className="text-white font-semibold text-lg tracking-tight">WTI Crude Tracking Benchmarks</h2>
         <p className="text-sm text-slate-400">Hover over the timeline to view predictions against actual settlements</p>
       </div>
 
-      <div className="flex-1 min-h-0 min-w-0 -ml-6 sm:-ml-4 relative" onClick={handleChartClick}>
-        
-        {hoveredDate && (
-          <div className="absolute top-2 right-6 z-[100] bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium px-4 py-2 rounded-lg text-sm backdrop-blur-md pointer-events-none animate-in fade-in zoom-in duration-200 shadow-xl">
-            {format(new Date(hoveredDate), 'MMM do, yyyy')} • Click for details
-          </div>
-        )}
-
+      {/* Chart — explicit flex-1 with min-h-0 so ResponsiveContainer gets real pixel dimensions */}
+      <div className="flex-1 min-h-0 -ml-6 sm:-ml-4">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart 
-            data={data} 
+          <LineChart
+            data={data}
             margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            style={{ cursor: hoveredDate ? 'pointer' : 'default' }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
-            <XAxis 
-              dataKey="date" 
+            <XAxis
+              dataKey="date"
               tickFormatter={(str) => format(new Date(str), 'MMM d')}
               stroke="rgba(255,255,255,0.2)"
               tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 12 }}
               dy={10}
             />
-            <YAxis 
+            <YAxis
               domain={['auto', 'auto']}
               stroke="rgba(255,255,255,0.2)"
               tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 12 }}
               tickFormatter={(val) => `$${val}`}
               dx={-10}
             />
-            <Tooltip 
-              content={() => null} // We render our own absolute overlay above
-              cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2 }}
+
+            {/* HoverTooltip: visible, non-interactive, follows cursor */}
+            <Tooltip
+              content={<HoverTooltip />}
+              cursor={{ stroke: 'rgba(255,255,255,0.15)', strokeWidth: 2 }}
             />
+
             <Legend wrapperStyle={{ paddingTop: '20px' }} iconType="circle" />
-            
-            <Line 
-              type="monotone" 
+
+            {/* Actual settlement line */}
+            <Line
+              type="monotone"
               name="Actual Settlement (CL=F)"
-              dataKey="actual_close" 
-              stroke="#34d399" 
+              dataKey="actual_close"
+              stroke="#34d399"
               strokeWidth={3}
-              activeDot={{ r: 8, fill: '#34d399', strokeWidth: 0 }}
               dot={false}
+              activeDot={{
+                r: 9,
+                fill: '#34d399',
+                stroke: '#fff',
+                strokeWidth: 2,
+                style: { cursor: 'pointer' },
+                onClick: (_event: any, dotProps: any) => handleDotClick(dotProps),
+              }}
             />
+
+            {/* Model prediction lines */}
             {models.map((m, idx) => (
-              <Line 
+              <Line
                 key={m}
-                type="monotone" 
+                type="monotone"
                 name={`${m} Target`}
                 dataKey={(row) => row.predictions?.[m]?.predict_target_price}
                 stroke={COLORS[idx % COLORS.length]}
                 strokeWidth={2}
                 strokeDasharray="5 5"
-                activeDot={{ r: 8, fill: COLORS[idx % COLORS.length], strokeWidth: 0 }}
                 dot={false}
+                activeDot={{
+                  r: 9,
+                  fill: COLORS[idx % COLORS.length],
+                  stroke: '#fff',
+                  strokeWidth: 2,
+                  style: { cursor: 'pointer' },
+                  onClick: (_event: any, dotProps: any) => handleDotClick(dotProps),
+                }}
               />
             ))}
           </LineChart>
         </ResponsiveContainer>
       </div>
 
-      {/* Detail Modal */}
-      {selectedPoint && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
-             onClick={() => setSelectedPoint(null)}>
-          <div className="bg-slate-900 border border-white/10 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col"
-               onClick={e => e.stopPropagation()}>
-            
-            <div className="p-6 border-b border-white/10 flex items-center justify-between bg-white/5">
-              <div>
-                <h3 className="text-2xl font-bold text-white tracking-tight">
-                  Detailed AI Reasoning
-                </h3>
-                <p className="text-emerald-400 font-medium mt-1">
-                  Settlement Date: {format(new Date(selectedPoint.date), 'MMMM do, yyyy')} | Actual Close: ${selectedPoint.actual_close.toFixed(2)}
-                </p>
+      {/* Detail Modal — rendered via portal to escape all containing-block constraints */}
+      {selectedPoint &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[99999] flex items-center justify-center p-4"
+            style={{ backgroundColor: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(4px)' }}
+            onClick={() => setSelectedPoint(null)}
+          >
+            <div
+              className="bg-slate-900 border border-white/10 rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="p-6 border-b border-white/10 flex items-center justify-between bg-white/5">
+                <div>
+                  <h3 className="text-2xl font-bold text-white tracking-tight">Detailed AI Reasoning</h3>
+                  <p className="text-emerald-400 font-medium mt-1">
+                    Settlement Date: {format(new Date(selectedPoint.date), 'MMMM do, yyyy')} | Actual Close: ${selectedPoint.actual_close.toFixed(2)}
+                  </p>
+                </div>
+                <button
+                  onClick={() => setSelectedPoint(null)}
+                  className="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-400 hover:text-white"
+                >
+                  <X className="w-6 h-6" />
+                </button>
               </div>
-              <button 
-                onClick={() => setSelectedPoint(null)}
-                className="p-2 hover:bg-white/10 rounded-full transition-colors text-slate-400 hover:text-white"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
 
-            <div className="p-6 overflow-y-auto overflow-x-hidden flex-1 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 mt-2">
-                {models.map((model, idx) => {
-                  const pred = selectedPoint.predictions?.[model];
-                  if (!pred) return null;
-                  const color = COLORS[idx % COLORS.length]; 
-                  return (
-                    <div key={model} className="bg-black/20 rounded-xl p-5 border border-white/5 relative h-full flex flex-col">
-                      <div className="flex items-center justify-between mb-3 border-b border-white/10 pb-3">
-                        <p className="font-bold text-base" style={{ color }}>{model.split('/').pop() || model}</p>
-                        <div className="text-right">
-                          <p className="text-white font-mono text-sm">${pred.predict_target_price.toFixed(2)}</p>
-                          <p className="text-xs text-slate-400">Target</p>
+              {/* Body */}
+              <div className="p-6 overflow-y-auto flex-1">
+                {/* Model cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                  {models.map((model, idx) => {
+                    const pred = selectedPoint.predictions?.[model];
+                    if (!pred) return null;
+                    const color = COLORS[idx % COLORS.length];
+                    return (
+                      <div key={model} className="bg-black/20 rounded-xl p-5 border border-white/5 flex flex-col">
+                        <div className="flex items-center justify-between mb-3 border-b border-white/10 pb-3">
+                          <p className="font-bold text-base" style={{ color }}>
+                            {model.split('/').pop() || model}
+                          </p>
+                          <div className="text-right">
+                            <p className="text-white font-mono text-sm">${pred.predict_target_price.toFixed(2)}</p>
+                            <p className="text-xs text-slate-400">Target</p>
+                          </div>
+                        </div>
+                        <div className="text-sm text-slate-300 italic leading-relaxed flex-1">
+                          &ldquo;{pred.reasoning}&rdquo;
+                        </div>
+                        <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
+                          <span>
+                            Error:{' '}
+                            <span className={pred.delta > 0 ? 'text-rose-400 font-medium' : 'text-emerald-400 font-medium'}>
+                              ${Math.abs(pred.delta).toFixed(2)}
+                            </span>
+                          </span>
+                          <span>
+                            Alloc: <span className="text-emerald-400 font-medium">{pred.portfolio_allocation}%</span>
+                          </span>
                         </div>
                       </div>
-                      <div className="text-sm text-slate-300 italic leading-relaxed flex-1">
-                        "{pred.reasoning}"
-                      </div>
-                      <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center text-xs text-slate-400">
-                        <span>Error: <span className={pred.delta > 0 ? "text-rose-400 font-medium" : "text-emerald-400 font-medium"}>${Math.abs(pred.delta).toFixed(2)}</span></span>
-                        <span>Alloc: <span className="text-emerald-400 font-medium">{pred.portfolio_allocation}%</span></span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {(selectedPoint.eiaSummary || (selectedPoint.news && selectedPoint.news.length > 0)) && (
-                <div className="bg-slate-800/50 rounded-xl p-6 border border-white/5 mx-2 mb-2">
-                  <h4 className="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">Provided Context</h4>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {selectedPoint.eiaSummary && (
-                      <div>
-                        <p className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3 flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                          EIA Supply Data
-                        </p>
-                        <p className="text-sm text-slate-300 leading-relaxed font-mono">
-                          {selectedPoint.eiaSummary}
-                        </p>
-                      </div>
-                    )}
-
-                    {selectedPoint.news && selectedPoint.news.length > 0 && (
-                      <div>
-                        <p className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3 flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-purple-500"></span>
-                          Financial News Headlines
-                        </p>
-                        <ul className="text-sm text-slate-300 space-y-4">
-                          {selectedPoint.news.map((n, i) => (
-                            <li key={i} className="bg-black/20 p-3 rounded-lg border border-white/5">
-                              <p className="font-semibold text-white mb-1 line-clamp-2">{n.title}</p>
-                              {n.snippet && n.snippet !== n.title && (
-                                <p className="text-xs text-slate-400 line-clamp-3">{n.snippet}</p>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </div>
+                    );
+                  })}
                 </div>
-              )}
 
+                {/* Context card */}
+                {(selectedPoint.eiaSummary || (selectedPoint.news && selectedPoint.news.length > 0)) && (
+                  <div className="bg-slate-800/50 rounded-xl p-6 border border-white/5">
+                    <h4 className="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">Provided Context</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {selectedPoint.eiaSummary && (
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-blue-500" />
+                            EIA Supply Data
+                          </p>
+                          <p className="text-sm text-slate-300 leading-relaxed font-mono">{selectedPoint.eiaSummary}</p>
+                        </div>
+                      )}
+                      {selectedPoint.news && selectedPoint.news.length > 0 && (
+                        <div>
+                          <p className="text-xs uppercase tracking-wider text-slate-500 font-bold mb-3 flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-purple-500" />
+                            Financial News Headlines
+                          </p>
+                          <ul className="text-sm text-slate-300 space-y-3">
+                            {selectedPoint.news.map((n, i) => (
+                              <li key={i} className="bg-black/20 p-3 rounded-lg border border-white/5">
+                                <p className="font-semibold text-white mb-1 line-clamp-2">{n.title}</p>
+                                {n.snippet && n.snippet !== n.title && (
+                                  <p className="text-xs text-slate-400 line-clamp-3">{n.snippet}</p>
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </div>
-      )}
-
+          </div>,
+          document.body
+        )}
     </div>
   );
 }
