@@ -83,7 +83,6 @@ export default function PriceChart({ data, models }: PriceChartProps) {
               content={<CustomTooltip />} 
               wrapperStyle={{ zIndex: 100, outline: 'none' }} 
               allowEscapeViewBox={{ x: false, y: true }}
-              position={{ y: -50 }}
               cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2 }}
             />
             <Legend wrapperStyle={{ paddingTop: '20px', cursor: 'pointer' }} iconType="circle" />

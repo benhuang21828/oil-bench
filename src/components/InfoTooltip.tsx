@@ -7,39 +7,43 @@ export default function InfoTooltip({ label, content }: { label: string, content
   const triggerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    if (show && triggerRef.current && tooltipRef.current) {
-      const triggerRect = triggerRef.current.getBoundingClientRect();
-      const tooltipRect = tooltipRef.current.getBoundingClientRect();
-      
-      let top = triggerRect.bottom + 8;
-      let left = triggerRect.left;
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!show || !tooltipRef.current) return;
+    
+    const tooltipRect = tooltipRef.current.getBoundingClientRect();
+    
+    let top = e.clientY + 15;
+    let left = e.clientX + 15;
 
-      // Ensure tooltip doesn't get cut off vertically by viewport
-      if (top + tooltipRect.height > window.innerHeight - 10) {
-        // Pop it UP instead of DOWN
-        top = triggerRect.top - tooltipRect.height - 8;
-      }
-      
-      // Ensure tooltip doesn't get cut off horizontally by viewport
-      if (left + tooltipRect.width > window.innerWidth - 10) {
-        left = window.innerWidth - tooltipRect.width - 10;
-      }
-      
-      // Prevent left edge clipping
-      if (left < 10) {
-        left = 10;
-      }
-
-      setCoords({ top, left });
+    // Ensure tooltip doesn't get cut off vertically by viewport
+    if (top + tooltipRect.height > window.innerHeight - 10) {
+      // Pop it UP instead of DOWN
+      top = e.clientY - tooltipRect.height - 15;
     }
-  }, [show]);
+    
+    // Ensure tooltip doesn't get cut off horizontally by viewport
+    if (left + tooltipRect.width > window.innerWidth - 10) {
+      left = window.innerWidth - tooltipRect.width - 10;
+    }
+    
+    // Prevent left edge clipping
+    if (left < 10) {
+      left = 10;
+    }
+
+    setCoords({ top, left });
+  };
 
   return (
     <div 
       className="inline-flex items-center gap-1 cursor-help border-b border-dashed border-slate-500 pb-[1px]"
-      onMouseEnter={() => setShow(true)}
+      onMouseEnter={(e) => {
+        setShow(true);
+        // Initial coords
+        setCoords({ top: e.clientY + 15, left: e.clientX + 15 });
+      }}
       onMouseLeave={() => setShow(false)}
+      onMouseMove={handleMouseMove}
       ref={triggerRef}
     >
       {label} <span className="text-slate-500 text-[10px] bg-slate-800 rounded-full px-1">(?)</span>

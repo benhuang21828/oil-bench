@@ -10,9 +10,12 @@ type SortDirection = 'asc' | 'desc';
 
 interface LeaderboardClientProps {
   metrics: MetricsSummary[];
+  baselinePnL: number;
+  startDate?: string;
+  endDate?: string;
 }
 
-export default function LeaderboardClient({ metrics }: LeaderboardClientProps) {
+export default function LeaderboardClient({ metrics, baselinePnL, startDate, endDate }: LeaderboardClientProps) {
   // Pre-calculate base rank (based on default P&L sort) so "rank" is a consistent property if we want to sort by it
   const baseMetrics = [...metrics].sort((a, b) => (b.simulatedPnL || 0) - (a.simulatedPnL || 0)).map((m, idx) => ({
     ...m,
@@ -78,6 +81,17 @@ export default function LeaderboardClient({ metrics }: LeaderboardClientProps) {
           Model Leaderboard
         </h2>
         <p className="text-sm text-slate-400 mt-1">{getSubtext()}</p>
+        
+        {/* Baseline Reference Row */}
+        <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between bg-white/5 py-2 px-3 rounded-lg border border-white/5">
+           <div>
+             <span className="text-sm font-semibold text-slate-200">Baseline Target (Buy & Hold)</span>
+             <p className="text-xs text-slate-400 mt-0.5">Holding $10,000 of WTI Crude from {startDate} to {endDate}</p>
+           </div>
+           <span className={`font-bold text-lg ${baselinePnL >= 10000 ? 'text-emerald-400' : 'text-rose-400'}`}>
+             ${baselinePnL.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}
+           </span>
+        </div>
       </div>
 
       <div className="flex-1 overflow-x-auto overflow-y-auto p-2">
