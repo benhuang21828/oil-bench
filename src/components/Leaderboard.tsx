@@ -32,7 +32,7 @@ export default async function Leaderboard() {
       endDate = sortedDates[sortedDates.length - 1];
       const firstData = JSON.parse(await fs.readFile(path.join(pricesDir, `${startDate}.json`), 'utf8'));
       const lastData = JSON.parse(await fs.readFile(path.join(pricesDir, `${endDate}.json`), 'utf8'));
-      baselinePnL = 10000 * (lastData.close / firstData.close);
+      baselinePnL = 10000 * (lastData.cl.price / firstData.cl.price);
     }
   } catch (e) {}
 
