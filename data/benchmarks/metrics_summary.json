@@ -18,9 +18,9 @@
   {
     "model": "minimax/minimax-m2.5",
     "totalPredictions": 52,
-    "mae": 3.075769283588116,
-    "rmse": 9.262105150672467,
-    "averageDeltaVal": -1.3842303408109229,
-    "simulatedPnL": 14648.95
+    "mae": 1.8671154374342696,
+    "rmse": 2.8514179018495738,
+    "averageDeltaVal": -0.17557649465707664,
+    "simulatedPnL": 14636.94
   }
 ]

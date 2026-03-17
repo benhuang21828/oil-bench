@@ -304,12 +304,12 @@
     "prediction": {
       "date": "2026-02-05T00:00:00.000Z",
       "model": "minimax/minimax-m2.5",
-      "predict_target_price": 0,
-      "portfolio_allocation": 50,
-      "reasoning": "Failed to parse reasoning."
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 30,
+      "reasoning": "Large U.S. crude inventories and a stronger dollar are pressure points that typically push prices lower. However, a low active rig count and improving market sentiment provide some support, limiting the downside. Consequently, the settlement price is expected to slip modestly from yesterday’s close, landing near $62.85."
     },
     "actual_close": 63.54999923706055,
-    "delta": -63.54999923706055
+    "delta": -0.6999992370605455
   },
   {
     "targetDate": "2026-02-06",
