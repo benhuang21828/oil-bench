@@ -46,5 +46,13 @@
     "rmse": 2.5927866231969365,
     "averageDeltaVal": -0.37903803311861384,
     "simulatedPnL": 14852.07
+  },
+  {
+    "model": "x-ai/grok-4.20-beta",
+    "totalPredictions": 52,
+    "mae": 1.848653981135442,
+    "rmse": 2.6669422052524454,
+    "averageDeltaVal": 0.43173119765061646,
+    "simulatedPnL": 14463.94
   }
 ]
