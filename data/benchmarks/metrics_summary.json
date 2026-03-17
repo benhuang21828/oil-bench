@@ -30,5 +30,13 @@
     "rmse": 2.508498541491411,
     "averageDeltaVal": 0.1975004284198468,
     "simulatedPnL": 15292.54
+  },
+  {
+    "model": "moonshotai/kimi-k2.5",
+    "totalPredictions": 52,
+    "mae": 1.6421150853083686,
+    "rmse": 2.526222313297901,
+    "averageDeltaVal": -0.013268802349383026,
+    "simulatedPnL": 14952.46
   }
 ]
