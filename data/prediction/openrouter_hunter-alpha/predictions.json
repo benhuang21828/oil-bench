@@ -1,0 +1,636 @@
+[
+  {
+    "targetDate": "2026-01-01",
+    "prediction": {
+      "date": "2026-01-01T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 56.85,
+      "portfolio_allocation": 20,
+      "reasoning": "Bearish market sentiment dominates, with the steepest annual fall since Covid and a projected 2026 oil glut suggesting continued downward pressure, outweighing isolated bullish factors like AI-driven demand. The modest DXY uptick further supports near-term weakness in crude prices. A small allocation allows for cautious positioning in case of a geopolitical surprise or short-covering rally, but the risk-reward favors a defensive stance."
+    },
+    "actual_close": 57.31999969482422,
+    "delta": -0.46999969482421733
+  },
+  {
+    "targetDate": "2026-01-02",
+    "prediction": {
+      "date": "2026-01-02T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 57.4,
+      "portfolio_allocation": 35,
+      "reasoning": "The market appears range-bound near $57 support with bearish fundamentals from high inventories and steady OPEC+ output outweighing any geopolitical premium from Saudi-UAE tensions. The modest DXY uptick adds slight headwinds, making a sustained breakout unlikely, so I predict a small rebound to $57.40 as traders test resistance ahead of the OPEC+ meeting. I allocate 35% to capture potential short-term upside while maintaining a defensive posture given the uncertain supply outlook and bearish technical sentiment."
+    },
+    "actual_close": 57.31999969482422,
+    "delta": 0.08000030517577983
+  },
+  {
+    "targetDate": "2026-01-03",
+    "prediction": {
+      "date": "2026-01-03T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 57.89,
+      "portfolio_allocation": 40,
+      "reasoning": "The geopolitical headlines from Venezuela and the Middle East are creating significant upward pressure on supply risk expectations, which will likely dominate trading sentiment and push prices higher. However, the modest fundamental backdrop of stable OPEC+ policy and relatively high U.S. crude inventories caps the immediate upside, suggesting a measured rally rather than a spike. Therefore, I predict a settlement at $57.89 and allocate 40% of the portfolio to capture this upside while maintaining a cash buffer to manage the inherent volatility."
+    },
+    "actual_close": 57.130001068115234,
+    "delta": 0.7599989318847662
+  },
+  {
+    "targetDate": "2026-01-06",
+    "prediction": {
+      "date": "2026-01-06T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 56.45,
+      "portfolio_allocation": 15,
+      "reasoning": "The bearish momentum from yesterday's 2.04% drop, coupled with strong US dollar strength and news highlighting ample global supply expectations, suggests continued downward pressure on WTI. While Venezuelan geopolitical uncertainty introduces volatility, the dominant theme is oversupply and weak demand, making a further modest decline the most probable outcome. A small short position captures the potential downside while limiting exposure to unexpected geopolitical shocks."
+    },
+    "actual_close": 55.9900016784668,
+    "delta": 0.45999832153320597
+  },
+  {
+    "targetDate": "2026-01-07",
+    "prediction": {
+      "date": "2026-01-07T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 54.89,
+      "portfolio_allocation": 15,
+      "reasoning": "The market is in a clear oversupply situation, with news of a 'supply gut' and OPEC+ struggling with compliance despite compensation cuts. The recent 2% drop and negative sentiment suggest further downside pressure is likely. I'm maintaining a minimal long position as a contrarian hedge against a potential short-term bounce, but the dominant trend is bearish."
+    },
+    "actual_close": 57.7599983215332,
+    "delta": -2.8699983215332026
+  },
+  {
+    "targetDate": "2026-01-08",
+    "prediction": {
+      "date": "2026-01-08T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 58.45,
+      "portfolio_allocation": 65,
+      "reasoning": "The previous session's strong +3.16% gain, driven by energy demand strength and index buying, suggests bullish momentum may extend slightly into today's settlement. While the US Dollar Index rose 0.25% (a headwind) and Iraqi supply expansion is on the horizon, the immediate geopolitical risk from the US seizure of Russian/Venezuelan tankers could support prices. I predict a modest continuation higher to $58.45 and allocate 65% of the portfolio, balancing the positive momentum against the stronger dollar and upcoming supply news."
+    },
+    "actual_close": 59.119998931884766,
+    "delta": -0.6699989318847628
+  },
+  {
+    "targetDate": "2026-01-09",
+    "prediction": {
+      "date": "2026-01-09T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 58.85,
+      "portfolio_allocation": 30,
+      "reasoning": "Yesterday's 2.35% gain suggests potential for profit-taking amid mixed signals: the US-Venezuela deal could ease supply concerns, but reduced Russian production and high inventories point to balanced fundamentals. The rising DXY adds headwinds for dollar-denominated oil. I anticipate a modest pullback to $58.85, reflecting cautious consolidation after recent gains, and a 30% allocation balances opportunity with risk."
+    },
+    "actual_close": 59.119998931884766,
+    "delta": -0.2699989318847642
+  },
+  {
+    "targetDate": "2026-01-10",
+    "prediction": {
+      "date": "2026-01-10T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 59.75,
+      "portfolio_allocation": 30,
+      "reasoning": "The market is reacting to geopolitical tensions regarding Venezuela and Iran, but the strong US Dollar and ample US crude inventories create a headwind. Technicals show a bounce from oversold conditions, but the lack of a clear catalyst for a major rally suggests a modest rebound is most likely. The allocation is conservative due to the conflicting signals between geopolitical risk and bearish fundamentals."
+    },
+    "actual_close": 61.150001525878906,
+    "delta": -1.4000015258789062
+  },
+  {
+    "targetDate": "2026-01-13",
+    "prediction": {
+      "date": "2026-01-13T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 75,
+      "reasoning": "The market is in a bullish trend driven by Iranian supply fears and a technical breakout above the $61 level, suggesting momentum will push prices higher. While the strong dollar and high stockpiles provide a fundamental headwind, the geopolitical premium is dominating sentiment. I'm allocating 75% to oil to capture the upside, leaving some cash as a buffer against potential pullbacks."
+    },
+    "actual_close": 62.02000045776367,
+    "delta": 0.8299995422363295
+  },
+  {
+    "targetDate": "2026-01-14",
+    "prediction": {
+      "date": "2026-01-14T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 61.85,
+      "portfolio_allocation": 30,
+      "reasoning": "The market shows bearish pressure with rising U.S. crude stocks and a steady dollar, though OPEC's positive long-term demand outlook provides some support. I expect a modest pullback from yesterday's close as near-term inventory concerns outweigh the longer-term narrative. My allocation is cautious at 30% due to the mixed signals and current volatility."
+    },
+    "actual_close": 59.189998626708984,
+    "delta": 2.660001373291017
+  },
+  {
+    "targetDate": "2026-01-15",
+    "prediction": {
+      "date": "2026-01-15T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 58.5,
+      "portfolio_allocation": 30,
+      "reasoning": "The sharp 4.56% decline yesterday and a rising DXY create immediate bearish pressure, suggesting a technical rebound is unlikely in the short term. While OPEC's long-term demand outlook remains supportive, near-term market sentiment is dominated by oversupply fears and the strong dollar, pointing to further consolidation or a slight dip. I predict a modest decline to $58.50 and maintain a cautious 30% allocation to capture potential upside while limiting exposure to continued volatility."
+    },
+    "actual_close": 59.439998626708984,
+    "delta": -0.9399986267089844
+  },
+  {
+    "targetDate": "2026-01-16",
+    "prediction": {
+      "date": "2026-01-16T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 59.3,
+      "portfolio_allocation": 15,
+      "reasoning": "WTI is showing slight weakness with the DXY up and geopolitical news mixed, suggesting a modest pullback from the $59.44 close. The EIA stock data is neutral, and the market appears range-bound with balanced OPEC views. Given the uncertainty, a small long position captures potential upside while limiting risk."
+    },
+    "actual_close": 59.439998626708984,
+    "delta": -0.13999862670898722
+  },
+  {
+    "targetDate": "2026-01-17",
+    "prediction": {
+      "date": "2026-01-17T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 58.95,
+      "portfolio_allocation": 35,
+      "reasoning": "The dominant market narrative indicates a supply glut and falling prices, with the recent EIA inventory build and Saudi Aramco's stock reaction confirming bearish sentiment outweighing geopolitical tensions. Given the 0.42% decline and DXY strength, I expect the downward pressure to continue, but the significant China-Iran dependency provides a floor that prevents a sharper collapse. A moderate short-side allocation balances the high-probability bearish bias against the risk of unexpected Middle East supply disruptions."
+    },
+    "actual_close": 60.34000015258789,
+    "delta": -1.3900001525878878
+  },
+  {
+    "targetDate": "2026-01-20",
+    "prediction": {
+      "date": "2026-01-20T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 60.85,
+      "portfolio_allocation": 60,
+      "reasoning": "Yesterday's rally, driven by a weaker dollar and Black Sea disruptions, suggests upward momentum may persist in the short term, though the broader oversupply narrative from Fitch and rising Middle East production cap significant gains. I'm predicting a modest continuation to $60.85 as geopolitical tensions provide a floor while oversupply concerns limit the ceiling. A 60% allocation reflects a balanced view, leaning into the near-term positive momentum but maintaining substantial cash reserves to hedge against the dominant oversupply risk."
+    },
+    "actual_close": 60.619998931884766,
+    "delta": 0.2300010681152358
+  },
+  {
+    "targetDate": "2026-01-21",
+    "prediction": {
+      "date": "2026-01-21T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 60.35,
+      "portfolio_allocation": 25,
+      "reasoning": "The IEA reports a significant surplus in Q1 2026, which is a strong bearish fundamental factor likely to pressure prices despite a modest upward revision to demand growth. The slight increase in the US Dollar Index (DXY) also provides a minor headwind for dollar-denominated oil. However, the oversupply narrative may not fully dominate today's session, leading to a modest decline rather than a sharp drop, prompting a cautious, low-allocation position."
+    },
+    "actual_close": 59.36000061035156,
+    "delta": 0.9899993896484389
+  },
+  {
+    "targetDate": "2026-01-22",
+    "prediction": {
+      "date": "2026-01-22T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 58.8,
+      "portfolio_allocation": 35,
+      "reasoning": "The 2% drop on geopolitical de-escalation (Trump softening threats) suggests bearish momentum may persist into the next session, but Saudi Aramco's pushback against the glut narrative provides some fundamental support. With the dollar down (bullish for oil) but US stocks high and rig count stable, I expect a modest further decline before finding a floor. I'm allocating 35% to oil to position for a potential bounce from oversold conditions while managing risk amid conflicting signals."
+    },
+    "actual_close": 61.06999969482422,
+    "delta": -2.2699996948242216
+  },
+  {
+    "targetDate": "2026-01-23",
+    "prediction": {
+      "date": "2026-01-23T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 63.52,
+      "portfolio_allocation": 65,
+      "reasoning": "The current price action is driven primarily by geopolitical risk premium from Trump's renewed Iran threats and a weaker dollar, which is counteracting the bearish fundamental data of elevated U.S. inventories. While the EIA report shows significant stocks and rig counts remain active, the market is currently focused on supply disruption fears, suggesting a continuation of the rebound from the $61.07 close. Given the conflicting signals, I expect a moderate upward move, but not a full retest of the $64.62 mentioned in the news, leading to a cautious but bullish allocation."
+    },
+    "actual_close": 61.06999969482422,
+    "delta": 2.4500003051757844
+  },
+  {
+    "targetDate": "2026-01-24",
+    "prediction": {
+      "date": "2026-01-24T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 61.45,
+      "portfolio_allocation": 65,
+      "reasoning": "Yesterday's 2.88% jump on Iran tensions and a weaker dollar creates momentum, but the large EIA stock build and rig count suggest ample supply, capping aggressive upside. I predict a modest continuation of the rally, closing slightly higher at $61.45. A 65% allocation captures potential geopolitical upside while maintaining significant cash to hedge against a potential pullback from the reported inventory surplus."
+    },
+    "actual_close": 62.38999938964844,
+    "delta": -0.9399993896484347
+  },
+  {
+    "targetDate": "2026-01-27",
+    "prediction": {
+      "date": "2026-01-27T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 60.85,
+      "portfolio_allocation": 15,
+      "reasoning": "The market sentiment is bearish, with WTI retreating despite supply disruptions and geopolitical tensions, indicating weak demand is the dominant driver. The EIA stocks report shows ample supply, and the strong U.S. dollar weakness is not enough to offset the oversupply narrative and clean energy transition pressures. I predict a modest further decline to $60.85, and with high uncertainty, I allocate a minimal 15% to oil, maintaining most of the portfolio in cash to preserve capital."
+    },
+    "actual_close": 63.209999084472656,
+    "delta": -2.359999084472655
+  },
+  {
+    "targetDate": "2026-01-28",
+    "prediction": {
+      "date": "2026-01-28T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 64.15,
+      "portfolio_allocation": 20,
+      "reasoning": "While geopolitical tensions and supply disruptions from U.S. storms have pushed prices to recent highs around $66.91, the reported EIA inventory build and Saudi Arabia potentially offering discounts for March crude suggest bearish fundamentals may temper further gains, leading to a modest retreat from the peak. The strong U.S. dollar and current rig count data also provide headwinds, indicating limited upside potential for the immediate next session. Given the conflicting signals—short-term supply shock versus longer-term oversupply concerns—I expect a slight pullback from recent highs, warranting a cautious, small allocation to oil."
+    },
+    "actual_close": 65.41999816894531,
+    "delta": -1.2699981689453068
+  },
+  {
+    "targetDate": "2026-01-29",
+    "prediction": {
+      "date": "2026-01-29T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 67.15,
+      "portfolio_allocation": 75,
+      "reasoning": "Geopolitical risk premiums are driving prices higher, with multiple sources reporting a surge to a four-month high of $69.51 on supply disruption fears from potential US action against Iran. This strong momentum, combined with a weakening US dollar, suggests further upside pressure in the near term. My allocation of 75% reflects a strong bullish bias while maintaining a modest cash reserve to manage volatility around these elevated levels."
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 1.9400009155273494
+  },
+  {
+    "targetDate": "2026-01-30",
+    "prediction": {
+      "date": "2026-01-30T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 65.85,
+      "portfolio_allocation": 60,
+      "reasoning": "Geopolitical tensions with Iran and the expected OPEC+ pause on production increases provide fundamental support, but the strong US Dollar and recent price jump to $70 may cap further gains. The settlement price is predicted to be $65.85, reflecting a modest upward bias from yesterday's close of $65.21. A 60% portfolio allocation balances the supportive supply/demand dynamics against the risk of a short-term pullback after the recent rally."
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 0.6400009155273381
+  },
+  {
+    "targetDate": "2026-01-31",
+    "prediction": {
+      "date": "2026-01-31T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 66.5,
+      "portfolio_allocation": 75,
+      "reasoning": "Geopolitical tensions, particularly US-Iran concerns, are providing a bullish catalyst that should push WTI higher in the next session, outweighing the bearish pressure from a rising US Dollar Index. OPEC's decision to maintain output discipline, despite prices above $70, supports the upside by limiting supply growth. I predict a settlement price of $66.50 and allocate 75% of the portfolio to capture this upward momentum, leaving some cash for risk management."
+    },
+    "actual_close": 63.209999084472656,
+    "delta": 3.2900009155273438
+  },
+  {
+    "targetDate": "2026-02-03",
+    "prediction": {
+      "date": "2026-02-03T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 30,
+      "reasoning": "The market is caught between a persistent oversupply narrative (as highlighted by the $55–$65 range forecast) and geopolitical safe-haven demand that could provide a temporary floor. With crude closing at $63.21 yesterday and the DXY slightly down, I expect a modest pullback toward the lower end of the forecasted range as bearish fundamentals dominate. I'm allocating 30% to oil, taking a cautious long position to capture any geopolitical rebound while maintaining significant cash to hedge against the strong downside risk from oversupply."
+    },
+    "actual_close": 65.13999938964844,
+    "delta": -2.289999389648436
+  },
+  {
+    "targetDate": "2026-02-04",
+    "prediction": {
+      "date": "2026-02-04T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 64.85,
+      "portfolio_allocation": 30,
+      "reasoning": "The 3% drop on Thursday following the US-Iran talks announcement indicates immediate bearish sentiment, with the dollar's slight uptrend adding further headwinds. However, the report's mention of ongoing uncertainty and a potential risk premium suggests some support may hold, preventing a complete collapse. Therefore, I predict a modest further decline but with limited downside, prompting a cautious, small long position to capitalize on any potential volatility or rebound."
+    },
+    "actual_close": 63.290000915527344,
+    "delta": 1.5599990844726506
+  },
+  {
+    "targetDate": "2026-02-05",
+    "prediction": {
+      "date": "2026-02-05T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 64.15,
+      "portfolio_allocation": 20,
+      "reasoning": "Despite yesterday's sharp decline and easing geopolitical tensions, fundamental indicators suggest a modest rebound; StanChart's improving sentiment, declining U.S. inventories, and strong Middle East growth prospects support a slight price recovery, though oversupply fears and a strong dollar limit upside. I predict a modest bounce to $64.15, reflecting cautious optimism but constrained by market headwinds. I allocate 20% to oil, balancing potential recovery against persistent volatility and weak momentum."
+    },
+    "actual_close": 63.54999923706055,
+    "delta": 0.6000007629394588
+  },
+  {
+    "targetDate": "2026-02-06",
+    "prediction": {
+      "date": "2026-02-06T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 63.15,
+      "portfolio_allocation": 40,
+      "reasoning": "WTI closed at $63.55 with a slight downward trend, and the primary news driver is de-escalating geopolitical risk from U.S.-Iran nuclear talks, which reduces the risk premium and points to a bearish bias for today's session. The EIA stocks report shows a moderately high inventory level, adding to the fundamental pressure. Therefore, I predict a modest decline to $63.15 and allocate 40% of the portfolio to oil, maintaining a cautious position given the uncertain but currently easing geopolitical landscape."
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -0.3999992370605483
+  },
+  {
+    "targetDate": "2026-02-07",
+    "prediction": {
+      "date": "2026-02-07T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 64.25,
+      "portfolio_allocation": 35,
+      "reasoning": "The market shows mixed signals with bearish oversupply concerns partially offset by geopolitical risks from Iran-US tensions and dollar weakness. The slight uptick in the previous session and reports of easing oversupply suggest potential for modest upward movement, though lingering bearish risks limit conviction. A cautious allocation of 35% balances the potential for a small price recovery with the need to manage downside risk in an uncertain environment."
+    },
+    "actual_close": 63.959999084472656,
+    "delta": 0.29000091552734375
+  },
+  {
+    "targetDate": "2026-02-10",
+    "prediction": {
+      "date": "2026-02-10T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 64.15,
+      "portfolio_allocation": 60,
+      "reasoning": "The closing price will likely see a modest rebound from yesterday's decline due to lingering Middle East tensions and stable OPEC demand forecasts, while US inventory data and a slightly weaker dollar provide mild support. The $64.15 target reflects a cautious upward move balancing these factors against the broader context of cooling US drilling and stable prices. I allocate 60% of the portfolio to oil to capture potential upside while maintaining cash for risk management amid geopolitical uncertainty."
+    },
+    "actual_close": 64.62999725341797,
+    "delta": -0.47999725341796307
+  },
+  {
+    "targetDate": "2026-02-11",
+    "prediction": {
+      "date": "2026-02-11T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 65.4,
+      "portfolio_allocation": 85,
+      "reasoning": "Geopolitical tensions in the Middle East, particularly between the U.S. and Iran, are providing strong upward pressure on oil prices, outweighing the bearish signal from a large U.S. crude stocks build. OPEC+ production declines further tighten supply expectations, supporting a continuation of the recent bullish momentum. The predicted settlement price of $65.40 reflects a modest gain from yesterday's close, aligning with the market's risk-on sentiment, warranting a high allocation to capture potential upside."
+    },
+    "actual_close": 62.84000015258789,
+    "delta": 2.559999847412115
+  },
+  {
+    "targetDate": "2026-02-12",
+    "prediction": {
+      "date": "2026-02-12T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 63.15,
+      "portfolio_allocation": 30,
+      "reasoning": "The IEA's downward revision of 2026 demand growth and bearish inventory data create a near-term headwind, but Middle East tensions provide a floor. I expect a modest rebound from yesterday's oversold close, but not a sustained rally given the fundamentally weak outlook. I'm taking a cautious long position to capture a potential technical bounce while limiting exposure to further downside risk."
+    },
+    "actual_close": 62.88999938964844,
+    "delta": 0.2600006103515611
+  },
+  {
+    "targetDate": "2026-02-13",
+    "prediction": {
+      "date": "2026-02-13T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 62.15,
+      "portfolio_allocation": 15,
+      "reasoning": "Bearish OPEC+ signals of increased output from April, combined with softer demand outlook and rising US inventories, create a headwind for prices, suggesting a continuation of the recent downward trend. The minor DXY decline provides minimal offset. I'm maintaining a low allocation due to the negative fundamental and geopolitical news flow, expecting a modest price decline."
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.7399993896484389
+  },
+  {
+    "targetDate": "2026-02-14",
+    "prediction": {
+      "date": "2026-02-14T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 62.45,
+      "portfolio_allocation": 25,
+      "reasoning": "The IEA's projection of supply exceeding demand by 3.73mbpd in 2026 creates a bearish fundamental backdrop, outweighing modest demand growth and geopolitical tensions. OPEC+'s potential April output resumption adds to near-term oversupply concerns, likely capping upside despite a weaker dollar. Given this bearish tilt, a modest 25% allocation is prudent, with a predicted settlement slightly lower as the market digests the supply outlook."
+    },
+    "actual_close": 62.33000183105469,
+    "delta": 0.11999816894531534
+  },
+  {
+    "targetDate": "2026-02-17",
+    "prediction": {
+      "date": "2026-02-17T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 61.85,
+      "portfolio_allocation": 30,
+      "reasoning": "WTI is likely to face downward pressure from a persistent supply glut and potential diplomatic progress with Iran, which could ease Middle East tensions and add barrels to the market. However, steady demand and the recent price dip may provide some support, preventing a sharp decline. Given the uncertain geopolitical backdrop and bearish fundamental signals, a modest short exposure with a defensive allocation is prudent."
+    },
+    "actual_close": 65.19000244140625,
+    "delta": -3.3400024414062486
+  },
+  {
+    "targetDate": "2026-02-18",
+    "prediction": {
+      "date": "2026-02-18T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 66.85,
+      "portfolio_allocation": 70,
+      "reasoning": "The 4% jump driven by U.S.-Iran tensions establishes strong upward momentum, which is likely to persist into today's session as geopolitical risk premiums remain elevated. Record Asian imports provide fundamental demand support, offsetting the modestly stronger dollar and reinforcing the bullish technical breakout. I am allocating 70% to capture this continuation move while retaining 30% cash to manage volatility around potential diplomatic headlines."
+    },
+    "actual_close": 66.43000030517578,
+    "delta": 0.41999969482421307
+  },
+  {
+    "targetDate": "2026-02-19",
+    "prediction": {
+      "date": "2026-02-19T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 67.85,
+      "portfolio_allocation": 70,
+      "reasoning": "Despite bearish fundamental data (rising supply, falling demand, strong USD), the market's primary driver today is geopolitical risk premium from escalating US-Iran tensions, which have already caused a significant price spike and will likely sustain upward pressure on the settlement price. The price action suggests momentum is overriding the bearish fundamentals, leading to a higher expected close, though the magnitude of the move may be moderated by the underlying supply/demand imbalance. Therefore, a moderate overweight allocation captures the upward bias from the geopolitical news while hedging against the possibility of a sharp reversal if tensions de-escalate or if the market refocuses on the oversupplied fundamentals."
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 1.4600006103515568
+  },
+  {
+    "targetDate": "2026-02-20",
+    "prediction": {
+      "date": "2026-02-20T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 68.85,
+      "portfolio_allocation": 75,
+      "reasoning": "Geopolitical risk premium is elevated due to imminent US military threats against Iran, a major oil producer, which historically causes sharp price spikes. The weak US Dollar Index provides additional tailwind for dollar-denominated commodities. However, high US crude inventories and a relatively stable rig count limit upside potential, prompting a high but not maximal allocation."
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 2.460000610351557
+  },
+  {
+    "targetDate": "2026-02-21",
+    "prediction": {
+      "date": "2026-02-21T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 67.15,
+      "portfolio_allocation": 65,
+      "reasoning": "Geopolitical tensions surrounding Iran and a surprise weekly gain are providing upward momentum, overriding the narrative of a supply glut. The weakening US Dollar adds a tailwind, while the EIA stock data, though elevated, is not spooking the market today. Consequently, I expect a rally above the recent resistance, settling near $67.15, warranting a moderately aggressive long position."
+    },
+    "actual_close": 65.62999725341797,
+    "delta": 1.520002746582037
+  },
+  {
+    "targetDate": "2026-02-24",
+    "prediction": {
+      "date": "2026-02-24T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 66.15,
+      "portfolio_allocation": 75,
+      "reasoning": "WTI is likely to rebound slightly from yesterday's decline due to heightened geopolitical risk premiums from Middle East tensions and the Venezuela crisis, which are increasing shipping costs and supply uncertainty. The strong Middle East export volumes may cap the upside, but the overall risk environment supports a modest price increase. Portfolio allocation of 75% balances the upside potential with the caution warranted by the DXY's strength and potential demand concerns from high shipping costs."
+    },
+    "actual_close": 65.41999816894531,
+    "delta": 0.7300018310546932
+  },
+  {
+    "targetDate": "2026-02-25",
+    "prediction": {
+      "date": "2026-02-25T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 65.98,
+      "portfolio_allocation": 65,
+      "reasoning": "The bearish pressure from a large U.S. crude stock build and potential OPEC+ output increases is offset by escalating geopolitical risk, as Iran rushes to load oil and Saudi Arabia plans to boost exports in anticipation of supply disruption from a potential U.S.-Iran conflict. This tension, combined with a weakening dollar, suggests a moderate upward bias for prices in the near term, though volatility is expected. The 65% allocation reflects a cautious bullish stance, capturing potential upside from geopolitical premium while maintaining a cash buffer to manage risk."
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 0.7700009155273477
+  },
+  {
+    "targetDate": "2026-02-26",
+    "prediction": {
+      "date": "2026-02-26T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 65.85,
+      "portfolio_allocation": 60,
+      "reasoning": "The OPEC+ meeting and escalating US-Iran tensions introduce significant upside supply risk, counteracting the bearish inventory and rig count data. The dollar's minor strength provides only marginal headwinds, while Gulf export rushes and Venezuelan dynamics add layers of market uncertainty that typically support prices. I predict a modest rally toward $65.85, reflecting cautious optimism amid volatility, and allocate 60% to capture potential upside while maintaining cash for defensive positioning."
+    },
+    "actual_close": 67.0199966430664,
+    "delta": -1.169996643066412
+  },
+  {
+    "targetDate": "2026-02-27",
+    "prediction": {
+      "date": "2026-02-27T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 68.15,
+      "portfolio_allocation": 35,
+      "reasoning": "WTI closed at $67.02 with a 2.78% gain, showing upward momentum despite the bearish fundamental outlook; the DXY weakness and geopolitical risk premiums from Iran tensions and OPEC meeting uncertainty suggest continued support, though oversupply concerns and potential output hikes limit the upside. The EIA stock data at 439M barrels indicates adequate supply, and the rig count at 479 shows steady production, creating a tug-of-war between geopolitical risk and fundamental oversupply. Given the mixed signals—bullish war risk premium offset by bearish supply fundamentals—I predict a modest gain to $68.15 but allocate only 35% to reflect the elevated uncertainty and conflicting drivers."
+    },
+    "actual_close": 67.0199966430664,
+    "delta": 1.1300033569335994
+  },
+  {
+    "targetDate": "2026-02-28",
+    "prediction": {
+      "date": "2026-02-28T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 69.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The geopolitical risk premium from the U.S.-Israeli attack on Iran, a major OPEC producer and custodian of the Strait of Hormuz, is likely to dominate market sentiment and push prices significantly higher despite the bearish counterweight of potential OPEC+ supply increases. The 2.78% rally yesterday signals the market is already pricing in disruption, and this momentum should extend into the next session as the situation remains volatile and supply concerns intensify. I predict a settlement near $69.85, reflecting a substantial but not extreme risk premium, and allocate 85% of the portfolio to capture this upside while retaining some cash for volatility."
+    },
+    "actual_close": 74.55999755859375,
+    "delta": -4.709997558593756
+  },
+  {
+    "targetDate": "2026-03-03",
+    "prediction": {
+      "date": "2026-03-03T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 76.83,
+      "portfolio_allocation": 75,
+      "reasoning": "The significant 4.67% surge yesterday, driven by the escalating Middle East conflict with direct attacks on key OPEC infrastructure, indicates strong upward momentum and a high risk premium will persist. While the rising DXY and resilient Indian imports from Russia provide some bearish counterweight, the immediate threat to global supply is the dominant market driver. Therefore, I expect a further rally, though potentially at a slower pace than yesterday's spike, leading to a predicted settlement slightly above the prior close."
+    },
+    "actual_close": 74.66000366210938,
+    "delta": 2.1699963378906233
+  },
+  {
+    "targetDate": "2026-03-04",
+    "prediction": {
+      "date": "2026-03-04T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 76.25,
+      "portfolio_allocation": 70,
+      "reasoning": "The market is experiencing a significant geopolitical risk premium due to escalating Middle East tensions and reports of oil prices surging above $85/bbl, which is a major upward catalyst. While the previous close was $74.66, the fundamental supply disruption concerns, particularly around the Strait of Hormuz, are likely to drive a strong rally in today's session. I am allocating 70% of the portfolio to capture this anticipated upward momentum, while holding 30% as a buffer for potential volatility or profit-taking intraday."
+    },
+    "actual_close": 81.01000213623047,
+    "delta": -4.760002136230469
+  },
+  {
+    "targetDate": "2026-03-05",
+    "prediction": {
+      "date": "2026-03-05T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 83.25,
+      "portfolio_allocation": 80,
+      "reasoning": "WTI surged 8.51% yesterday on escalating Middle East conflict disrupting supply, particularly heavy crude flows, with no immediate relief from U.S. shale. The DXY uptick is a minor headwind, but fundamental tightening from geopolitical risk and robust demand signals (implied by Asia's vulnerability) should support prices further. Expect continued upward momentum with volatility, but settlement likely consolidates near current highs with a modest premium."
+    },
+    "actual_close": 90.9000015258789,
+    "delta": -7.650001525878906
+  },
+  {
+    "targetDate": "2026-03-06",
+    "prediction": {
+      "date": "2026-03-06T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 92.15,
+      "portfolio_allocation": 75,
+      "reasoning": "The 12.21% surge yesterday combined with escalating Middle East tensions, disrupted supply chains, and surging Asian demand for US barrels indicates strong bullish momentum likely to continue into today's session. However, the massive EIA stockpile build (443.1 million barrels) and potential for profit-taking after such a sharp move warrants a moderately aggressive but not full allocation to manage volatility risk. The weaker dollar (-0.33% DXY) provides additional tailwind, supporting a target price slightly above yesterday's close while acknowledging the overbought condition."
+    },
+    "actual_close": 90.9000015258789,
+    "delta": 1.2499984741210994
+  },
+  {
+    "targetDate": "2026-03-07",
+    "prediction": {
+      "date": "2026-03-07T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 93.15,
+      "portfolio_allocation": 75,
+      "reasoning": "The sharp 12.2% rally yesterday, driven by escalating Middle East conflict and the Strait of Hormuz disruption, suggests strong upward momentum will continue into today's session, though profit-taking may cap gains. The falling US Dollar provides additional tailwind, but the scale of yesterday's move increases the risk of a pullback, so I am allocating a significant but not full position to capture further upside while managing volatility risk."
+    },
+    "actual_close": 94.7699966430664,
+    "delta": -1.6199966430664006
+  },
+  {
+    "targetDate": "2026-03-09",
+    "prediction": {
+      "date": "2026-03-09T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 95.85,
+      "portfolio_allocation": 70,
+      "reasoning": "The market is reacting to Middle East geopolitical tensions which have driven a significant 4.26% jump yesterday, and while Trump's comments about potential de-escalation may cap further immediate upside, the fundamental backdrop of elevated risk premiums and strong demand narratives suggests prices will hold most gains and consolidate near current levels. I'm allocating 70% to oil to capture continued volatility and potential upside from any escalation, while keeping 30% in cash as a buffer given the news-driven whipsaw risk from rapidly shifting headlines."
+    },
+    "actual_close": 83.44999694824219,
+    "delta": 12.400003051757807
+  },
+  {
+    "targetDate": "2026-03-10",
+    "prediction": {
+      "date": "2026-03-10T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 87.5,
+      "portfolio_allocation": 65,
+      "reasoning": "The sharp 11.94% drop yesterday appears oversold given the intensifying Middle East conflict, with news of US-Israeli attacks on Iran and Persian Gulf supply disruptions strongly supportive of a rebound toward the pre-crash price zone around $87-$88. The weaker dollar adds a tailwind, though the magnitude of yesterday's sell-off suggests some residual volatility and profit-taking may cap gains. I'm allocating 65% to capture the likely recovery bounce while retaining 35% cash as a buffer against potential further geopolitical whipsaws."
+    },
+    "actual_close": 87.25,
+    "delta": 0.25
+  },
+  {
+    "targetDate": "2026-03-11",
+    "prediction": {
+      "date": "2026-03-11T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 89.15,
+      "portfolio_allocation": 85,
+      "reasoning": "The geopolitical risk premium is dominant, with Middle East disruptions and record emergency releases signaling a tight supply outlook that should support prices despite a strong USD. The 4.55% jump yesterday and OPEC's steady demand forecast suggest bullish momentum will continue, though a parabolic move to $100+ seems unlikely without new escalation. I predict a moderate further gain as the market digests the conflict's duration and emergency reserve implications."
+    },
+    "actual_close": 95.7300033569336,
+    "delta": -6.580003356933588
+  },
+  {
+    "targetDate": "2026-03-12",
+    "prediction": {
+      "date": "2026-03-12T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 105.21,
+      "portfolio_allocation": 85,
+      "reasoning": "The unprecedented scale of the Middle East supply disruption, described by the IEA as the largest in history, is creating severe upward pressure on prices that overwhelms the bearish signal from a rising dollar and high inventory levels. A 9.72% single-day surge indicates extreme market anxiety and strong momentum, suggesting the settlement price will continue to climb sharply as traders price in the imminent physical shortage. Consequently, I am allocating 85% of the portfolio to oil, reflecting high conviction in a continued rally while retaining a 15% cash buffer for potential short-term volatility or a partial reversal."
+    },
+    "actual_close": 98.71,
+    "delta": 6.5
+  },
+  {
+    "targetDate": "2026-03-14",
+    "prediction": {
+      "date": "2026-03-14T00:00:00.000Z",
+      "model": "openrouter/hunter-alpha",
+      "predict_target_price": 101.55,
+      "portfolio_allocation": 85,
+      "reasoning": "The massive 10 million bpd Middle East supply disruption reported by the IEA is the dominant fundamental driver, creating an immediate and severe supply shock that outweighs the modest DXY strength. An expected 1.2 million barrel draw in the EIA report would add to bullish momentum, while the steady OPEC demand forecast and resilient US rig count provide no bearish counterweight. Given the unprecedented scale of disruption, I expect the market to price in a significant premium, pushing prices above the key $100 psychological level."
+    }
+  }
+]

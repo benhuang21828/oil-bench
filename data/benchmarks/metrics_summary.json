@@ -62,5 +62,13 @@
     "rmse": 2.6324051765057606,
     "averageDeltaVal": 0.32134658226600143,
     "simulatedPnL": 15558.17
+  },
+  {
+    "model": "openrouter/hunter-alpha",
+    "totalPredictions": 52,
+    "mae": 1.9136537639911357,
+    "rmse": 2.943403403418421,
+    "averageDeltaVal": 0.03942350534292443,
+    "simulatedPnL": 14490.98
   }
 ]
