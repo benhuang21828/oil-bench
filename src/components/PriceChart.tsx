@@ -43,45 +43,10 @@ export default function PriceChart({ data, models }: PriceChartProps) {
       const fmtDate = format(new Date(dataPoint.date), 'MMM do, yyyy');
 
       return (
-        <div className="bg-slate-900 border border-white/10 rounded-xl p-4 shadow-2xl backdrop-blur-md relative z-[1000]">
-          <p className="font-semibold text-slate-200 border-b border-white/10 pb-2 mb-3">
-            {fmtDate}
-          </p>
-          
-          <div className="flex flex-col gap-1 mb-4">
-            <p className="text-sm">
-              <span className="text-emerald-400 font-medium tracking-wide">Actual Close:</span> 
-              <span className="text-white ml-2">${dataPoint.actual_close.toFixed(2)}</span>
-            </p>
-            {models.map((model, idx) => {
-              const pred = dataPoint.predictions?.[model];
-              if (!pred) return null;
-              const color = COLORS[idx % COLORS.length]; 
-              return (
-                <div key={model} className="mt-3 pt-3 border-t border-white/5">
-                  <p className="text-sm font-semibold mb-1" style={{ color }}>{model}</p>
-                  <p className="text-sm">
-                    <span className="text-slate-400">Predicted Close:</span> 
-                    <span className="text-white ml-2">${pred.predict_target_price.toFixed(2)}</span>
-                  </p>
-                  <div className="flex items-center gap-4 mt-1">
-                    <p className="text-xs text-slate-400 font-medium">
-                      Error: <span className={pred.delta > 0 ? "text-rose-400" : "text-emerald-400"}>
-                        ${Math.abs(pred.delta).toFixed(2)}
-                      </span>
-                    </p>
-                    <div className="h-3 w-px bg-white/20"></div>
-                    <p className="text-xs text-slate-400 font-medium whitespace-nowrap">
-                      Alloc: <span className="text-emerald-400">{pred.portfolio_allocation}%</span>
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <p className="text-xs italic text-blue-400 text-center animate-pulse mt-1 pt-3 border-t border-white/5">
-            Click data point for full AI reasoning & news context
+        <div className="bg-slate-900 border border-emerald-500/30 rounded-lg py-2 px-4 shadow-2xl backdrop-blur-md relative z-[1000] text-center flex flex-col items-center gap-1 cursor-pointer">
+          <p className="font-semibold text-slate-200 text-sm whitespace-nowrap">{fmtDate}</p>
+          <p className="text-xs font-bold uppercase tracking-wider text-emerald-400 animate-pulse whitespace-nowrap">
+            Click for Details
           </p>
         </div>
       );
