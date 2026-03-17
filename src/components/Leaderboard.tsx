@@ -15,8 +15,8 @@ export default async function Leaderboard() {
     metrics = [];
   }
 
-  // Sort by lowest MAE
-  metrics.sort((a, b) => a.mae - b.mae);
+  // Sort by highest Simulated P&L
+  metrics.sort((a, b) => (b.simulatedPnL || 0) - (a.simulatedPnL || 0));
 
   return (
     <div className="w-full h-full bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden flex flex-col shadow-2xl">
@@ -24,7 +24,7 @@ export default async function Leaderboard() {
         <h2 className="text-xl font-semibold text-white tracking-tight flex items-center gap-2">
           Model Leaderboard
         </h2>
-        <p className="text-sm text-slate-400 mt-1">Ranking by absolute tracking error</p>
+        <p className="text-sm text-slate-400 mt-1">Ranking by Simulated P&L</p>
       </div>
 
       <div className="flex-1 overflow-x-auto overflow-y-auto p-2">
@@ -40,6 +40,12 @@ export default async function Leaderboard() {
                 <th className="px-4 py-3 whitespace-nowrap">Model</th>
                 <th className="px-4 py-3 whitespace-nowrap">
                   <InfoTooltip 
+                    label="Simulated P&L" 
+                    content={<>Ending balance of a $10,000 algorithmic portfolio based entirely on the LLM's daily asset allocation decisions.</>}
+                  />
+                </th>
+                <th className="px-4 py-3 whitespace-nowrap">
+                  <InfoTooltip 
                     label="Avg Daily Miss" 
                     content={<>Mean Absolute Error (MAE): The average dollar amount the model's prediction missed the actual closing price.</>}
                   />
@@ -48,12 +54,6 @@ export default async function Leaderboard() {
                   <InfoTooltip 
                     label="Consistency Risk" 
                     content={<>Root Mean Square Error (RMSE): Penalizes larger misses more heavily. A higher risk means the model occasionally makes very wrong predictions.</>}
-                  />
-                </th>
-                <th className="px-4 py-3 whitespace-nowrap">
-                  <InfoTooltip 
-                    label="Simulated P&L" 
-                    content={<>Ending balance of a $10,000 algorithmic portfolio based entirely on the LLM's daily asset allocation decisions.</>}
                   />
                 </th>
                 <th className="px-4 py-3 whitespace-nowrap">Inferences</th>
@@ -71,9 +71,9 @@ export default async function Leaderboard() {
                     </span>
                   </td>
                   <td className="px-4 py-3 font-medium text-slate-200 whitespace-nowrap">{m.model.split('/').pop() || m.model}</td>
-                  <td className="px-4 py-3 text-emerald-400 font-medium whitespace-nowrap">${m.mae.toFixed(2)}</td>
-                  <td className="px-4 py-3 text-rose-400 text-xs whitespace-nowrap">${m.rmse.toFixed(2)}</td>
                   <td className={`px-4 py-3 font-semibold whitespace-nowrap ${m.simulatedPnL >= 10000 ? 'text-emerald-400' : 'text-rose-400'}`}>${m.simulatedPnL?.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) || '10,000.00'}</td>
+                  <td className="px-4 py-3 text-slate-300 font-medium whitespace-nowrap">${m.mae.toFixed(2)}</td>
+                  <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">${m.rmse.toFixed(2)}</td>
                   <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">{m.totalPredictions}</td>
                 </tr>
               ))}
