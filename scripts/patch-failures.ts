@@ -71,6 +71,7 @@ async function run() {
                 messages: [{ role: 'user', content: prompt }],
                 response_format: { type: "json_object" },
                 temperature: Math.max(baseTemperature, 0.5), // ensure some variation
+                top_p: 0.95,
                 seed: baseSeed + runIdx
               };
 

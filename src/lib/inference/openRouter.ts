@@ -22,6 +22,7 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
     ],
     response_format: { type: "json_object" },
     temperature: parsedTemperature,
+    top_p: 0.95,
     seed: parsedSeed
   };
 

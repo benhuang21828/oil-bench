@@ -92,6 +92,7 @@ async function run() {
             messages: [{ role: 'user', content: prompt }],
             response_format: { type: "json_object" },
             temperature: isMultiRun ? Math.max(baseTemperature, 0.5) : baseTemperature, // Increase variation across runs
+            top_p: 0.95, // Prevent absurd long tail hallucinations during variance testing
             seed: currentSeed
           };
 
