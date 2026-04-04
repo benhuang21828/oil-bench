@@ -12,12 +12,17 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
     throw new Error('OPENROUTER_KEY is not defined in .env');
   }
 
-  const payload = {
+  const parsedTemperature = parseFloat(process.env.LLM_TEMPERATURE || "0");
+  const parsedSeed = parseInt(process.env.LLM_SEED || "42", 10);
+
+  const payload: any = {
     model: model,
     messages: [
       { role: 'user', content: prompt }
     ],
-    response_format: { type: "json_object" }
+    response_format: { type: "json_object" },
+    temperature: parsedTemperature,
+    seed: parsedSeed
   };
 
   try {
@@ -45,12 +50,16 @@ export async function runInference(prompt: string, targetDateFmt: string): Promi
       parsed = JSON.parse(cleaned);
     }
 
+    const predict_target_price = parsed?.predict_target_price;
+    const isSuccess = typeof predict_target_price === 'number' && predict_target_price > 0;
+
     const prediction: PredictionResult = {
       date: new Date(targetDateFmt).toISOString(),
       model: model,
-      predict_target_price: parsed.predict_target_price || 0,
-      portfolio_allocation: typeof parsed.portfolio_allocation === 'number' ? parsed.portfolio_allocation : 50,
-      reasoning: parsed.reasoning || "Failed to parse reasoning."
+      predict_target_price: isSuccess ? predict_target_price : 0,
+      portfolio_allocation: typeof parsed?.portfolio_allocation === 'number' ? parsed.portfolio_allocation : 50,
+      reasoning: parsed?.reasoning || "Failed to parse reasoning.",
+      parse_status: isSuccess ? "success" : "failed"
     };
 
     const output: DailyPredictionOutput = {

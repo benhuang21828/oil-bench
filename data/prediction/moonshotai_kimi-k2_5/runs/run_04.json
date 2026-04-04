@@ -1,0 +1,689 @@
+[
+  {
+    "targetDate": "2026-01-01",
+    "prediction": {
+      "date": "2026-01-01T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 56.85,
+      "portfolio_allocation": 20,
+      "reasoning": "Bearish fundamentals dominate with record annual declines, swelling global inventories at 422.9 million barrels, and Ecuador's OPEC exit threatening additional supply, while a stronger dollar provides headwinds. The persistent negative momentum and glut narratives suggest continued downward pressure toward the $56.80-56.90 range. Given the entrenched bearish trend and oversupply concerns, a defensive 20% allocation balances minimal upside capture against significant downside risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.31999969482422,
+    "delta": -0.46999969482421733
+  },
+  {
+    "targetDate": "2026-01-02",
+    "prediction": {
+      "date": "2026-01-02T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 57.45,
+      "portfolio_allocation": 35,
+      "reasoning": "OPEC+ is widely expected to maintain current production levels at their Sunday meeting, removing immediate downside catalysts from oversupply fears while also failing to provide bullish support through deeper cuts. WTI holding above $57 technical support suggests modest buying interest, though the bearish 2026 outlook from both OPEC and IEA divergence, slowing US production, and strong inventories (419M barrels) cap upside enthusiasm. The dollar's continued strength (DXY +0.14%) creates a modest headwind for dollar-denominated crude, suggesting limited range-bound movement with slight upward bias as markets await clarity from the weekend OPEC+ decision.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.31999969482422,
+    "delta": 0.1300003051757841
+  },
+  {
+    "targetDate": "2026-01-03",
+    "prediction": {
+      "date": "2026-01-03T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 57.45,
+      "portfolio_allocation": 45,
+      "reasoning": "Geopolitical supply shock fears from Middle East conflicts and Venezuelan political instability provide temporary price support for crude markets. However, bearish fundamentals including a stronger US Dollar and elevated domestic crude inventories exceeding 419 million barrels continue to cap significant upside momentum. Given these offsetting forces, I anticipate modest price consolidation with slight downward bias, warranting a moderately defensive portfolio stance.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.130001068115234,
+    "delta": 0.31999893188476847
+  },
+  {
+    "targetDate": "2026-01-06",
+    "prediction": {
+      "date": "2026-01-06T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 56.75,
+      "portfolio_allocation": 20,
+      "reasoning": "Crude markets remain under pressure from bearish fundamentals including rising U.S. stockpiles at 419 million barrels and a stronger dollar index. The persistent downtrend from April's highs continues as traders discount ample 2026 supply prospects and shrug off geopolitical noise from Venezuela. A modest 20% allocation captures potential oversold bounces while maintaining defensive cash positioning against further downside momentum.",
+      "parse_status": "success"
+    },
+    "actual_close": 55.9900016784668,
+    "delta": 0.7599983215332031
+  },
+  {
+    "targetDate": "2026-01-07",
+    "prediction": {
+      "date": "2026-01-07T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 55.25,
+      "portfolio_allocation": 15,
+      "reasoning": "Global oil markets are facing significant oversupply pressures with robust inventories and potential Venezuelan barrels entering the market, weighing on prices. While OPEC+ has announced deeper compensation cuts to tighten supply, the immediate fundamental picture remains bearish with the dollar strengthening. Given the negative momentum and supply glut concerns, a defensive allocation is warranted despite potential production cuts providing longer-term support.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.7599983215332,
+    "delta": -2.509998321533203
+  },
+  {
+    "targetDate": "2026-01-08",
+    "prediction": {
+      "date": "2026-01-08T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 58.15,
+      "portfolio_allocation": 60,
+      "reasoning": "WTI likely extends yesterday's sharp 3.16% gain modestly amid continued index buying and geopolitical support from the US tanker seizures, though headwinds from a stronger dollar and elevated EIA inventory levels at 419 million barrels will cap upside. The DXY's 0.25% rise creates negative carry for dollar-denominated crude, while Iraq's planned 2026 production expansion looms as a longer-term bearish overhang. Given mixed signals—strong momentum versus fundamental supply pressure—a moderate portfolio allocation balances opportunity against downside risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.119998931884766,
+    "delta": -0.969998931884767
+  },
+  {
+    "targetDate": "2026-01-09",
+    "prediction": {
+      "date": "2026-01-09T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 59.4,
+      "portfolio_allocation": 65,
+      "reasoning": "Russian production cuts due to US sanctions provide bullish supply support, offsetting headwinds from a stronger US Dollar and the announced Venezuela export deal. Yesterday's 2.35% gain indicates positive momentum, though high inventory levels at 422.4 million barrels and the prospective increase in Venezuelan exports warrant caution. I expect modest upside price action with a target near $59.40, justifying a moderate 65% allocation to capture potential gains while maintaining cash reserves for volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.119998931884766,
+    "delta": 0.28000106811523295
+  },
+  {
+    "targetDate": "2026-01-10",
+    "prediction": {
+      "date": "2026-01-10T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 58.65,
+      "portfolio_allocation": 30,
+      "reasoning": "WTI faces near-term headwinds from a strengthening dollar and bearish supply developments, including potential Venezuelan production increases and reduced effectiveness of Iranian sanctions enforcement, suggesting a modest retracement of yesterday's 2.35% advance. Elevated domestic crude inventories exceeding 422 million barrels combined with resilient non-OPEC supply growth prospects limit upside momentum despite recent bullish technical signals. A defensive 30% allocation captures optionality on potential Strait of Hormuz disruptions while protecting capital against inventory overhang and dollar strength risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.150001525878906,
+    "delta": -2.5000015258789077
+  },
+  {
+    "targetDate": "2026-01-13",
+    "prediction": {
+      "date": "2026-01-13T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.95,
+      "portfolio_allocation": 75,
+      "reasoning": "Geopolitical tensions surrounding Iran are driving a significant risk premium into crude markets, with WTI futures already rallying over 3% intraday toward $63.00 on acute supply disruption concerns. Despite headwinds from a strengthening US Dollar and elevated inventory levels, the escalation in Middle East unrest likely sustains bullish momentum through the settlement. I project a close of $62.95 as traders balance geopolitical risks against technical resistance, warranting substantial long exposure to capture the ongoing uptrend while acknowledging potential volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.02000045776367,
+    "delta": 0.929999542236331
+  },
+  {
+    "targetDate": "2026-01-14",
+    "prediction": {
+      "date": "2026-01-14T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.45,
+      "portfolio_allocation": 65,
+      "reasoning": "Bullish sentiment from OPEC's steady 2027 demand growth forecast and supportive U.S. inventory data should extend yesterday's gains, pushing WTI toward $62.45 despite potential profit-taking pressures. A 65% allocation reflects favorable supply-demand fundamentals underscored by historically low rig counts of 479, while retaining cash to hedge against geopolitical uncertainty surrounding U.S. policy shifts in Venezuela. The stable Dollar environment allows commodity prices to trade on intrinsic fundamentals, though traders should monitor for any unexpected inventory builds that could reverse recent momentum.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.189998626708984,
+    "delta": 3.2600013732910185
+  },
+  {
+    "targetDate": "2026-01-15",
+    "prediction": {
+      "date": "2026-01-15T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 58.75,
+      "portfolio_allocation": 15,
+      "reasoning": "WTI faces continued technical selling pressure following yesterday's sharp 4.56% decline to $59.19, compounded by a strengthening dollar that typically weighs on commodity prices. Inventory levels remain elevated at over 422 million barrels, providing near-term headwinds that should push prices lower toward $58.75. Despite these bearish short-term factors, OPEC's optimistic demand forecasts through 2027 and historically low rig counts of 479 suggest underlying market support, justifying a modest 15% allocation to capture potential upside while preserving capital.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.439998626708984,
+    "delta": -0.6899986267089844
+  },
+  {
+    "targetDate": "2026-01-16",
+    "prediction": {
+      "date": "2026-01-16T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 59.3,
+      "portfolio_allocation": 40,
+      "reasoning": "WTI faces near-term pressure from a stronger US Dollar and elevated crude inventories at 426 million barrels, which typically weigh on pricing power. However, persistent geopolitical tensions in the Middle East and OPEC's regained market share in India provide a fundamental floor against deeper corrections. Given these conflicting signals, I anticipate modest downside consolidation and advocate a measured 40% allocation to maintain upside optionality while mitigating risks from the current supply overhang.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.439998626708984,
+    "delta": -0.13999862670898722
+  },
+  {
+    "targetDate": "2026-01-17",
+    "prediction": {
+      "date": "2026-01-17T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 58.7,
+      "portfolio_allocation": 15,
+      "reasoning": "The market narrative has shifted decisively toward oversupply concerns as rising U.S. inventories and resilient non-OPEC supply outweigh geopolitical risks, while a stronger dollar adds additional headwinds. Recent price action indicates bearish momentum following the retreat from geopolitical risk premiums, suggesting further downside toward the $58.70 level. Given these bearish fundamentals and negative momentum, a minimal allocation of 15% reflects a defensive posture while acknowledging potential for volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 60.34000015258789,
+    "delta": -1.6400001525878878
+  },
+  {
+    "targetDate": "2026-01-20",
+    "prediction": {
+      "date": "2026-01-20T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 60.25,
+      "portfolio_allocation": 45,
+      "reasoning": "While Black Sea production disruptions provided bullish momentum for Tuesday's 1.51% rally to $60.34, Fitch's assessment of a structurally oversupplied global market presents a significant headwind for further appreciation. The expectation of rising Middle East oil output in 2026, combined with a marginally stronger US Dollar and elevated domestic inventories at 426 million barrels, suggests limited upside potential from current levels. We anticipate modest price consolidation near yesterday's close, warranting a moderately defensive allocation that maintains partial exposure to lingering geopolitical supply risks while protecting against fundamental oversupply concerns.",
+      "parse_status": "success"
+    },
+    "actual_close": 60.619998931884766,
+    "delta": -0.3699989318847656
+  },
+  {
+    "targetDate": "2026-01-21",
+    "prediction": {
+      "date": "2026-01-21T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 60.35,
+      "portfolio_allocation": 35,
+      "reasoning": "The IEA's warning of a deep surplus in Q1 2026 combined with a stronger US Dollar and high inventory levels of over 426 million barrels creates bearish short-term pressure, suggesting a modest decline from yesterday's $60.62 close. However, the upward revision to 2026 demand growth forecasts and relatively low rig counts provide medium-term support, warranting a cautious but not fully defensive allocation. The allocation of 35% balances immediate oversupply risks against improving demand fundamentals.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.36000061035156,
+    "delta": 0.9899993896484389
+  },
+  {
+    "targetDate": "2026-01-22",
+    "prediction": {
+      "date": "2026-01-22T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 59.65,
+      "portfolio_allocation": 25,
+      "reasoning": "WTI is expected to trade near $59.65 as dollar weakness and Saudi supply reassurances counterbalance elevated U.S. inventories and yesterday's risk-off sentiment. A conservative 25% allocation reflects cautious optimism for a technical stabilization while acknowledging persistent bearish fundamentals and demand headwinds. This positioning allows participation in potential upside from currency dynamics without full exposure to inventory overhang risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.06999969482422,
+    "delta": -1.4199996948242202
+  },
+  {
+    "targetDate": "2026-01-23",
+    "prediction": {
+      "date": "2026-01-23T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 64.25,
+      "portfolio_allocation": 80,
+      "reasoning": "Escalating geopolitical tensions from President Trump's naval threats against Iran have introduced significant supply risk premiums, pushing WTI sharply higher from yesterday's $61.07 close toward intraday levels near $64.62. This bullish momentum is reinforced by a weakening US Dollar and Aramco CEO's comments dismissing oversupply concerns while citing robust demand fundamentals. An 80% allocation captures the upside from this geopolitical risk premium and favorable macro backdrop, while maintaining a 20% cash position to manage potential intraday volatility or sudden diplomatic developments.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.06999969482422,
+    "delta": 3.1800003051757812
+  },
+  {
+    "targetDate": "2026-01-24",
+    "prediction": {
+      "date": "2026-01-24T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 61.45,
+      "portfolio_allocation": 65,
+      "reasoning": "Geopolitical tensions regarding Iran and US sanctions provided strong bullish momentum on Friday, supported by a weaker US Dollar. While the nearly 3% rally suggests potential for short-term profit-taking, the persistent supply risk premium and favorable currency backdrop should limit downside. Therefore, I expect modest follow-through buying with the settlement price edging higher, warranting a moderately aggressive allocation to capture continued upside while retaining cash for volatility management.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.38999938964844,
+    "delta": -0.9399993896484347
+  },
+  {
+    "targetDate": "2026-01-27",
+    "prediction": {
+      "date": "2026-01-27T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 60.25,
+      "portfolio_allocation": 20,
+      "reasoning": "Crude oil is under pressure from easing U.S. supply disruptions and reports of weak demand keeping prices subdued despite a weaker dollar offering slight relief. With inventories elevated at 423.7 million barrels and production surpluses persisting, bearish fundamentals outweigh lingering Middle East geopolitical risks. I anticipate a settlement near $60.25 and recommend a defensive 20% allocation to limit exposure to further downside while retaining optionality for volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.209999084472656,
+    "delta": -2.9599990844726562
+  },
+  {
+    "targetDate": "2026-01-28",
+    "prediction": {
+      "date": "2026-01-28T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 65.4,
+      "portfolio_allocation": 60,
+      "reasoning": "Winter storm disruptions have removed approximately 15% of U.S. crude production, creating a significant immediate supply shock that should support prices moving toward recent four-month highs despite high inventory levels. Saudi Arabia's expected price discounting for Asian buyers signals underlying demand weakness that may cap gains once weather-related outages resolve. A moderately bullish allocation balances the immediate supply deficit against structural demand concerns and dollar strength.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.41999816894531,
+    "delta": -0.019998168945306816
+  },
+  {
+    "targetDate": "2026-01-29",
+    "prediction": {
+      "date": "2026-01-29T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 66.85,
+      "portfolio_allocation": 65,
+      "reasoning": "Escalating Middle East tensions regarding potential U.S. military action against Iran have created significant supply disruption fears, driving continued bullish momentum following yesterday's 3.5% rally. The weakening U.S. Dollar Index provides additional tailwinds for dollar-denominated crude oil, though elevated domestic inventories and the risk of profit-taking after recent highs suggest tempered upside potential. I anticipate moderate continued appreciation toward $66.85 but maintain a 65% allocation to balance geopolitical upside risks against potential volatility from technical overbought conditions and fundamental oversupply concerns.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 1.640000915527338
+  },
+  {
+    "targetDate": "2026-01-30",
+    "prediction": {
+      "date": "2026-01-30T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 66.15,
+      "portfolio_allocation": 75,
+      "reasoning": "OPEC+ is expected to maintain production cuts at their weekend meeting, creating bullish supply constraints. Geopolitical tensions with Iran and a weak dollar narrative (despite recent DXY strength) support upside price risk. However, the 0.74% DXY rally and already elevated prices from recent gains suggest limited upside, warranting a 75% allocation rather than full exposure to manage downside risk if the dollar strengthens further or OPEC+ surprises with a policy shift.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 0.9400009155273494
+  },
+  {
+    "targetDate": "2026-01-31",
+    "prediction": {
+      "date": "2026-01-31T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 65.58,
+      "portfolio_allocation": 50,
+      "reasoning": "Escalating US-Iran tensions are supporting crude prices through geopolitical risk premiums, though gains are capped by a significantly stronger US Dollar (up 0.74%) and high domestic inventory levels exceeding 420 million barrels. OPEC's sustained production discipline and historically low US rig counts (479) provide a floor against deeper declines. Given elevated volatility from geopolitical uncertainty and conflicting fundamental signals, a balanced allocation manages upside participation while preserving capital for potential swings.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.209999084472656,
+    "delta": 2.370000915527342
+  },
+  {
+    "targetDate": "2026-02-03",
+    "prediction": {
+      "date": "2026-02-03T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 30,
+      "reasoning": "Persistent global oversupply of 2.3 million bpd continues to weigh on crude markets, with prices trading near the upper bound of the forecast $55-65 range. However, escalating Middle East tensions and a weakening US Dollar provide near-term support against deeper declines. Given these conflicting signals, I expect modest downside pressure with WTI settling slightly lower as supply concerns outweigh geopolitical risk premiums.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.13999938964844,
+    "delta": -2.289999389648436
+  },
+  {
+    "targetDate": "2026-02-04",
+    "prediction": {
+      "date": "2026-02-04T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 63.85,
+      "portfolio_allocation": 30,
+      "reasoning": "US-Iran diplomatic talks scheduled in Oman are reducing geopolitical risk premiums and pressuring prices lower following Thursday's 2-3% decline on easing supply concerns. However, persistent uncertainty regarding the negotiation outcomes and structurally low US rig counts at 479 provide underlying market support and limit downside potential. Given elevated US crude inventories at 420.3 million barrels and a strengthening dollar creating additional headwinds, a defensive allocation is prudent amid high event risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.290000915527344,
+    "delta": 0.5599990844726577
+  },
+  {
+    "targetDate": "2026-02-05",
+    "prediction": {
+      "date": "2026-02-05T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.95,
+      "portfolio_allocation": 35,
+      "reasoning": "WTI faces continued pressure from easing geopolitical risk premiums following US-Iran talks and a stronger dollar, though oversold technical conditions and declining inventory trends per StanChart may limit downside. The 2.8% drop yesterday likely prices in much of the immediate bearish news, suggesting consolidation near current levels. Given mixed fundamental signals and event risk from ongoing diplomatic developments, a cautious allocation balances potential downside against longer-term rebalancing dynamics.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -0.599999237060544
+  },
+  {
+    "targetDate": "2026-02-06",
+    "prediction": {
+      "date": "2026-02-06T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 63.28,
+      "portfolio_allocation": 25,
+      "reasoning": "U.S.-Iran nuclear negotiations in Oman are reducing fears of supply disruptions from the region, prompting traders to shed geopolitical risk premium and weighing on crude prices despite dollar weakness. With EIA data showing ample domestic inventories at 428.8 million barrels and Baker Hughes rig counts indicating restrained production growth, the market faces conflicting signals of oversupply against potential future constraints. Given the immediate bearish pressure from diplomatic developments offsetting technical support at current levels, a reduced allocation reflects prudent risk management amid uncertainty.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -0.26999923706054574
+  },
+  {
+    "targetDate": "2026-02-07",
+    "prediction": {
+      "date": "2026-02-07T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 63.75,
+      "portfolio_allocation": 60,
+      "reasoning": "WTI should edge higher to approximately $63.75, supported by dollar weakness and escalating Iran-US geopolitical tensions, though significant overhead resistance from lingering oversupply concerns may cap gains. The combination of easing inventory pressures and risk-off hedging creates a cautiously bullish setup for the session. A 60% allocation provides meaningful exposure to potential upside while preserving capital flexibility against persistent bearish macro risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.959999084472656,
+    "delta": -0.20999908447265625
+  },
+  {
+    "targetDate": "2026-02-10",
+    "prediction": {
+      "date": "2026-02-10T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 64.55,
+      "portfolio_allocation": 70,
+      "reasoning": "Escalating Iran-US tensions have reintroduced a geopolitical risk premium to oil markets, supporting a move higher from yesterday's $63.96 close. While substantial US crude inventories of 428.8 million barrels provide a buffer against immediate supply shocks, the declining rig count to 479 signals tightening future production capacity. A 70% allocation reflects constructive near-term sentiment driven by Middle East instability, balanced against the defensive need to maintain liquidity given elevated stock levels.",
+      "parse_status": "success"
+    },
+    "actual_close": 64.62999725341797,
+    "delta": -0.07999725341797159
+  },
+  {
+    "targetDate": "2026-02-11",
+    "prediction": {
+      "date": "2026-02-11T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 65.2,
+      "portfolio_allocation": 60,
+      "reasoning": "Escalating Middle East tensions and potential US military deployments in the region are generating significant geopolitical risk premiums that have outweighed bearish EIA inventory data showing substantial crude stock builds. Additionally, OPEC reported declining production last month due to outages in Kazakhstan, Venezuela, and Iran, providing fundamental support despite concerns of a developing supply glut in the US. Given these conflicting dynamics of strong geopolitical tailwinds versus underlying inventory pressures, I target a modest advance to $65.20 with a 60% allocation to balance upside capture against volatility risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.84000015258789,
+    "delta": 2.359999847412112
+  },
+  {
+    "targetDate": "2026-02-12",
+    "prediction": {
+      "date": "2026-02-12T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.3,
+      "portfolio_allocation": 25,
+      "reasoning": "Crude oil faces sustained selling pressure following the IEA's reduction in 2026 demand forecasts and reported inventory builds, countering support from Middle East geopolitical tensions. Yesterday's 2.77% decline to $62.84 likely extends modestly lower as the stronger US Dollar and bearish fundamentals outweigh supply risk premiums. I target a settlement of $62.30 and recommend a cautious 25% allocation to maintain limited exposure while preserving capital against further downside.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.5899993896484403
+  },
+  {
+    "targetDate": "2026-02-13",
+    "prediction": {
+      "date": "2026-02-13T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.4,
+      "portfolio_allocation": 20,
+      "reasoning": "OPEC+ plans to resume production increases from April combined with softer demand outlooks and rising U.S. inventories create significant bearish headwinds for crude prices. The fading geopolitical risk premium and ongoing second consecutive weekly decline confirm weakening momentum despite dollar weakness offering limited support. Consequently, I project moderate downside price pressure and adopt a defensive 20% allocation to minimize exposure to the deteriorating supply-demand fundamentals.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.4899993896484389
+  },
+  {
+    "targetDate": "2026-02-14",
+    "prediction": {
+      "date": "2026-02-14T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.55,
+      "portfolio_allocation": 15,
+      "reasoning": "The IEA's forecast of a substantial 3.73 million barrel per day supply surplus in 2026, coupled with OPEC+ considering production increases from April, presents significant bearish headwinds for crude markets. Although the weaker US Dollar and constrained US rig count of 479 offer underlying support, the overwhelming supply outlook suggests modest downward pressure on prices. Consequently, a minimal portfolio allocation is prudent given the negative fundamental trajectory while acknowledging potential short-term volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.33000183105469,
+    "delta": 0.21999816894530966
+  },
+  {
+    "targetDate": "2026-02-17",
+    "prediction": {
+      "date": "2026-02-17T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 62.05,
+      "portfolio_allocation": 25,
+      "reasoning": "Elevated U.S. crude inventories at 419.8 million barrels combined with weakening retail gasoline prices signal persistent supply-demand imbalances that should pressure prices lower. While geopolitical tensions ahead of US-Iran negotiations may provide temporary support, the prevailing supply glut narrative and yesterday's 0.89% decline suggest continued modest downside. Consequently, a conservative 25% allocation balances potential upside volatility against fundamental headwinds.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.19000244140625,
+    "delta": -3.140002441406253
+  },
+  {
+    "targetDate": "2026-02-18",
+    "prediction": {
+      "date": "2026-02-18T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 66.85,
+      "portfolio_allocation": 75,
+      "reasoning": "The 4.59% surge to $65.19 was driven by escalating US-Iran tensions creating supply disruption fears, with Asia's record February import demand of 28.51 mb/d providing fundamental support. The DXY strength (+0.56%) typically pressures oil but is being outweighed by geopolitical risk premium; however, EIA stocks at 419.8 million barrels remain relatively elevated, capping upside. I expect modest continuation of the rally as Middle East tensions persist, targeting $66.85 for a 2.5% gain, while maintaining 25% cash buffer given the already sharp move and potential for diplomatic de-escalation headlines.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.43000030517578,
+    "delta": 0.41999969482421307
+  },
+  {
+    "targetDate": "2026-02-19",
+    "prediction": {
+      "date": "2026-02-19T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 68.15,
+      "portfolio_allocation": 40,
+      "reasoning": "Escalating US-Iran geopolitical tensions with military mobilization signals and imminent conflict rhetoric are driving substantial risk premium buying that should push prices higher despite bearish underlying fundamentals. High US crude inventories at 419.8 million barrels, weak December demand contraction of 614,000 bpd, and a strengthening dollar provide significant headwinds that will likely cap the upside and create volatile two-way price action. A moderate allocation balances participation in potential supply disruption spikes against the need to preserve capital for the high volatility and potential rapid reversal should military action be delayed or diplomatic solutions emerge.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 1.7600006103515682
+  },
+  {
+    "targetDate": "2026-02-20",
+    "prediction": {
+      "date": "2026-02-20T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 68.2,
+      "portfolio_allocation": 70,
+      "reasoning": "Escalating geopolitical tensions regarding potential imminent U.S. military strikes against Iran, which controls the Strait of Hormuz and holds the world's third-largest oil reserves, should drive a significant risk premium into prices already trading near six-month highs. The weakening U.S. dollar index, down 0.13%, provides additional bullish support by improving purchasing power for foreign buyers and offsetting the bearish implications of elevated domestic crude inventories. While the upside potential remains substantial given the supply disruption threat, a 70% allocation is prudent to hedge against the binary risk of diplomatic de-escalation or swift profit-taking after recent gains.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 1.8100006103515653
+  },
+  {
+    "targetDate": "2026-02-21",
+    "prediction": {
+      "date": "2026-02-21T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 66.85,
+      "portfolio_allocation": 65,
+      "reasoning": "Escalating US-Iran tensions are supporting risk premiums and driving oil toward its first weekly gain, outweighing bearish supply glut narratives. The weaker US dollar and historically low rig counts provide additional fundamental support for higher prices overnight. However, persistent concerns about global oversupply and demand uncertainty warrant maintaining partial cash reserves to manage downside risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.62999725341797,
+    "delta": 1.2200027465820256
+  },
+  {
+    "targetDate": "2026-02-24",
+    "prediction": {
+      "date": "2026-02-24T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 66.15,
+      "portfolio_allocation": 55,
+      "reasoning": "Geopolitical tensions involving potential military conflict with Iran and Venezuelan supply disruptions create significant upside risk for crude prices. However, bearish fundamentals persist with high U.S. crude inventories at 435.8 million barrels and a stronger U.S. Dollar Index dampening demand. The surge in Middle East tanker costs to six-year highs indicates physical market tightness, supporting a moderately bullish allocation despite inventory headwinds.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.41999816894531,
+    "delta": 0.7300018310546932
+  },
+  {
+    "targetDate": "2026-02-25",
+    "prediction": {
+      "date": "2026-02-25T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 65.55,
+      "portfolio_allocation": 60,
+      "reasoning": "Elevated US crude inventories and planned OPEC+ supply increases are capping upside potential despite a weaker US Dollar. Escalating geopolitical tensions between the US and Iran are injecting a significant risk premium as traders anticipate potential supply disruptions. Given the conflicting fundamental and geopolitical drivers, a moderately bullish allocation balances the opportunity for price spikes against inventory overhang risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 0.3400009155273409
+  },
+  {
+    "targetDate": "2026-02-26",
+    "prediction": {
+      "date": "2026-02-26T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 65.48,
+      "portfolio_allocation": 35,
+      "reasoning": "Elevated U.S. crude inventories at 435.8 million barrels and a stronger dollar provide near-term headwinds, but heightened geopolitical tensions surrounding Iran and the upcoming OPEC+ meeting on Sunday support a modest risk premium. Gulf states rushing exports creates temporary supply pressure, yet the potential for supply disruptions keeps bids underlying the market. Given the binary weekend event risk from both OPEC+ decisions and Iran negotiations, a moderate allocation balances upside potential against downside volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 67.0199966430664,
+    "delta": -1.5399966430664023
+  },
+  {
+    "targetDate": "2026-02-27",
+    "prediction": {
+      "date": "2026-02-27T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 67.45,
+      "portfolio_allocation": 40,
+      "reasoning": "Geopolitical tensions and war risk premiums continue to support crude prices following recent supply concerns, likely sustaining modest upward momentum from yesterday's 2.78% gain. However, bearish headwinds persist including elevated US crude inventories at 439 million barrels and imminent OPEC+ discussions to resume output hikes, which could pressure prices lower. Consequently, a moderate allocation captures potential upside from geopolitical volatility while maintaining liquidity to navigate uncertainty surrounding Sunday's production decision.",
+      "parse_status": "success"
+    },
+    "actual_close": 67.0199966430664,
+    "delta": 0.4300033569335966
+  },
+  {
+    "targetDate": "2026-02-28",
+    "prediction": {
+      "date": "2026-02-28T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 69.35,
+      "portfolio_allocation": 65,
+      "reasoning": "The U.S.-Israeli attack on Iran introduces significant upside risk to oil prices due to potential supply disruptions through the Strait of Hormuz and direct production impacts, likely outweighing bearish considerations in the immediate term. However, reports of OPEC+ considering a larger 411k bpd output increase and elevated U.S. crude inventories at 439 million barrels provide downward pressure and uncertainty, warranting a balanced but positive exposure. I expect the settlement price to rise to $69.35 as markets price in a geopolitical risk premium, and allocate 65% of the portfolio to capture upside while maintaining cash reserves for volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 74.55999755859375,
+    "delta": -5.209997558593756
+  },
+  {
+    "targetDate": "2026-03-03",
+    "prediction": {
+      "date": "2026-03-03T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 77.15,
+      "portfolio_allocation": 75,
+      "reasoning": "The Iranian attacks on Saudi and Qatari oil facilities mark a critical escalation in Middle East conflicts, creating immediate supply disruption fears that override bearish US inventory data and dollar strength to drive prices higher. With Brent crude already advancing 6% internationally and Trump signaling further military action, WTI should extend its rally toward $77.15 as geopolitical risk premium expands significantly. A 75% portfolio allocation reflects strong bullish conviction on supply threats while maintaining 25% cash to hedge against potential rapid de-escalation or extreme volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 74.66000366210938,
+    "delta": 2.4899963378906307
+  },
+  {
+    "targetDate": "2026-03-04",
+    "prediction": {
+      "date": "2026-03-04T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 76.45,
+      "portfolio_allocation": 80,
+      "reasoning": "Escalating Middle East tensions and potential disruptions to Strait of Hormuz flows are driving significant supply risk premiums into crude markets. The weaker US Dollar and historically low domestic rig count of 479 active rigs provide additional fundamental support for higher prices. Given the acute geopolitical tailwinds and the vulnerability of Asian supply chains, WTI should appreciate from yesterday's close while maintaining exposure to capture potential upside volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 81.01000213623047,
+    "delta": -4.560002136230466
+  },
+  {
+    "targetDate": "2026-03-05",
+    "prediction": {
+      "date": "2026-03-05T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 83.5,
+      "portfolio_allocation": 85,
+      "reasoning": "The effective closure of the Strait of Hormuz represents a catastrophic supply disruption that cannot be remedied by US shale given historically low rig counts, driving continued buying pressure despite yesterday's 8.51% surge. Heavy crude shortages are forcing substitution into lighter grades like WTI while geopolitical risk premiums expand rapidly across the energy complex. Although technical indicators suggest overbought conditions after the sharp rally, the fundamental supply deficit supports further price appreciation toward the mid-$83 range.",
+      "parse_status": "success"
+    },
+    "actual_close": 90.9000015258789,
+    "delta": -7.400001525878906
+  },
+  {
+    "targetDate": "2026-03-06",
+    "prediction": {
+      "date": "2026-03-06T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 93.5,
+      "portfolio_allocation": 85,
+      "reasoning": "The extreme geopolitical escalation involving Iran and potential Strait of Hormuz closure represents acute supply risk that overrides the technical overextension from yesterday's 12% rally. Asian buyers are already scrambling for alternative US barrels, indicating immediate supply anxiety, while the weak dollar provides additional fundamental support. Although the price has risen sharply, the asymmetry of further escalation suggests continued upward pressure, warranting substantial but not full exposure given volatility risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 90.9000015258789,
+    "delta": 2.5999984741210938
+  },
+  {
+    "targetDate": "2026-03-07",
+    "prediction": {
+      "date": "2026-03-07T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 93.25,
+      "portfolio_allocation": 80,
+      "reasoning": "Escalating geopolitical risks including threats to Strait of Hormuz transit and Kuwaiti production cuts are driving significant risk premium into oil markets. Following yesterday's exceptional 12.21% surge, continued upward momentum is likely as supply disruption fears outweigh demand concerns. While the bullish trend is strong, a substantial but not full allocation balances opportunity against the elevated volatility inherent after such extreme daily moves.",
+      "parse_status": "success"
+    },
+    "actual_close": 94.7699966430664,
+    "delta": -1.5199966430664062
+  },
+  {
+    "targetDate": "2026-03-09",
+    "prediction": {
+      "date": "2026-03-09T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 93.85,
+      "portfolio_allocation": 35,
+      "reasoning": "While ongoing Middle East conflicts maintain a risk premium on crude supplies, President Trump's indication that the war with Iran could end soon has triggered profit-taking after yesterday's sharp 4.26% rally and shifted near-term sentiment toward de-escalation. The combination of high volatility, uncertain conflict duration, and potential for diplomatic resolution suggests limiting exposure while maintaining some position to hedge against persistent supply risks. Consequently, I expect a modest pullback from the previous close as markets price in reduced geopolitical risk, settling around $93.85 while retaining a defensive 35% allocation to balance upside and downside scenarios.",
+      "parse_status": "success"
+    },
+    "actual_close": 83.44999694824219,
+    "delta": 10.400003051757807
+  },
+  {
+    "targetDate": "2026-03-10",
+    "prediction": {
+      "date": "2026-03-10T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 87.65,
+      "portfolio_allocation": 75,
+      "reasoning": "Escalating geopolitical tensions in the Middle East, specifically the widening conflict involving Iran and potential disruptions to Strait of Hormuz shipments, justify a significant risk premium above the recent $83.45 close. The combination of supply disruption fears, Saudi Arabia's emergency pipeline activation, and a weakening dollar (-0.35%) supports continued bullish momentum from the $86.33 intraday levels mentioned in recent reports. However, given the extreme recent volatility (-11.94% prior drop) and potential for rapid diplomatic developments or profit-taking after sharp gains, a 75% allocation balances aggressive upside participation with prudent risk management.",
+      "parse_status": "success"
+    },
+    "actual_close": 87.25,
+    "delta": 0.4000000000000057
+  },
+  {
+    "targetDate": "2026-03-11",
+    "prediction": {
+      "date": "2026-03-11T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 88.75,
+      "portfolio_allocation": 70,
+      "reasoning": "Geopolitical escalation in the Middle East with Iranian strikes and Gulf supply disruptions continues to drive risk premium, while record emergency reserve releases failing to quell fears indicates persistent market tightness. Yesterday's strong 4.55% rally demonstrates bullish momentum, though Saudi production increases and a stronger dollar may moderate gains. I expect continued upside but at a slower pace given the sharp recent advance and potential for profit-taking.",
+      "parse_status": "success"
+    },
+    "actual_close": 95.7300033569336,
+    "delta": -6.980003356933594
+  },
+  {
+    "targetDate": "2026-03-12",
+    "prediction": {
+      "date": "2026-03-12T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 100.8,
+      "portfolio_allocation": 85,
+      "reasoning": "The IEA's warning of the largest supply disruption in history with 10 million bpd offline creates a severe supply deficit that will likely drive prices above $100 despite yesterday's 9.72% rally to $95.73. While emergency reserves are being released, the scale of the disruption dwarfs these efforts, supporting continued bullish momentum toward new highs. A high allocation reflects the strong upward trajectory while maintaining some cash to manage potential intraday volatility from profit-taking.",
+      "parse_status": "success"
+    },
+    "actual_close": 98.71,
+    "delta": 2.0900000000000034
+  },
+  {
+    "targetDate": "2026-03-14",
+    "prediction": {
+      "date": "2026-03-14T00:00:00.000Z",
+      "model": "moonshotai/kimi-k2.5",
+      "predict_target_price": 100.85,
+      "portfolio_allocation": 80,
+      "reasoning": "The IEA's warning of a historic 10 million bpd supply disruption from Middle East Gulf countries, combined with expectations of a 1.2M barrel EIA inventory draw, provides overwhelming bullish catalysts that should override the modest headwind from a strengthening US Dollar. With WTI already rallying 3.11% to $98.71, continued momentum should push prices through psychological $100 resistance, though the pace of gains may moderate slightly as traders digest the severity of the supply shock. An 80% allocation balances the exceptional upside potential from the supply crisis against prudent risk management given the elevated volatility and extended technical conditions following yesterday's sharp advance.",
+      "parse_status": "success"
+    }
+  }
+]

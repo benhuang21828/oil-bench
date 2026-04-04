@@ -21,17 +21,23 @@ Open your `.env` file. You will need an API key from [OpenRouter](https://openro
 Find the specific string name of the model you wish to benchmark on OpenRouter (e.g., `meta-llama/llama-3-70b-instruct` or `anthropic/claude-3-opus`).
 
 Assign it to the `LLM_MODEL_NAME` variable:
+Assign it to the `LLM_MODEL_NAME` variable:
 ```bash
 OPENROUTER_KEY=yr_key_here
 LLM_MODEL_NAME=anthropic/claude-3-opus
+LLM_TEMPERATURE=0
+LLM_SEED=42
 ```
 
+**Step 2b. Add Training Cutoff Date**
+To prevent data leakage, you must define the model's training data cutoff date in `data/models-metadata.json`. The pipeline will automatically skip benchmark dates that fall before this date. Provide a YYYY-MM-DD date or use a conservative proxy (like public release date) if exact details aren't known.
+
 **Step 3. Run the Inference Engine**
-With your environment variable set, execute the prompt builder:
+With your environment variable set, execute the batch inference pipeline. We strongly recommend using the `--runs` flag to perform multiple repeated runs (usually 10) to accurately measure intra-model consistency (variance):
 ```bash
-npx tsx scripts/backfill-inference.ts
+npx tsx scripts/batch-inference.ts --runs=10
 ```
-*(This script will read the historical context data in `data/raw`, construct the prompt, query your newly specified model via OpenRouter, and save the chain-of-thought results into a new folder `data/prediction/anthropic_claude-3-opus/predictions.json`.)*
+*(This script will read the historical context data in `data/raw`, automatically skip dates before your model's cutoff, query your model via OpenRouter factoring in the temperature and seed, and save the result sets into a new folder `data/prediction/anthropic_claude-3-opus/runs/`.)*
 
 **Step 4. Run the Evaluator**
 Once the inferences finish, run the grading script:

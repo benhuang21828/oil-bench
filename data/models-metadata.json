@@ -1,0 +1,42 @@
+{
+  "anthropic/claude-opus-4.6": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "anthropic/claude-sonnet-4.6": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "google/gemini-2.5-flash": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "google/gemini-3-flash-preview": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "minimax/minimax-m2.5": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "moonshotai/kimi-k2.5": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "openai/gpt-5.4": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "openrouter/hunter-alpha": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "x-ai/grok-4.1-fast": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  },
+  "x-ai/grok-4.20-beta": {
+    "trainingCutoff": "2026-01-01",
+    "notes": "Conservative cutoff — only evaluate on dates >= this value"
+  }
+}

@@ -1,22 +1,27 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { DailyPredictionOutput } from '../types';
-import { MetricsSummary } from './types';
+import { MetricsSummary, MetricStatistics } from './types';
+
+function computeStats(values: number[]): MetricStatistics {
+  if (values.length === 0) return { mean: 0, stdDev: 0, min: 0, max: 0 };
+  const sum = values.reduce((a, b) => a + b, 0);
+  const mean = sum / values.length;
+  const variance = values.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / values.length;
+  return {
+    mean: Number(mean.toFixed(4)),
+    stdDev: Number(Math.sqrt(variance).toFixed(4)),
+    min: Number(Math.min(...values).toFixed(4)),
+    max: Number(Math.max(...values).toFixed(4))
+  };
+}
 
 export async function evaluatePredictions(modelName: string): Promise<MetricsSummary> {
   const dirModelName = modelName.replace(/[^a-zA-Z0-9_-]/g, '_');
-  const predictionsPath = path.join(process.cwd(), 'data', 'prediction', dirModelName, 'predictions.json');
+  const basePredictionDir = path.join(process.cwd(), 'data', 'prediction', dirModelName);
   const pricesDir = path.join(process.cwd(), 'data', 'raw', 'prices');
 
-  let predictions: DailyPredictionOutput[] = [];
-  try {
-    const data = await fs.readFile(predictionsPath, 'utf-8');
-    predictions = JSON.parse(data);
-  } catch (e) {
-    throw new Error(`Could not read predictions for model: ${modelName}`);
-  }
-
-  // Read all available price files to understand the timeline
+  // Read all available price files
   let priceFiles: string[] = [];
   try {
     priceFiles = await fs.readdir(pricesDir);
@@ -29,82 +34,162 @@ export async function evaluatePredictions(modelName: string): Promise<MetricsSum
     .map(f => f.replace('.json', ''))
     .sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
 
-  let totalPredictions = 0;
-  let sumAbsoluteError = 0;
-  let sumSquaredError = 0;
-  let sumDelta = 0; // track raw delta just to see overall bias
-  
-  // Simulated Trading P&L starting with 10k
-  let simulatedPnL = 10000;
-
-  for (let i = 0; i < predictions.length; i++) {
-    const pred = predictions[i];
-    const targetDateFmt = pred.targetDate; // Day N
+  // Function to evaluate single file
+  async function evaluateSingleFile(filePath: string): Promise<MetricsSummary> {
+    const data = await fs.readFile(filePath, 'utf-8');
+    const predictions: DailyPredictionOutput[] = JSON.parse(data);
     
-    // Find Day N+1
-    const currentIndex = sortedDates.indexOf(targetDateFmt);
-    if (currentIndex === -1 || currentIndex >= sortedDates.length - 1) {
-      // We don't have the "tomorrow" ground truth yet
-      continue;
+    let totalPredictions = 0;
+    let sumAbsoluteError = 0;
+    let sumSquaredError = 0;
+    let sumDelta = 0;
+    let parseFailures = 0;
+    let skippedGaps = 0;
+    
+    let simulatedPnL = 10000;
+
+    for (let i = 0; i < predictions.length; i++) {
+      const pred = predictions[i];
+      
+      if (pred.prediction.parse_status === 'failed') {
+        parseFailures++;
+        continue;
+      }
+      
+      const targetDateFmt = pred.targetDate; // Day N
+      const currentIndex = sortedDates.indexOf(targetDateFmt);
+      if (currentIndex === -1 || currentIndex >= sortedDates.length - 1) {
+        continue;
+      }
+
+      const nextDateFmt = sortedDates[currentIndex + 1];
+      
+      // Gap calculation
+      const gapDays = (new Date(nextDateFmt).getTime() - new Date(targetDateFmt).getTime()) / (1000 * 60 * 60 * 24);
+      if (gapDays > 4) {
+        skippedGaps++;
+        continue;
+      }
+
+      const nextPricePath = path.join(pricesDir, `${nextDateFmt}.json`);
+      const currPricePath = path.join(pricesDir, `${targetDateFmt}.json`);
+      
+      const nextPriceData = JSON.parse(await fs.readFile(nextPricePath, 'utf-8'));
+      const currPriceData = JSON.parse(await fs.readFile(currPricePath, 'utf-8'));
+
+      const currClose = currPriceData.cl.price;
+      const actualClose = nextPriceData.cl.price;
+      const predictedTarget = pred.prediction.predict_target_price;
+
+      const delta = predictedTarget - actualClose;
+      const absoluteError = Math.abs(delta);
+      
+      pred.actual_close = actualClose;
+      pred.delta = delta;
+      
+      const allocPercent = pred.prediction.portfolio_allocation ?? 50;
+      const oilPortion = simulatedPnL * (allocPercent / 100);
+      const cashPortion = simulatedPnL - oilPortion;
+      
+      const trueAssetReturn = (actualClose - currClose) / currClose;
+      const newOilPortion = oilPortion * (1 + trueAssetReturn);
+      simulatedPnL = newOilPortion + cashPortion;
+
+      sumAbsoluteError += absoluteError;
+      sumSquaredError += (absoluteError * absoluteError);
+      sumDelta += delta;
+      totalPredictions++;
     }
 
-    const nextDateFmt = sortedDates[currentIndex + 1];
-    
-    // Read the N+1 price file to get the actual settle
-    const nextPricePath = path.join(pricesDir, `${nextDateFmt}.json`);
-    const nextPriceData = JSON.parse(await fs.readFile(nextPricePath, 'utf-8'));
-    
-    // Read Day N price file to calculate true daily return
-    const currPricePath = path.join(pricesDir, `${targetDateFmt}.json`);
-    const currPriceData = JSON.parse(await fs.readFile(currPricePath, 'utf-8'));
+    await fs.writeFile(filePath, JSON.stringify(predictions, null, 2));
 
-    const currClose = currPriceData.cl.price;
-    const actualClose = nextPriceData.cl.price;
-    const predictedTarget = pred.prediction.predict_target_price;
+    let mae = 0;
+    let rmse = 0;
+    let averageDeltaVal = 0;
 
-    // Delta = Predicted - Actual
-    const delta = predictedTarget - actualClose;
-    const absoluteError = Math.abs(delta);
-    
-    // Mutate the object to include the graded truth
-    pred.actual_close = actualClose;
-    pred.delta = delta;
-    
-    // Portfolio Logic
-    const allocPercent = pred.prediction.portfolio_allocation ?? 50; // default 50% if missing
-    const oilPortion = simulatedPnL * (allocPercent / 100);
-    const cashPortion = simulatedPnL - oilPortion;
-    
-    const trueAssetReturn = (actualClose - currClose) / currClose;
-    const newOilPortion = oilPortion * (1 + trueAssetReturn);
-    
-    simulatedPnL = newOilPortion + cashPortion;
+    if (totalPredictions > 0) {
+       mae = sumAbsoluteError / totalPredictions;
+       rmse = Math.sqrt(sumSquaredError / totalPredictions);
+       averageDeltaVal = sumDelta / totalPredictions;
+    }
 
-    sumAbsoluteError += absoluteError;
-    sumSquaredError += (absoluteError * absoluteError);
-    sumDelta += delta;
-    totalPredictions++;
+    return {
+      model: modelName,
+      totalPredictions,
+      mae,
+      rmse,
+      averageDeltaVal,
+      simulatedPnL: parseFloat(simulatedPnL.toFixed(2)),
+      parseFailures,
+      skippedGaps
+    };
   }
 
-  // Overwrite predictions with graded data
-  await fs.writeFile(predictionsPath, JSON.stringify(predictions, null, 2));
+  const runsDir = path.join(basePredictionDir, 'runs');
+  let runFiles: string[] = [];
+  try {
+    const files = await fs.readdir(runsDir);
+    runFiles = files.filter(f => f.endsWith('.json')).map(f => path.join(runsDir, f));
+  } catch(e) {}
 
-  if (totalPredictions === 0) {
-    throw new Error('No valid consecutive days found to evaluate against.');
+  let finalMetrics: MetricsSummary;
+
+  if (runFiles.length > 0) {
+    const allMetrics: MetricsSummary[] = [];
+    
+    // Group all run predictions to calculate daily target spread
+    const dateTargets = new Map<string, number[]>();
+
+    for (const runFile of runFiles) {
+      allMetrics.push(await evaluateSingleFile(runFile));
+      
+      const runData = JSON.parse(await fs.readFile(runFile, 'utf8')) as DailyPredictionOutput[];
+      for (const pred of runData) {
+         if (pred.prediction.parse_status === 'failed') continue;
+         if (!dateTargets.has(pred.targetDate)) dateTargets.set(pred.targetDate, []);
+         dateTargets.get(pred.targetDate)!.push(pred.prediction.predict_target_price);
+      }
+    }
+    
+    let sumSpreads = 0;
+    let daysWithMultipleRuns = 0;
+    for (const targets of dateTargets.values()) {
+       if (targets.length > 1) {
+          const spread = Math.max(...targets) - Math.min(...targets);
+          sumSpreads += spread;
+          daysWithMultipleRuns++;
+       }
+    }
+    const averageDailyTargetSpread = daysWithMultipleRuns > 0 ? (sumSpreads / daysWithMultipleRuns) : 0;
+    
+    // Aggregate over runs
+    finalMetrics = {
+      model: modelName,
+      totalPredictions: Math.round(computeStats(allMetrics.map(m => m.totalPredictions)).mean),
+      mae: computeStats(allMetrics.map(m => m.mae)).mean,
+      rmse: computeStats(allMetrics.map(m => m.rmse)).mean,
+      averageDeltaVal: computeStats(allMetrics.map(m => m.averageDeltaVal)).mean,
+      simulatedPnL: computeStats(allMetrics.map(m => m.simulatedPnL)).mean,
+      parseFailures: Math.round(computeStats(allMetrics.map(m => m.parseFailures)).mean),
+      skippedGaps: Math.round(computeStats(allMetrics.map(m => m.skippedGaps)).mean),
+      runsCount: runFiles.length,
+      averageDailyTargetSpread: Number(averageDailyTargetSpread.toFixed(4)),
+      aggregateMetrics: {
+        mae: computeStats(allMetrics.map(m => m.mae)),
+        rmse: computeStats(allMetrics.map(m => m.rmse)),
+        simulatedPnL: computeStats(allMetrics.map(m => m.simulatedPnL))
+      },
+      perRunMetrics: allMetrics
+    };
+  } else {
+    // Single file logic
+    const singlePath = path.join(basePredictionDir, 'predictions.json');
+    try {
+      finalMetrics = await evaluateSingleFile(singlePath);
+    } catch(e) {
+      throw new Error(`No predictions found for model ${modelName} in ${singlePath}`);
+    }
   }
-
-  const mae = sumAbsoluteError / totalPredictions;
-  const rmse = Math.sqrt(sumSquaredError / totalPredictions);
-  const averageDeltaVal = sumDelta / totalPredictions;
-
-  const metrics: MetricsSummary = {
-    model: modelName,
-    totalPredictions,
-    mae,
-    rmse,
-    averageDeltaVal,
-    simulatedPnL: parseFloat(simulatedPnL.toFixed(2))
-  };
 
   // Save metrics summary globally
   const metricsDir = path.join(process.cwd(), 'data', 'benchmarks');
@@ -115,18 +200,16 @@ export async function evaluatePredictions(modelName: string): Promise<MetricsSum
   try {
     const currentSummaries = await fs.readFile(summaryPath, 'utf-8');
     existingSummaries = JSON.parse(currentSummaries);
-  } catch (e) {
-    // Doesn't exist yet
-  }
+  } catch (e) {}
 
   const existingIdx = existingSummaries.findIndex(m => m.model === modelName);
   if (existingIdx > -1) {
-    existingSummaries[existingIdx] = metrics;
+    existingSummaries[existingIdx] = finalMetrics;
   } else {
-    existingSummaries.push(metrics);
+    existingSummaries.push(finalMetrics);
   }
 
   await fs.writeFile(summaryPath, JSON.stringify(existingSummaries, null, 2));
 
-  return metrics;
+  return finalMetrics;
 }

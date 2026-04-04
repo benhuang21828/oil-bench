@@ -1,11 +1,18 @@
 "use client";
 import React, { useState, useRef, useLayoutEffect } from "react";
 
+import { createPortal } from "react-dom";
+
 export default function InfoTooltip({ label, content }: { label: string, content: React.ReactNode }) {
   const [show, setShow] = useState(false);
   const [coords, setCoords] = useState({ top: -9999, left: -9999 });
+  const [mounted, setMounted] = useState(false);
   const triggerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!show || !tooltipRef.current) return;
@@ -48,14 +55,15 @@ export default function InfoTooltip({ label, content }: { label: string, content
     >
       {label} <span className="text-slate-500 text-[10px] bg-slate-800 rounded-full px-1">(?)</span>
       
-      {show && (
+      {mounted && show && createPortal(
         <div
           ref={tooltipRef}
           style={{ position: 'fixed', top: coords.top, left: coords.left }}
           className="z-[9999] w-56 p-2 bg-slate-800 text-slate-300 text-xs rounded shadow-2xl border border-white/10 normal-case font-normal whitespace-normal pointer-events-none"
         >
           {content}
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

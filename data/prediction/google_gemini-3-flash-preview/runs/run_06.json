@@ -1,0 +1,689 @@
+[
+  {
+    "targetDate": "2026-01-01",
+    "prediction": {
+      "date": "2026-01-01T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 56.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The recent EIA inventory data and the exit of Ecuador from OPEC suggest a loosening supply environment, while the annual trend indicates significant downward pressure on prices. A rising US Dollar Index further creates headwinds for dollar-denominated commodities, likely pushing the settlement price toward the next support level. I am maintaining a conservative allocation to capitalize on volatility while hedging against the broader bearish 2026 outlook reported by major institutions.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.31999969482422,
+    "delta": -0.46999969482421733
+  },
+  {
+    "targetDate": "2026-01-02",
+    "prediction": {
+      "date": "2026-01-02T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 57.15,
+      "portfolio_allocation": 35,
+      "reasoning": "The combination of a strengthening US Dollar Index and bearish long-term outlooks for 2026 suggests continued downward pressure on crude prices. While OPEC+ maintaining production levels provides a floor near the $57 support level, the internal tensions between Saudi Arabia and the UAE introduce a risk premium that limits aggressive shorting. Consequently, a defensive allocation is warranted as the market awaits a definitive technical breakout or a shift in inventory trends.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.31999969482422,
+    "delta": -0.16999969482422017
+  },
+  {
+    "targetDate": "2026-01-03",
+    "prediction": {
+      "date": "2026-01-03T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 59.45,
+      "portfolio_allocation": 75,
+      "reasoning": "The sudden geopolitical vacuum in Venezuela following the capture of Maduro and ongoing Middle East supply shock jitters create significant upward pressure on prices despite a stronger US Dollar. While OPEC+ maintains steady output, the 'Trump factor' regarding Venezuelan reserves introduces a high-risk premium that favors a bullish breakout from the previous close. I am allocating 75% of the portfolio to capture this volatility while maintaining a cash buffer against potential OPEC+ policy shifts or inventory surpluses.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.130001068115234,
+    "delta": 2.3199989318847685
+  },
+  {
+    "targetDate": "2026-01-06",
+    "prediction": {
+      "date": "2026-01-06T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 56.45,
+      "portfolio_allocation": 35,
+      "reasoning": "The combination of a strengthening US Dollar and bearish EIA inventory data suggests continued downward pressure on crude prices in the immediate term. Ample global supply forecasts for 2026 and geopolitical stability in the Middle East are outweighing the current uncertainty regarding Venezuelan output. A defensive allocation is warranted given the negative technical momentum and the breach of the $57 support level.",
+      "parse_status": "success"
+    },
+    "actual_close": 55.9900016784668,
+    "delta": 0.45999832153320597
+  },
+  {
+    "targetDate": "2026-01-07",
+    "prediction": {
+      "date": "2026-01-07T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 55.15,
+      "portfolio_allocation": 20,
+      "reasoning": "The market is facing significant downward pressure from a global supply glut and a strengthening US Dollar, which typically inversely correlates with crude prices. While OPEC+ is attempting to deepen compensation cuts to stabilize the market, the potential influx of 50 million barrels of Venezuelan oil to the US creates a bearish short-term outlook. Consequently, I am maintaining a defensive posture with low allocation, anticipating further price erosion toward the $55.00 support level.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.7599983215332,
+    "delta": -2.6099983215332045
+  },
+  {
+    "targetDate": "2026-01-08",
+    "prediction": {
+      "date": "2026-01-08T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 58.45,
+      "portfolio_allocation": 65,
+      "reasoning": "The recent 3.16% surge driven by index buying and demand strength suggests strong bullish momentum, though a rising US Dollar Index may provide some resistance to further gains. Geopolitical tensions regarding US seizures of Russian and Venezuelan tankers introduce a significant risk premium that offsets the long-term supply concerns from Iraq's 2026 projects. Given the EIA inventory levels and the current technical breakout, I am allocating a majority of the portfolio to capture continued short-term upward volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.119998931884766,
+    "delta": -0.6699989318847628
+  },
+  {
+    "targetDate": "2026-01-09",
+    "prediction": {
+      "date": "2026-01-09T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 58.45,
+      "portfolio_allocation": 40,
+      "reasoning": "The combination of a strengthening US Dollar and the finalized $2 billion Venezuelan export deal creates immediate downward pressure on WTI prices due to increased supply expectations. While Russian production cuts provide a structural floor, the current EIA inventory levels and high rig count suggest a well-supplied market in the short term. I am reducing allocation to 40% to mitigate risk from the bearish technical momentum following yesterday's 2.35% gain.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.119998931884766,
+    "delta": -0.6699989318847628
+  },
+  {
+    "targetDate": "2026-01-10",
+    "prediction": {
+      "date": "2026-01-10T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 58.45,
+      "portfolio_allocation": 40,
+      "reasoning": "The rising US Dollar Index and stable domestic inventory levels exert downward pressure on WTI prices, suggesting a technical correction from yesterday's gain. Geopolitical uncertainty regarding potential Trump administration sanctions on Iran and Venezuela introduces a risk premium, but current supply stability remains the dominant factor. Consequently, I am maintaining a moderate allocation to capitalize on volatility while hedging against a stronger dollar and high rig counts.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.150001525878906,
+    "delta": -2.7000015258789034
+  },
+  {
+    "targetDate": "2026-01-13",
+    "prediction": {
+      "date": "2026-01-13T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 63.25,
+      "portfolio_allocation": 75,
+      "reasoning": "Escalating geopolitical tensions in Iran and potential supply disruptions outweigh the headwinds from a stronger US Dollar and stable domestic rig counts. The market momentum is currently bullish following a nearly 3% gain, supported by news of U.S. tariff warnings and Middle Eastern instability. While Venezuelan production remains a long-term uncertainty, the immediate supply-side risk premium justifies a high conviction long position for the upcoming session.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.02000045776367,
+    "delta": 1.2299995422363281
+  },
+  {
+    "targetDate": "2026-01-14",
+    "prediction": {
+      "date": "2026-01-14T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 65,
+      "reasoning": "OPEC's optimistic 2027 demand outlook provides a bullish long-term signal, while the recent 1.42% upward momentum suggests strong short-term buying interest. Geopolitical uncertainty surrounding U.S. intervention in Venezuela adds a risk premium to the supply side. A 65% allocation balances the positive demand forecasts against a steady US Dollar and high domestic inventory levels.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.189998626708984,
+    "delta": 3.660001373291017
+  },
+  {
+    "targetDate": "2026-01-15",
+    "prediction": {
+      "date": "2026-01-15T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 58.65,
+      "portfolio_allocation": 35,
+      "reasoning": "The recent 4.56% drop indicates significant bearish momentum and technical breakdown, further pressured by a strengthening US Dollar Index. While OPEC's long-term demand forecasts remain optimistic, current high US inventory levels and stable rig counts suggest a short-term supply surplus. A cautious allocation is warranted as the market seeks a new support level following the breach of the $60 psychological threshold.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.439998626708984,
+    "delta": -0.7899986267089858
+  },
+  {
+    "targetDate": "2026-01-16",
+    "prediction": {
+      "date": "2026-01-16T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 59.85,
+      "portfolio_allocation": 65,
+      "reasoning": "Despite a strengthening US Dollar and stable EIA inventory levels, geopolitical tensions in the Middle East and OPEC's regained market share in India provide a bullish floor for prices. The market is currently pricing in a supply-demand equilibrium for 2026, suggesting moderate upward momentum from yesterday's close. A 65% allocation balances the potential for a price breakout against the risk of continued volatility and uncertainty in global demand projections.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.439998626708984,
+    "delta": 0.41000137329101705
+  },
+  {
+    "targetDate": "2026-01-17",
+    "prediction": {
+      "date": "2026-01-17T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 58.65,
+      "portfolio_allocation": 35,
+      "reasoning": "The prevailing market narrative has shifted from geopolitical risk to a supply glut, as evidenced by rising U.S. inventories and easing tensions in the Middle East. A strengthening US Dollar Index and a 4% drop in Brent benchmarks suggest immediate downward pressure on WTI prices. Consequently, a defensive allocation is warranted to mitigate risk while monitoring the impact of Chinese demand and potential OPEC+ responses to the surplus.",
+      "parse_status": "success"
+    },
+    "actual_close": 60.34000015258789,
+    "delta": -1.690000152587892
+  },
+  {
+    "targetDate": "2026-01-20",
+    "prediction": {
+      "date": "2026-01-20T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 61.12,
+      "portfolio_allocation": 65,
+      "reasoning": "The recent 1.51% upward momentum is supported by Black Sea production disruptions and a weakening US Dollar, creating short-term bullish pressure. While Fitch warns of a long-term oversupply, the immediate market sentiment is bolstered by resilient domestic demand and geopolitical risks. A moderate allocation reflects a tactical long position to capture continued recovery while remaining cautious of high inventory levels reported by the EIA.",
+      "parse_status": "success"
+    },
+    "actual_close": 60.619998931884766,
+    "delta": 0.5000010681152318
+  },
+  {
+    "targetDate": "2026-01-21",
+    "prediction": {
+      "date": "2026-01-21T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 59.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The IEA's projection of a significant surplus in Q1 2026 combined with a strengthening US Dollar creates strong downward pressure on WTI prices. While demand growth forecasts were slightly revised upward, the overarching narrative of oversupply and high US inventory levels suggests a bearish trend for the immediate session. A conservative allocation is maintained to hedge against potential volatility from geopolitical shifts in South America despite the current market numbness to such events.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.36000061035156,
+    "delta": 0.4899993896484389
+  },
+  {
+    "targetDate": "2026-01-22",
+    "prediction": {
+      "date": "2026-01-22T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 58.75,
+      "portfolio_allocation": 30,
+      "reasoning": "The recent 2% drop triggered by easing geopolitical tensions with Iran and Greenland suggests a shift toward bearish sentiment in the short term. While Saudi Aramco disputes the oil glut narrative, the technical momentum remains downward following the breach of previous support levels. A conservative allocation is warranted as the market digests the impact of US sanctions relief scenarios in Venezuela against a backdrop of steady US rig counts.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.06999969482422,
+    "delta": -2.3199996948242188
+  },
+  {
+    "targetDate": "2026-01-23",
+    "prediction": {
+      "date": "2026-01-23T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 63.45,
+      "portfolio_allocation": 85,
+      "reasoning": "The combination of a weakening US Dollar and heightened geopolitical tensions regarding Iran provides strong upward momentum for WTI futures. Bullish sentiment is further supported by the Aramco CEO's comments on strong demand and the relatively low US inventory levels reported by the EIA. Given the significant price rebound and the 'armada' rhetoric, a high conviction allocation is warranted to capture the expected short-term volatility and price appreciation.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.06999969482422,
+    "delta": 2.380000305175784
+  },
+  {
+    "targetDate": "2026-01-24",
+    "prediction": {
+      "date": "2026-01-24T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The combination of a weakening US Dollar and significant geopolitical escalation involving new sanctions and naval movements against Iran creates a strong bullish catalyst. Crude stocks remain relatively tight at 423 million barrels, and the market's 2.88% momentum from the previous session suggests a breakout above the $62.00 resistance level is imminent. High conviction in continued upward movement justifies a heavy 85% allocation to capture the volatility premium driven by supply-side risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.38999938964844,
+    "delta": 0.4600006103515639
+  },
+  {
+    "targetDate": "2026-01-27",
+    "prediction": {
+      "date": "2026-01-27T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 61.25,
+      "portfolio_allocation": 35,
+      "reasoning": "Despite a recent price bounce and a weakening US Dollar, the prevailing market sentiment remains bearish due to persistent reports of surplus production and weak global demand forecasts for 2026. Technical indicators show WTI retreating toward the $60.50 support level as US supply disruptions ease and geopolitical risk premiums begin to fade. A conservative allocation is warranted given the downward pressure from high inventory levels and the structural shift toward clean energy mentioned in recent reports.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.209999084472656,
+    "delta": -1.9599990844726562
+  },
+  {
+    "targetDate": "2026-01-28",
+    "prediction": {
+      "date": "2026-01-28T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 65.45,
+      "portfolio_allocation": 75,
+      "reasoning": "The 15 percent reduction in U.S. production due to winter storms creates a significant supply-side shock that outweighs the bearish pressure from a stronger US Dollar. While Saudi Arabia's potential price discounting suggests long-term competition for market share, the immediate physical market tightness is driving prices toward a four-month high. I am allocating 75% of the portfolio to capture the momentum from this supply disruption while maintaining a cash buffer for volatility.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.41999816894531,
+    "delta": 0.030001831054690342
+  },
+  {
+    "targetDate": "2026-01-29",
+    "prediction": {
+      "date": "2026-01-29T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 67.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The convergence of heightened geopolitical risk involving potential U.S. strikes on Iran and a weakening U.S. Dollar Index provides a strong bullish catalyst for WTI prices. Despite the long-term 'superglut' concerns for 2026, the immediate supply-side risk premium and recent 3.5% momentum suggest a continued breakout toward the $68-70 range. A high portfolio allocation is justified to capture this volatility, though 15% cash is retained to hedge against the high EIA inventory levels reported.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 2.640000915527338
+  },
+  {
+    "targetDate": "2026-01-30",
+    "prediction": {
+      "date": "2026-01-30T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 65.85,
+      "portfolio_allocation": 65,
+      "reasoning": "Despite a strengthening US Dollar, the convergence of geopolitical tensions in Iran and reports of OPEC+ maintaining production cuts through March provides significant upward pressure on crude prices. The recent EIA data showing stable inventory levels combined with the market's anticipation of a supply deficit supports a bullish short-term reversal. I am allocating 65% of the portfolio to capture the expected price rebound as WTI tests the $66 resistance level.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 0.6400009155273381
+  },
+  {
+    "targetDate": "2026-01-31",
+    "prediction": {
+      "date": "2026-01-31T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 66.45,
+      "portfolio_allocation": 65,
+      "reasoning": "Heightened geopolitical risk premiums from US-Iran tensions and OPEC's commitment to supply discipline provide strong upward pressure despite a strengthening US Dollar. The EIA inventory levels and stable rig counts suggest a balanced physical market, while India's long-term demand outlook bolsters bullish sentiment. A target price of $66.45 reflects a recovery from yesterday's dip, justifying a 65% allocation to capitalize on the anticipated volatility-driven rebound.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.209999084472656,
+    "delta": 3.2400009155273466
+  },
+  {
+    "targetDate": "2026-02-03",
+    "prediction": {
+      "date": "2026-02-03T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The combination of a persistent global supply surplus of 2.3 million bpd and the 'peak oil' narrative regarding renewable displacement creates significant downward pressure on WTI. While a weakening US Dollar and Middle East geopolitical tensions provide a temporary floor, the specific forecast of a $55-$65 range suggests limited upside from current levels. Consequently, a defensive allocation is warranted to mitigate risk against the prevailing bearish demand headwinds and high inventory levels.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.13999938964844,
+    "delta": -2.289999389648436
+  },
+  {
+    "targetDate": "2026-02-04",
+    "prediction": {
+      "date": "2026-02-04T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 63.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The agreement between the U.S. and Iran to hold talks in Oman significantly reduces the geopolitical risk premium, as evidenced by the recent 3% price drop. While the rising U.S. Dollar Index exerts further downward pressure on commodities, the uncertainty of the talk outcomes warrants a cautious, non-zero allocation. Technical momentum suggests a test of lower support levels near $63.85 as supply disruption fears subside in the short term.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.290000915527344,
+    "delta": 0.5599990844726577
+  },
+  {
+    "targetDate": "2026-02-05",
+    "prediction": {
+      "date": "2026-02-05T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.45,
+      "portfolio_allocation": 35,
+      "reasoning": "The combination of a strengthening US Dollar and potential easing of geopolitical tensions via US-Iran talks creates immediate downward pressure on WTI prices. While long-term sentiment from Standard Chartered suggests a rebalancing market, the current momentum is bearish following a nearly 3% drop and rising inventory concerns. A conservative allocation is warranted to capitalize on the downward trend while hedging against the volatility of shifting shale growth and Middle Eastern production dynamics.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -1.099999237060544
+  },
+  {
+    "targetDate": "2026-02-06",
+    "prediction": {
+      "date": "2026-02-06T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.95,
+      "portfolio_allocation": 35,
+      "reasoning": "The easing of supply disruption fears due to U.S.-Iran nuclear negotiations in Oman is creating significant downward pressure on prices, outweighing the minor support from a weaker U.S. Dollar. High inventory levels of 428.8 million barrels suggest a well-supplied market, reinforcing the bearish sentiment seen in recent sessions. A conservative allocation is prudent as the market tests lower support levels while awaiting concrete outcomes from the diplomatic talks.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -0.599999237060544
+  },
+  {
+    "targetDate": "2026-02-07",
+    "prediction": {
+      "date": "2026-02-07T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 64.12,
+      "portfolio_allocation": 65,
+      "reasoning": "The confluence of a weakening US Dollar and heightened geopolitical tensions between the US and Iran provides a bullish catalyst for short-term pricing. EIA data showing stable inventory levels combined with reports of easing oversupply suggests a tightening physical market despite long-term bearish risks. A 65% allocation reflects a tactical long position to capture momentum from the recent positive settlement and supportive macro environment.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.959999084472656,
+    "delta": 0.1600009155273483
+  },
+  {
+    "targetDate": "2026-02-10",
+    "prediction": {
+      "date": "2026-02-10T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 64.65,
+      "portfolio_allocation": 65,
+      "reasoning": "Despite a slight decline in the previous session, escalating Iran-US tensions and OPEC's steady demand outlook provide a bullish floor for prices. The cooling of U.S. shale production and a stable rig count suggest supply growth is peaking, while a weakening Dollar Index further supports a price rebound. I am allocating 65% of the portfolio to capitalize on the expected 1% upward correction driven by geopolitical risk premiums and inventory stability.",
+      "parse_status": "success"
+    },
+    "actual_close": 64.62999725341797,
+    "delta": 0.020002746582036934
+  },
+  {
+    "targetDate": "2026-02-11",
+    "prediction": {
+      "date": "2026-02-11T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 65.45,
+      "portfolio_allocation": 75,
+      "reasoning": "Heightened geopolitical risk premiums from potential US-Iran escalations and a second aircraft carrier deployment are currently outweighing the bearish signal of a large US crude stock build. The decline in OPEC+ production, specifically from Kazakhstan and Iran, suggests a tightening global supply outlook despite the slight strength in the US Dollar. Technical momentum following a 1% gain yesterday supports a continued bullish trend toward the $65.50 resistance level.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.84000015258789,
+    "delta": 2.609999847412112
+  },
+  {
+    "targetDate": "2026-02-12",
+    "prediction": {
+      "date": "2026-02-12T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.15,
+      "portfolio_allocation": 30,
+      "reasoning": "The combination of a bearish EIA inventory build and the IEA's downward revision of 2026 demand growth outlook exerts significant downward pressure on prices. While a rising US Dollar Index further headwinds WTI, the existing geopolitical tensions in the Middle East provide a technical floor that prevents a complete collapse. Consequently, a defensive 30% allocation is warranted to capitalize on the downward momentum while remaining liquid enough to hedge against sudden supply-side shocks.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.7399993896484389
+  },
+  {
+    "targetDate": "2026-02-13",
+    "prediction": {
+      "date": "2026-02-13T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 61.95,
+      "portfolio_allocation": 35,
+      "reasoning": "The combination of OPEC+ leaning towards increasing supply in April and rising U.S. crude inventories creates significant downward pressure on WTI prices. Fading geopolitical risks between the U.S. and Iran further reduces the risk premium, suggesting a bearish trend toward the $62 support level. A conservative allocation is maintained to hedge against potential volatility from upcoming inflation data while favoring a short-term bearish outlook.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.9399993896484347
+  },
+  {
+    "targetDate": "2026-02-14",
+    "prediction": {
+      "date": "2026-02-14T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 62.15,
+      "portfolio_allocation": 35,
+      "reasoning": "The IEA's projection of a significant supply surplus of 3.73 million barrels per day in 2026 creates strong downward pressure on long-term price action despite short-term geopolitical tensions. While the weakening US Dollar provides a minor tailwind, the prospect of OPEC+ resuming output increases in April suggests a bearish shift in market balance. Consequently, a conservative allocation is warranted as the market anticipates inventory builds and potential oversupply.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.33000183105469,
+    "delta": -0.18000183105468892
+  },
+  {
+    "targetDate": "2026-02-17",
+    "prediction": {
+      "date": "2026-02-17T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 61.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The recent EIA inventory data and reports of a potential global supply glut suggest downward pressure on prices, while the dip in US gasoline prices indicates softening domestic demand. Although Middle East tensions provide a geopolitical floor, the upward trend in the US Dollar Index and increased Libyan production targets favor a bearish outlook for the immediate session. Consequently, a conservative allocation is prudent to mitigate volatility risks associated with upcoming US-Iran nuclear negotiations.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.19000244140625,
+    "delta": -3.3400024414062486
+  },
+  {
+    "targetDate": "2026-02-18",
+    "prediction": {
+      "date": "2026-02-18T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 66.85,
+      "portfolio_allocation": 75,
+      "reasoning": "Escalating U.S.-Iran tensions and record-high Asian demand forecasts provide strong bullish momentum despite a strengthening U.S. Dollar. The sharp 4.59% jump yesterday indicates high volatility and a breakout above recent resistance levels, suggesting further upside potential. A 75% allocation balances the strong geopolitical risk premium against the headwind of a rising DXY and stable domestic inventory levels.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.43000030517578,
+    "delta": 0.41999969482421307
+  },
+  {
+    "targetDate": "2026-02-19",
+    "prediction": {
+      "date": "2026-02-19T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 68.25,
+      "portfolio_allocation": 65,
+      "reasoning": "The market is currently reacting to a significant geopolitical risk premium driven by reports of imminent military conflict between the US and Iran, which typically outweighs bearish demand fundamentals in the short term. While Deutsche Bank's long-term outlook remains bearish due to oversupply and declining demand, the immediate technical momentum and news of military mobilization suggest a continued upward spike toward the $68 level. A 65% allocation balances the high-conviction volatility play with the risk of a sudden de-escalation or a return to focus on the rising EIA stock levels.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 1.8600006103515625
+  },
+  {
+    "targetDate": "2026-02-20",
+    "prediction": {
+      "date": "2026-02-20T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 68.45,
+      "portfolio_allocation": 85,
+      "reasoning": "Heightened geopolitical tensions involving potential U.S. military action against Iran create a significant risk premium that outweighs the slight inventory build in the EIA report. The weakening US Dollar Index provides additional tailwinds for dollar-denominated crude prices, suggesting an upward breakout from the previous session's flat close. A high allocation is justified to capture the expected volatility and price surge associated with the imminent threat to Middle Eastern supply chains.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 2.0600006103515653
+  },
+  {
+    "targetDate": "2026-02-21",
+    "prediction": {
+      "date": "2026-02-21T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 67.85,
+      "portfolio_allocation": 65,
+      "reasoning": "Despite a projected supply glut, escalating US-Iran tensions and potential airstrikes are introducing a significant geopolitical risk premium that outweighs bearish fundamental inventory data. The weakening US Dollar Index provides additional tailwinds for dollar-denominated crude prices in the immediate term. I am allocating 65% to capitalize on this upward momentum driven by the Middle East risk escalation while maintaining a cash buffer against long-term oversupply concerns.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.62999725341797,
+    "delta": 2.2200027465820256
+  },
+  {
+    "targetDate": "2026-02-24",
+    "prediction": {
+      "date": "2026-02-24T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 68.45,
+      "portfolio_allocation": 75,
+      "reasoning": "The escalation of geopolitical risk following the reported military intervention in Venezuela and rising Middle East tensions creates a significant supply-side risk premium that outweighs the bearish pressure from a stronger US Dollar. Surging tanker rates and high export volumes indicate a scramble for physical supply, suggesting the previous day's price drop was a temporary correction. Given the high volatility and potential for a rapid price spike, a 75% allocation balances the aggressive upside potential with the risk of dollar-driven resistance.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.41999816894531,
+    "delta": 3.0300018310546903
+  },
+  {
+    "targetDate": "2026-02-25",
+    "prediction": {
+      "date": "2026-02-25T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 64.85,
+      "portfolio_allocation": 35,
+      "reasoning": "The combination of a potential 137,000 bpd OPEC+ output increase and a significant US crude stock build of 435 million barrels creates substantial downward pressure on prices. While geopolitical tensions involving Iran provide a risk premium floor, the market appears more focused on the immediate supply surplus and rising inventory levels. I am maintaining a defensive allocation of 35% to capitalize on volatility while hedging against the bearish fundamental data.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": -0.35999908447266193
+  },
+  {
+    "targetDate": "2026-02-26",
+    "prediction": {
+      "date": "2026-02-26T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 66.45,
+      "portfolio_allocation": 65,
+      "reasoning": "The combination of heightened geopolitical risks in the Middle East and the rush by Gulf petrostates to export crude suggests an immediate supply-risk premium that outweighs the slight bearish pressure from a stronger US Dollar. While the EIA stocks show healthy inventory levels, the uncertainty surrounding the OPEC+ meeting and potential US strikes on Iran creates a bullish technical setup for a mean-reversion bounce from recent lows. Consequently, a 65% allocation is warranted to capture the expected volatility-driven price appreciation while maintaining a cash buffer for further diplomatic developments.",
+      "parse_status": "success"
+    },
+    "actual_close": 67.0199966430664,
+    "delta": -0.5699966430664034
+  },
+  {
+    "targetDate": "2026-02-27",
+    "prediction": {
+      "date": "2026-02-27T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 68.15,
+      "portfolio_allocation": 65,
+      "reasoning": "The recent 2.78% price surge and reclaiming of key technical levels indicate strong bullish momentum driven by a returning war risk premium and a weakening US Dollar. While long-term 2026 outlooks mention oversupply, the immediate market focus is on heightened geopolitical tensions involving Iran and the potential for OPEC+ to delay production hikes. A 65% allocation balances the aggressive short-term upward trend against the fundamental risk of high US inventory levels and upcoming supply decisions.",
+      "parse_status": "success"
+    },
+    "actual_close": 67.0199966430664,
+    "delta": 1.1300033569335994
+  },
+  {
+    "targetDate": "2026-02-28",
+    "prediction": {
+      "date": "2026-02-28T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 84.5,
+      "portfolio_allocation": 85,
+      "reasoning": "The direct military attack on Iran by the U.S. and Israel introduces a significant geopolitical risk premium, potentially threatening supply through the Strait of Hormuz and infrastructure damage. While OPEC+ considers increasing output, the immediate threat of supply disruption outweighs the bearish impact of a 411,000 bpd hike. The combination of a weakening U.S. Dollar and a potential $20 risk premium suggests a sharp upward correction from yesterday's close.",
+      "parse_status": "success"
+    },
+    "actual_close": 74.55999755859375,
+    "delta": 9.94000244140625
+  },
+  {
+    "targetDate": "2026-03-03",
+    "prediction": {
+      "date": "2026-03-03T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 78.45,
+      "portfolio_allocation": 85,
+      "reasoning": "The escalation of a full-scale regional conflict involving Iran, Saudi Arabia, and Qatar creates a significant supply-side shock and risk premium that outweighs the bearish pressure of a rising US Dollar. While Indian demand for Russian crude provides a slight buffer, the physical disruption of shipping lanes and attacks on production facilities suggest a continued upward trajectory for WTI. High volatility warrants a strong but not total allocation to capture the momentum of the geopolitical risk premium while maintaining a cash reserve for potential margin requirements.",
+      "parse_status": "success"
+    },
+    "actual_close": 74.66000366210938,
+    "delta": 3.789996337890628
+  },
+  {
+    "targetDate": "2026-03-04",
+    "prediction": {
+      "date": "2026-03-04T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 76.85,
+      "portfolio_allocation": 85,
+      "reasoning": "The recent surge in oil prices above $85/bbl mentioned in news reports suggests a significant bullish momentum driven by potential Strait of Hormuz disruptions, despite yesterday's lower settlement. A weakening US Dollar Index and stable US rig counts provide additional tailwinds for commodity pricing in the short term. High geopolitical risk premiums and Asia's supply vulnerability justify an aggressive portfolio allocation to capture expected volatility-driven gains.",
+      "parse_status": "success"
+    },
+    "actual_close": 81.01000213623047,
+    "delta": -4.160002136230474
+  },
+  {
+    "targetDate": "2026-03-05",
+    "prediction": {
+      "date": "2026-03-05T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 84.65,
+      "portfolio_allocation": 85,
+      "reasoning": "The escalation of conflict in Iran and the effective closure of the Strait of Hormuz represent a severe supply-side shock that outweighs the bearish pressure of a rising US Dollar. Despite the US granting waivers for Russian oil, the structural deficit from lost Middle Eastern heavy crude and limited US shale elasticity creates a strong upward price trajectory. I am allocating 85% of the portfolio to capture this volatility, maintaining a 15% cash buffer due to the extreme 8.5% jump yesterday which may invite short-term profit taking.",
+      "parse_status": "success"
+    },
+    "actual_close": 90.9000015258789,
+    "delta": -6.250001525878901
+  },
+  {
+    "targetDate": "2026-03-06",
+    "prediction": {
+      "date": "2026-03-06T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 94.25,
+      "portfolio_allocation": 85,
+      "reasoning": "The combination of a weakening US Dollar and escalating geopolitical tensions in the Middle East, specifically involving Iran and the Strait of Hormuz, creates a strong bullish catalyst for WTI prices. Supply chain disruptions and increased Asian demand for US barrels further tighten the physical market despite relatively stable EIA inventory levels. Given the high volatility and potential for a significant supply shock, a high portfolio allocation is justified to capture the upward momentum.",
+      "parse_status": "success"
+    },
+    "actual_close": 90.9000015258789,
+    "delta": 3.3499984741210938
+  },
+  {
+    "targetDate": "2026-03-07",
+    "prediction": {
+      "date": "2026-03-07T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 94.75,
+      "portfolio_allocation": 85,
+      "reasoning": "The combination of a weakening US Dollar and significant geopolitical risk premiums stemming from the Strait of Hormuz disruption creates a strong bullish catalyst. With WTI already showing 12% momentum and national gas prices surging, the market is pricing in a severe supply-side shock. A high allocation is justified to capture the continued upward volatility driven by the escalating Middle East conflict and production cuts.",
+      "parse_status": "success"
+    },
+    "actual_close": 94.7699966430664,
+    "delta": -0.01999664306640625
+  },
+  {
+    "targetDate": "2026-03-09",
+    "prediction": {
+      "date": "2026-03-09T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 93.25,
+      "portfolio_allocation": 45,
+      "reasoning": "The recent surge to $94.77 appears overextended as geopolitical tensions show signs of cooling following President Trump's comments regarding a potential end to the conflict. While low rig counts and EIA inventory levels provide a structural floor, the immediate market sentiment is shifting toward a bearish correction from overbought levels. I am reducing allocation to 45% to capture potential downside while maintaining a core position in case of renewed supply disruptions.",
+      "parse_status": "success"
+    },
+    "actual_close": 83.44999694824219,
+    "delta": 9.800003051757812
+  },
+  {
+    "targetDate": "2026-03-10",
+    "prediction": {
+      "date": "2026-03-10T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 86.35,
+      "portfolio_allocation": 85,
+      "reasoning": "The sharp 11.94% drop yesterday appears to be an overcorrection or technical anomaly given that current news reports indicate immediate supply constraints and prices already rebounding toward $86.33. Geopolitical escalation in the Persian Gulf and a weakening US Dollar Index provide strong bullish tailwinds that should offset high EIA inventory levels. I am allocating aggressively to capture the expected mean reversion and risk premium associated with the widening Middle East conflict.",
+      "parse_status": "success"
+    },
+    "actual_close": 87.25,
+    "delta": -0.9000000000000057
+  },
+  {
+    "targetDate": "2026-03-11",
+    "prediction": {
+      "date": "2026-03-11T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 98.45,
+      "portfolio_allocation": 85,
+      "reasoning": "The escalation of direct strikes by Iran on economic targets and the resulting supply crunch fears are outweighing the bearish pressure from a rising US Dollar and the IEA's emergency reserve release. Despite Saudi production hikes, the market is pricing in a significant geopolitical risk premium as prices have already breached the $100 psychological level in intraday trading. A high portfolio allocation is justified by the strong upward momentum and the fundamental threat to global crude flows through the Middle East.",
+      "parse_status": "success"
+    },
+    "actual_close": 95.7300033569336,
+    "delta": 2.719996643066409
+  },
+  {
+    "targetDate": "2026-03-12",
+    "prediction": {
+      "date": "2026-03-12T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 108.65,
+      "portfolio_allocation": 95,
+      "reasoning": "The unprecedented 10 million bpd supply cut reported by the IEA represents the largest disruption in history, creating a severe physical deficit that outweighs the bearish pressure of a rising US Dollar. Despite emergency reserve releases, the magnitude of the Middle East conflict suggests a massive risk premium and immediate supply crunch. I am allocating nearly all capital to capture the anticipated parabolic move as markets price in the structural shortage.",
+      "parse_status": "success"
+    },
+    "actual_close": 98.71,
+    "delta": 9.940000000000012
+  },
+  {
+    "targetDate": "2026-03-14",
+    "prediction": {
+      "date": "2026-03-14T00:00:00.000Z",
+      "model": "google/gemini-3-flash-preview",
+      "predict_target_price": 108.45,
+      "portfolio_allocation": 85,
+      "reasoning": "The IEA report of a 10 million bpd supply disruption due to Middle East conflict represents a historic supply shock that far outweighs the minor headwind of a stronger US Dollar. Despite long-term efficiency gains, the immediate physical shortage and expected EIA inventory draw create a high-conviction bullish environment for WTI. I am aggressively allocating to capture the significant risk premium being priced into the market following these unprecedented geopolitical developments.",
+      "parse_status": "success"
+    }
+  }
+]

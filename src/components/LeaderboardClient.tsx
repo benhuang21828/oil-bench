@@ -5,7 +5,7 @@ import { MetricsSummary } from '@/lib/evaluation/types';
 import InfoTooltip from './InfoTooltip';
 import { ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react';
 
-type SortField = 'rank' | 'model' | 'simulatedPnL' | 'mae' | 'rmse' | 'totalPredictions';
+type SortField = 'rank' | 'model' | 'simulatedPnL' | 'mae' | 'rmse' | 'pnlSpread' | 'avgDailySpread';
 type SortDirection = 'asc' | 'desc';
 
 interface LeaderboardClientProps {
@@ -50,6 +50,16 @@ export default function LeaderboardClient({ metrics, baselinePnL, startDate, end
       return sortDirection === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
     }
     
+    if (sortField === 'pnlSpread') {
+      aValue = a.aggregateMetrics?.simulatedPnL ? (a.aggregateMetrics.simulatedPnL.max - a.aggregateMetrics.simulatedPnL.min) : 0;
+      bValue = b.aggregateMetrics?.simulatedPnL ? (b.aggregateMetrics.simulatedPnL.max - b.aggregateMetrics.simulatedPnL.min) : 0;
+    }
+    
+    if (sortField === 'avgDailySpread') {
+      aValue = a.averageDailyTargetSpread || 0;
+      bValue = b.averageDailyTargetSpread || 0;
+    }
+    
     // Numeric sorting
     const diff = (aValue as number) - (bValue as number);
     return sortDirection === 'asc' ? diff : -diff;
@@ -69,7 +79,8 @@ export default function LeaderboardClient({ metrics, baselinePnL, startDate, end
       case 'rmse': return 'Ranking by Consistency Risk (RMSE)';
       case 'model': return 'Sorted by Model Name';
       case 'rank': return 'Ranking by default Performance Score';
-      case 'totalPredictions': return 'Ranking by Total Inferences';
+      case 'pnlSpread': return 'Ranking by Model Inconsistency (Max PnL — Min PnL)';
+      case 'avgDailySpread': return 'Ranking by Internal Determinism (Average Intra-Day Target Variance)';
       default: return 'Ranking custom';
     }
   };
@@ -147,9 +158,23 @@ export default function LeaderboardClient({ metrics, baselinePnL, startDate, end
                 </th>
                 <th 
                   className="px-4 py-3 whitespace-nowrap cursor-pointer hover:text-slate-200 transition-colors select-none"
-                  onClick={() => handleSort('totalPredictions')}
+                  onClick={() => handleSort('pnlSpread')}
                 >
-                  Inferences {getSortIcon('totalPredictions')}
+                  <InfoTooltip 
+                    label="PnL Spread" 
+                    content={<>The difference between the best and worst performing PnL run for this model. A higher spread indicates higher model unstability constraint boundaries.</>}
+                  />
+                  {getSortIcon('pnlSpread')}
+                </th>
+                <th 
+                  className="px-4 py-3 whitespace-nowrap cursor-pointer hover:text-slate-200 transition-colors select-none"
+                  onClick={() => handleSort('avgDailySpread')}
+                >
+                  <InfoTooltip 
+                    label="Internal Determinism" 
+                    content={<>The average max-min spread of the target price strictly computed on an individual intra-day basis. Meaning, how wildly does the model change its mind when asked the same question on the same day?</>}
+                  />
+                  {getSortIcon('avgDailySpread')}
                 </th>
               </tr>
             </thead>
@@ -164,11 +189,40 @@ export default function LeaderboardClient({ metrics, baselinePnL, startDate, end
                       {m.rank}
                     </span>
                   </td>
-                  <td className="px-4 py-3 font-medium text-slate-200 whitespace-nowrap">{m.model.split('/').pop() || m.model}</td>
-                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${m.simulatedPnL >= 10000 ? 'text-emerald-400' : 'text-rose-400'}`}>${m.simulatedPnL?.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) || '10,000.00'}</td>
-                  <td className="px-4 py-3 text-slate-300 font-medium whitespace-nowrap">${m.mae.toFixed(2)}</td>
-                  <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">${m.rmse.toFixed(2)}</td>
-                  <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">{m.totalPredictions}</td>
+                  <td className="px-4 py-3 font-medium text-slate-200 whitespace-nowrap">
+                    {m.model.split('/').pop() || m.model}
+                    {m.runsCount && m.runsCount > 1 && (
+                      <span className="ml-2 bg-white/10 text-[10px] uppercase text-emerald-300 font-bold px-1.5 py-0.5 rounded border border-emerald-400/20">{m.runsCount}x</span>
+                    )}
+                  </td>
+                  <td className={`px-4 py-3 font-semibold whitespace-nowrap ${m.simulatedPnL >= 10000 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                    ${m.simulatedPnL?.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) || '10,000.00'}
+                    {m.aggregateMetrics?.simulatedPnL?.stdDev ? (
+                        <span className="text-[10px] text-slate-500 font-mono tracking-tighter block mt-0.5">±${m.aggregateMetrics.simulatedPnL.stdDev.toFixed(0)}</span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-3 text-slate-300 font-medium whitespace-nowrap">
+                    ${m.mae.toFixed(2)}
+                    {m.aggregateMetrics?.mae?.stdDev ? (
+                        <span className="text-[10px] text-slate-500 font-mono tracking-tighter block mt-0.5">±${m.aggregateMetrics.mae.stdDev.toFixed(3)}</span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">
+                    ${m.rmse.toFixed(2)}
+                    {m.aggregateMetrics?.rmse?.stdDev ? (
+                        <span className="text-[10px] text-slate-500 font-mono tracking-tighter block mt-0.5">±${m.aggregateMetrics.rmse.stdDev.toFixed(3)}</span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-3 text-slate-400 text-xs whitespace-nowrap">
+                    {m.aggregateMetrics?.simulatedPnL ? (
+                      <span className="text-rose-400 font-mono tracking-tighter block mt-0.5">${(m.aggregateMetrics.simulatedPnL.max - m.aggregateMetrics.simulatedPnL.min).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}</span>
+                    ) : <span className="text-slate-600">N/A</span>}
+                  </td>
+                  <td className="px-4 py-3 text-slate-500 text-sm font-semibold whitespace-nowrap">
+                    {m.averageDailyTargetSpread !== undefined ? (
+                       <span className="text-amber-500 block">±${m.averageDailyTargetSpread.toFixed(2)}</span>
+                    ) : 'N/A'}
+                  </td>
                 </tr>
               ))}
             </tbody>

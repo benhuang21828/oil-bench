@@ -1,0 +1,689 @@
+[
+  {
+    "targetDate": "2026-01-01",
+    "prediction": {
+      "date": "2026-01-01T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 57.18,
+      "portfolio_allocation": 25,
+      "reasoning": "WTI closed at $57.42 with bearish momentum (-0.91%), and the broader narrative is dominated by oversupply concerns heading into 2026, with oil recording its steepest annual fall since the COVID pandemic. The slightly stronger dollar (DXY +0.04%) adds marginal headwind, while U.S. crude inventories at ~423 million barrels remain elevated, and the rig count at 479 suggests continued domestic production. I estimate a modest further decline to $57.18 as bearish sentiment persists, and maintain a conservative 25% oil allocation given the high uncertainty from mixed signals—potential AI-driven demand upside vs. OPEC+ cohesion risks and global oversupply.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.31999969482422,
+    "delta": -0.13999969482421903
+  },
+  {
+    "targetDate": "2026-01-02",
+    "prediction": {
+      "date": "2026-01-02T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 57.18,
+      "portfolio_allocation": 30,
+      "reasoning": "WTI is trading near $57.32 with key $57 support being tested ahead of the OPEC+ meeting this weekend. OPEC+ is expected to maintain current production policy despite Saudi-UAE tensions, which removes upside catalyst while the bearish macro backdrop (rising DXY, high US inventories at 419M barrels, and diverging demand forecasts) continues to weigh on prices. I expect a slight drift lower toward $57.18 as pre-weekend positioning and lack of bullish catalysts keep pressure on, warranting a modest 30% allocation given the uncertain but slightly bearish near-term outlook.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.31999969482422,
+    "delta": -0.13999969482421903
+  },
+  {
+    "targetDate": "2026-01-03",
+    "prediction": {
+      "date": "2026-01-03T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 57.65,
+      "portfolio_allocation": 45,
+      "reasoning": "The geopolitical landscape presents mixed but modestly bullish signals: Middle East conflict supply shock concerns and the Venezuela regime change situation could create upward price pressure, while OPEC+ maintaining current output policy provides stability and limits downside. The slightly stronger dollar (DXY up 0.14%) and relatively stable US crude inventories at 419M barrels act as mild headwinds. Given the geopolitical risk premium from Middle East tensions and Venezuela uncertainty offsetting the bearish dollar strength and steady OPEC+ output, I expect a modest uptick to $57.65, with a moderate 45% allocation reflecting the uncertain but slightly bullish risk-reward profile.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.130001068115234,
+    "delta": 0.5199989318847642
+  },
+  {
+    "targetDate": "2026-01-06",
+    "prediction": {
+      "date": "2026-01-06T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 56.75,
+      "portfolio_allocation": 25,
+      "reasoning": "WTI dropped 2.04% yesterday to $57.13 amid bearish sentiment from ample global supply expectations and Venezuelan output uncertainty, with news headlines consistently pointing to supply-side pressure. The strengthening US dollar (DXY up 0.32%) adds further headwind to oil prices, and elevated US crude inventories at 419 million barrels suggest comfortable supply levels. I expect continued modest downside pressure toward $56.75 today, and given the bearish technical and fundamental backdrop I maintain a conservative 25% oil allocation to limit downside risk while retaining some exposure in case geopolitical disruptions (Venezuela) cause a reversal.",
+      "parse_status": "success"
+    },
+    "actual_close": 55.9900016784668,
+    "delta": 0.7599983215332031
+  },
+  {
+    "targetDate": "2026-01-07",
+    "prediction": {
+      "date": "2026-01-07T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 55.45,
+      "portfolio_allocation": 15,
+      "reasoning": "The bearish momentum is strong with WTI dropping 2% yesterday amid headlines highlighting a global supply glut, robust supplies, and OPEC+ producers scrambling to compensate for overproduction. Fundamentally, US crude inventories at 419 million barrels remain elevated, and the supply-side narrative dominates with Venezuela potentially adding 50 million barrels to market while OPEC+ struggles with compliance. I expect continued downward pressure with a settlement near $55.45, and I'm keeping allocation very low at 15% given the overwhelmingly bearish technical and fundamental setup, preserving capital in cash while maintaining minimal exposure in case of any short-covering bounce.",
+      "parse_status": "success"
+    },
+    "actual_close": 57.7599983215332,
+    "delta": -2.3099983215332003
+  },
+  {
+    "targetDate": "2026-01-08",
+    "prediction": {
+      "date": "2026-01-08T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 58.15,
+      "portfolio_allocation": 62,
+      "reasoning": "Yesterday's strong 3.16% rally was driven by energy demand strength and index buying, suggesting momentum continuation. However, the rising DXY (up 0.25%) creates a headwind for crude prices, and U.S. crude inventories at 419 million barrels remain elevated, which should cap upside. Geopolitical tensions from US seizure of Russian/Venezuelan-linked tankers add a risk premium, and I expect modest follow-through buying today pushing settlement to around $58.15, warranting a moderately bullish allocation.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.119998931884766,
+    "delta": -0.969998931884767
+  },
+  {
+    "targetDate": "2026-01-09",
+    "prediction": {
+      "date": "2026-01-09T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 59.35,
+      "portfolio_allocation": 45,
+      "reasoning": "Yesterday's 2.35% rally suggests bullish momentum, supported by Russia sharply reducing oil production due to US sanctions impact, which tightens global supply. However, the stronger US dollar (DXY up 0.20%) and elevated US crude inventories at 422.4 million barrels provide headwinds, while the Venezuela-US oil deal could add future supply pressure. I expect modest upside continuation to ~$59.35 as the Russia production cut narrative dominates near-term sentiment, but allocate only 45% given mixed fundamentals and uncertainty around OPEC strategy and geopolitical developments.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.119998931884766,
+    "delta": 0.2300010681152358
+  },
+  {
+    "targetDate": "2026-01-10",
+    "prediction": {
+      "date": "2026-01-10T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 59.35,
+      "portfolio_allocation": 42,
+      "reasoning": "WTI gained 2.35% yesterday to $59.12, showing bullish momentum, but the rising DXY (up 0.20%) creates a headwind for further oil price appreciation. Geopolitical news around Iran sanctions enforcement and Venezuela suggests supply disruption risks remain, but the articles indicate Trump's sanctions may be less effective than in 2019, limiting upside. US crude inventories at 422.4M barrels are relatively elevated, and with modest bullish momentum I expect a slight continuation to ~$59.35, warranting a moderate 42% allocation given mixed signals and elevated uncertainty.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.150001525878906,
+    "delta": -1.8000015258789048
+  },
+  {
+    "targetDate": "2026-01-13",
+    "prediction": {
+      "date": "2026-01-13T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.05,
+      "portfolio_allocation": 62,
+      "reasoning": "WTI surged 2.77% yesterday to $61.15, driven by escalating Iranian tensions and supply disruption fears, with news confirming crude prices rallying toward $64 on Iran unrest and U.S. tariff warnings. The bullish momentum from geopolitical risk premiums suggests continued upward pressure, though the rally may moderate as prices approach resistance near $62-63 and the DXY strengthening provides a mild headwind. I estimate settlement around $62.05 reflecting continued but decelerating bullish momentum, and allocate 62% to oil given the favorable geopolitical tailwinds while maintaining cash reserves against potential reversal if tensions de-escalate or dollar strength intensifies.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.02000045776367,
+    "delta": 0.029999542236325283
+  },
+  {
+    "targetDate": "2026-01-14",
+    "prediction": {
+      "date": "2026-01-14T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.35,
+      "portfolio_allocation": 55,
+      "reasoning": "WTI closed at $62.02 with a positive 1.42% move, and OPEC's first 2027 outlook projecting steady demand growth provides a modestly bullish fundamental backdrop. The flat DXY removes a headwind, while U.S. crude inventories at 422.4 million barrels remain within normal ranges and the rig count at 479 suggests measured supply growth. I expect a slight continuation of the upward momentum toward $62.35, warranting a moderately bullish allocation of 55% given the supportive but not strongly directional setup.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.189998626708984,
+    "delta": 3.160001373291017
+  },
+  {
+    "targetDate": "2026-01-15",
+    "prediction": {
+      "date": "2026-01-15T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 58.85,
+      "portfolio_allocation": 35,
+      "reasoning": "WTI dropped sharply by 4.56% to $59.19, suggesting significant bearish momentum likely driven by demand concerns or supply surplus fears, with inventories at 422.4 million barrels indicating ample supply. The DXY strengthening adds further downward pressure on oil prices, and while OPEC maintains an optimistic demand outlook for 2026-2027, near-term sentiment is clearly bearish after such a large single-day decline. I expect modest continued downside with a settlement near $58.85 as selling pressure persists but some bargain-hunting limits losses, and I'm allocating only 35% to oil given the unfavorable short-term technical picture and strong dollar headwind.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.439998626708984,
+    "delta": -0.589998626708983
+  },
+  {
+    "targetDate": "2026-01-16",
+    "prediction": {
+      "date": "2026-01-16T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 59.62,
+      "portfolio_allocation": 42,
+      "reasoning": "WTI closed at $59.44 with a modest 0.42% gain, and the overall environment shows OPEC seeing balanced supply/demand for 2026 while geopolitical stress persists as a mild upside risk factor. The slightly stronger dollar (DXY up 0.07%) provides a minor headwind, but Middle East crude strengthening and OPEC reclaiming Indian market share suggest steady physical demand. I expect a slight upward drift to ~$59.62 given balanced fundamentals and lingering geopolitical premium, with moderate allocation reflecting limited conviction in directional moves amid high uncertainty.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.439998626708984,
+    "delta": 0.18000137329101307
+  },
+  {
+    "targetDate": "2026-01-17",
+    "prediction": {
+      "date": "2026-01-17T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 59.18,
+      "portfolio_allocation": 25,
+      "reasoning": "The dominant narrative is oversupply with rising inventories (426M barrels) and the 'glut narrative regaining control' per news headlines, which is bearish for crude. While geopolitical risks from Iran sanctions and China's reliance on Iranian oil provide some floor, easing regional tensions and a slightly stronger dollar add downward pressure. I estimate a modest decline of ~$0.26 from yesterday's $59.44 close, and maintain a conservative 25% oil allocation given the bearish fundamental backdrop with limited upside catalysts.",
+      "parse_status": "success"
+    },
+    "actual_close": 60.34000015258789,
+    "delta": -1.160000152587891
+  },
+  {
+    "targetDate": "2026-01-20",
+    "prediction": {
+      "date": "2026-01-20T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 60.55,
+      "portfolio_allocation": 45,
+      "reasoning": "Yesterday's 1.51% rally was driven by dollar weakness and Black Sea supply disruptions, providing short-term bullish momentum. However, the broader fundamental picture remains bearish with Fitch calling the global oil market oversupplied, Middle East output set to rise, and US crude inventories at 426 million barrels suggesting ample supply. I expect modest follow-through buying today with a slight upside close near $60.55, but the oversupply narrative and uncertain geopolitical premium limit conviction, warranting a near-neutral allocation slightly below 50%.",
+      "parse_status": "success"
+    },
+    "actual_close": 60.619998931884766,
+    "delta": -0.06999893188476847
+  },
+  {
+    "targetDate": "2026-01-21",
+    "prediction": {
+      "date": "2026-01-21T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 60.45,
+      "portfolio_allocation": 30,
+      "reasoning": "The IEA reports indicate a significant surplus in Q1 2026, which creates persistent downward pressure on crude prices despite a modest upward revision in demand growth forecasts. Yesterday's slight gain of 0.46% appears to be a minor bounce within a broader bearish environment characterized by oversupply, and the strengthening dollar (DXY up 0.12%) adds additional headwind for oil prices. With inventories at 426 million barrels and the market growing numb to geopolitical risks due to oversupply conditions, I expect a slight pullback toward $60.45, and I'm allocating only 30% to oil given the unfavorable supply-demand dynamics and limited upside potential.",
+      "parse_status": "success"
+    },
+    "actual_close": 59.36000061035156,
+    "delta": 1.0899993896484403
+  },
+  {
+    "targetDate": "2026-01-22",
+    "prediction": {
+      "date": "2026-01-22T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 59.05,
+      "portfolio_allocation": 30,
+      "reasoning": "WTI dropped 2.08% yesterday to $59.36, driven by Trump de-escalating geopolitical tensions with Greenland and Iran, which removes risk premium from oil prices. The weakening dollar (DXY -0.41%) provides modest support, but elevated US crude inventories at 426M barrels and bearish sentiment from potential oversupply concerns suggest continued downward pressure. I estimate a slight further decline to ~$59.05 as markets digest reduced geopolitical risk, and allocate only 30% to oil given the bearish momentum and lack of near-term catalysts for a rebound, preserving capital in cash.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.06999969482422,
+    "delta": -2.0199996948242216
+  },
+  {
+    "targetDate": "2026-01-23",
+    "prediction": {
+      "date": "2026-01-23T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 61.85,
+      "portfolio_allocation": 62,
+      "reasoning": "WTI rebounded 2.88% yesterday to $61.07, driven by Trump's 'armada' threats toward Iran which inject a significant geopolitical risk premium into crude prices. News headlines reference prices around $64.62 in broader benchmarks (likely Brent), and Aramco's CEO dismissing glut fears supports a constructive near-term narrative, while a weakening DXY (-0.77%) is also bullish for dollar-denominated commodities. I expect modest follow-through buying today as the Iran threat premium persists, targeting a settlement around $61.85, though upside may be capped by elevated US crude inventories at 423.7M barrels; the 62% allocation reflects a moderately bullish stance tempered by inventory headwinds and potential for geopolitical rhetoric to fade.",
+      "parse_status": "success"
+    },
+    "actual_close": 61.06999969482422,
+    "delta": 0.7800003051757827
+  },
+  {
+    "targetDate": "2026-01-24",
+    "prediction": {
+      "date": "2026-01-24T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 61.45,
+      "portfolio_allocation": 62,
+      "reasoning": "WTI surged nearly 3% yesterday to $61.07 driven by US naval deployment toward Iran and new sanctions, creating significant geopolitical risk premium. The weakening dollar (DXY down 0.77%) provides additional tailwind for oil prices, and geopolitical tensions with Iran show no signs of immediate de-escalation, suggesting continued upward pressure. However, US crude inventories at 423.7 million barrels remain substantial, capping upside potential; I expect modest follow-through buying today with settlement around $61.45, warranting a moderately bullish allocation of 62% given elevated but asymmetric geopolitical risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.38999938964844,
+    "delta": -0.9399993896484347
+  },
+  {
+    "targetDate": "2026-01-27",
+    "prediction": {
+      "date": "2026-01-27T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.05,
+      "portfolio_allocation": 35,
+      "reasoning": "WTI closed at $62.39 after a strong 2.90% rally, but news headlines indicate bearish fundamentals including weak demand, surplus production from Middle East producers, and easing US supply disruptions, suggesting the rally may partially retrace. The weakening US Dollar (DXY down 0.85%) provides some support for oil prices, but inventory levels at 423,754 thousand barrels and one headline referencing WTI trading around $60.50 suggest downward pressure remains. I estimate a modest pullback to $62.05 as profit-taking offsets dollar weakness, and allocate 35% to oil given the uncertain environment with lingering geopolitical risks providing a floor but weak demand capping upside.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.209999084472656,
+    "delta": -1.159999084472659
+  },
+  {
+    "targetDate": "2026-01-28",
+    "prediction": {
+      "date": "2026-01-28T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 63.55,
+      "portfolio_allocation": 58,
+      "reasoning": "WTI closed at $63.21 with a 1.31% gain, supported by supply disruptions from a winter storm that knocked out ~15% of U.S. production, pushing prices toward four-month highs. However, bearish headwinds exist: Saudi Arabia potentially pricing Arab Light at a discount for the first time since 2020 signals weak Asian demand, the DXY is strengthening (bearish for oil), and U.S. crude inventories at 423.7M barrels remain elevated. I expect modest upside continuation to ~$63.55 as storm-related supply disruptions persist but gains are capped by the stronger dollar and demand concerns, warranting a moderately bullish allocation of 58%.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.41999816894531,
+    "delta": -1.8699981689453153
+  },
+  {
+    "targetDate": "2026-01-29",
+    "prediction": {
+      "date": "2026-01-29T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 66.85,
+      "portfolio_allocation": 72,
+      "reasoning": "WTI surged 3.5% yesterday to $65.42 driven by escalating US-Iran tensions, with a US aircraft carrier group deployed to the Middle East and fears of a potential strike on Iran creating significant supply disruption risk. The weakening dollar (DXY down 0.18%) provides additional tailwind for oil prices, and momentum from three consecutive days of gains with headlines citing four-month highs near $69.51 suggests continued upward pressure. However, the broader 2026 outlook warns of a potential 'superglut' which caps the upside; I estimate a further 2.2% gain to ~$66.85 as geopolitical risk premium continues to build, warranting a 72% allocation given strong short-term bullish catalysts tempered by medium-term oversupply risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 1.640000915527338
+  },
+  {
+    "targetDate": "2026-01-30",
+    "prediction": {
+      "date": "2026-01-30T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 65.55,
+      "portfolio_allocation": 45,
+      "reasoning": "OPEC+ maintaining production pause is supportive for prices, and Iran tensions provide additional upside risk premium, suggesting modest upward pressure from yesterday's $65.21 close. However, the strengthening US Dollar (DXY up 0.74%) and elevated US crude inventories at 420.3 million barrels act as headwinds, limiting upside potential. I estimate a slight recovery toward $65.55 given the geopolitical support and OPEC+ discipline, but allocate only 45% to oil given the mixed signals from dollar strength and high inventories creating uncertainty.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": 0.3400009155273409
+  },
+  {
+    "targetDate": "2026-01-31",
+    "prediction": {
+      "date": "2026-01-31T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 65.78,
+      "portfolio_allocation": 62,
+      "reasoning": "US-Iran tensions are providing upward pressure on crude prices, with multiple news sources confirming geopolitical risk premium is being priced in, while OPEC maintaining output discipline supports price stability near current levels. The stronger dollar (DXY up 0.74%) provides a modest headwind, but the geopolitical catalyst appears to outweigh this, suggesting a modest recovery from yesterday's slight decline. With inventory levels at 420,299 thousand barrels being relatively moderate and OPEC holding steady, I estimate a ~$0.57 upside move to $65.78 and allocate 62% to oil given the favorable risk/reward from geopolitical tailwinds tempered by dollar strength and demand uncertainty.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.209999084472656,
+    "delta": 2.570000915527345
+  },
+  {
+    "targetDate": "2026-02-03",
+    "prediction": {
+      "date": "2026-02-03T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 63.05,
+      "portfolio_allocation": 35,
+      "reasoning": "WTI closed at $63.21 with a 1.72% gain, but the broader fundamental picture remains bearish with a 2.3 million bpd global surplus, inventories at 420M barrels, and analyst forecasts targeting $55-65 range through Q1 2026. The weakening dollar provides mild support, and Middle East escalation (boosting gold) could offer some geopolitical risk premium to oil, but persistent oversupply and peak oil demand narratives cap upside. I expect a slight pullback toward $63.05 as yesterday's gains partially retrace, and maintain a modest 35% allocation given the unfavorable supply-demand balance offset by geopolitical tail risks.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.13999938964844,
+    "delta": -2.0899993896484403
+  },
+  {
+    "targetDate": "2026-02-04",
+    "prediction": {
+      "date": "2026-02-04T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 64.55,
+      "portfolio_allocation": 30,
+      "reasoning": "Yesterday's 3.05% drop was driven by easing US-Iran tensions after both sides agreed to talks in Oman, reducing the geopolitical risk premium that had been supporting prices. However, news suggests uncertainty remains around the outcome of these talks, with some sources noting risk premium could re-emerge if diplomacy falters, which creates a mixed outlook. With DXY trending slightly higher (bearish for oil), elevated US crude inventories at 420M barrels, and the dominant narrative being de-escalation of Iran tensions, I expect modest further downside pressure toward $64.55, keeping allocation conservative at 30% given the uncertain geopolitical backdrop and potential for volatility around the Oman talks outcome.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.290000915527344,
+    "delta": 1.2599990844726534
+  },
+  {
+    "targetDate": "2026-02-05",
+    "prediction": {
+      "date": "2026-02-05T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.85,
+      "portfolio_allocation": 30,
+      "reasoning": "Yesterday's sharp 2.84% decline to $63.29 was driven by easing geopolitical risk premiums from US-Iran talks in Oman, and this bearish momentum is likely to carry into today's session with some additional downside pressure. The stronger dollar (DXY up 0.20%) adds headwinds, while Middle East production growth expectations and easing supply concerns offset the modestly bullish StanChart outlook on rebalancing. I estimate a further modest decline to ~$62.85 as markets digest the Iran diplomacy developments, and I'm keeping allocation conservative at 30% given elevated downside risk from geopolitical de-escalation and bearish technical momentum, though declining US inventories and slowing shale growth provide some floor support.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -0.6999992370605455
+  },
+  {
+    "targetDate": "2026-02-06",
+    "prediction": {
+      "date": "2026-02-06T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 63.2,
+      "portfolio_allocation": 30,
+      "reasoning": "US-Iran nuclear negotiations in Oman are progressing, which eases supply disruption fears and puts downward pressure on crude prices. The weakening dollar provides some modest support, but the geopolitical narrative is clearly bearish as markets price in potential return of sanctioned Iranian barrels to the market. With inventories at 428.8 million barrels and the rig count relatively stable, I expect a slight decline from yesterday's $63.55 close to around $63.20, and maintain a cautious 30% allocation given the elevated downside risk from a potential US-Iran deal.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.54999923706055,
+    "delta": -0.34999923706054403
+  },
+  {
+    "targetDate": "2026-02-07",
+    "prediction": {
+      "date": "2026-02-07T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 63.82,
+      "portfolio_allocation": 55,
+      "reasoning": "WTI closed at $63.55 with modest upward momentum (+0.41%), supported by dollar weakness (DXY down -0.19%) and geopolitical risk premiums from Iran-US tensions. The IEA noting oversupply was sharply lower than expected provides fundamental support, while Baker Hughes rig count at 479 suggests moderate US production activity. I expect a slight continuation of the upward move toward $63.82, with geopolitical risks and dollar weakness providing tailwinds, though lingering bearish oversupply concerns cap the upside, warranting a moderately bullish 55% allocation.",
+      "parse_status": "success"
+    },
+    "actual_close": 63.959999084472656,
+    "delta": -0.13999908447265597
+  },
+  {
+    "targetDate": "2026-02-10",
+    "prediction": {
+      "date": "2026-02-10T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 64.15,
+      "portfolio_allocation": 45,
+      "reasoning": "WTI closed at $63.96 with a modest decline, but geopolitical tensions between Iran and the US provide upward pressure, while OPEC maintaining demand forecasts supports a stable-to-slightly-bullish outlook. The weakening dollar (DXY down) is mildly supportive for oil prices, and recent inventory data showing ~429M barrels is relatively neutral. I estimate a slight rebound toward $64.15 as Middle East tension premiums and the softer dollar offset bearish sentiment from cooling US drilling activity, but allocate moderately at 45% given the mixed signals and lack of a clear directional catalyst.",
+      "parse_status": "success"
+    },
+    "actual_close": 64.62999725341797,
+    "delta": -0.47999725341796307
+  },
+  {
+    "targetDate": "2026-02-11",
+    "prediction": {
+      "date": "2026-02-11T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 65.15,
+      "portfolio_allocation": 62,
+      "reasoning": "Middle East tensions between the US and Iran are providing a significant bullish catalyst, with Trump considering sending a second aircraft carrier to the region, which historically supports oil price premiums. While US crude stocks at 428.8 million barrels represent a bearish overhang and the large stocks build was noted in headlines, the geopolitical risk premium is currently dominating price action as evidenced by yesterday's 1.05% gain. OPEC production declines from Kazakhstan, Venezuela, and Iran further tighten supply expectations, supporting a modest continuation higher toward $65.15, warranting a moderately bullish 62% allocation given the competing forces of geopolitical risk premium versus inventory builds.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.84000015258789,
+    "delta": 2.309999847412115
+  },
+  {
+    "targetDate": "2026-02-12",
+    "prediction": {
+      "date": "2026-02-12T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.45,
+      "portfolio_allocation": 30,
+      "reasoning": "WTI closed at $62.84 after a sharp 2.77% decline, with bearish pressure from an inventory surge (EIA stocks at 428.8M barrels), IEA lowering 2026 demand outlook by 83K bpd, and a strengthening dollar (DXY up 0.10%). Middle East tensions provide some downside support but are insufficient to offset the bearish fundamentals of rising inventories and weakening demand forecasts. I expect modest further downside to around $62.45 as selling momentum continues, and allocate only 30% to oil given the unfavorable near-term setup with elevated inventories and demand downgrades, keeping significant cash to manage risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.43999938964843466
+  },
+  {
+    "targetDate": "2026-02-13",
+    "prediction": {
+      "date": "2026-02-13T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.55,
+      "portfolio_allocation": 25,
+      "reasoning": "OPEC+ leaning towards resuming output increases from April is bearish for prices, as it signals additional supply entering the market during a period of already softening demand outlook. Rising US inventories (419.8M barrels) and fading US-Iran geopolitical risk premium further pressure prices downward, with crude already trending toward a second consecutive weekly loss. I estimate a modest decline of ~$0.34 to $62.55, and allocate only 25% to oil given the predominantly bearish fundamental backdrop with limited upside catalysts, keeping most capital in cash to preserve optionality.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.88999938964844,
+    "delta": -0.33999938964844034
+  },
+  {
+    "targetDate": "2026-02-14",
+    "prediction": {
+      "date": "2026-02-14T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.72,
+      "portfolio_allocation": 30,
+      "reasoning": "The massive projected supply surplus of 3.73 mb/d in 2026 per the IEA is a significant bearish overhang, with global supply growth of 2.4 mb/d outpacing demand growth, which should pressure prices lower. OPEC+ leaning toward resuming output increases from April adds further downside risk, though US-Iran tensions provide some geopolitical floor support. With the DXY trending slightly down (mildly bullish for oil) but fundamentals overwhelmingly bearish given inventory builds and oversupply projections, I expect a modest decline to around $62.72 and maintain a conservative 30% allocation reflecting the unfavorable supply-demand backdrop.",
+      "parse_status": "success"
+    },
+    "actual_close": 62.33000183105469,
+    "delta": 0.38999816894531136
+  },
+  {
+    "targetDate": "2026-02-17",
+    "prediction": {
+      "date": "2026-02-17T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 62.15,
+      "portfolio_allocation": 30,
+      "reasoning": "WTI closed at $62.33 with a bearish trend (-0.89%), and fundamental headwinds persist including a global supply glut narrative, Brent at ~$66 suggesting limited upside for WTI, and US-Iran talks that could add supply if successful. The flat DXY provides no tailwind, while US crude inventories at ~420M barrels remain elevated. I expect a modest further decline toward $62.15 as the market digests geopolitical uncertainty and oversupply risks, warranting a conservative 30% allocation given the unfavorable risk-reward skew.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.19000244140625,
+    "delta": -3.0400024414062514
+  },
+  {
+    "targetDate": "2026-02-18",
+    "prediction": {
+      "date": "2026-02-18T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 65.85,
+      "portfolio_allocation": 62,
+      "reasoning": "WTI surged 4.59% yesterday to $65.19 driven by escalating U.S.-Iran tensions, and news confirms this geopolitical risk premium remains in play with markets still gauging the situation. Record Asian crude imports in February (28.51 mb/d) provide strong demand-side support, though a stronger dollar (DXY up 0.56%) and elevated U.S. crude inventories at ~420 million barrels create some headwinds. I expect modest follow-through buying today as geopolitical risk persists but the initial spike momentum fades, targeting $65.85 settlement; allocating 62% to oil given the favorable risk/reward from geopolitical tailwinds balanced against potential for a pullback if tensions de-escalate.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.43000030517578,
+    "delta": -0.5800003051757869
+  },
+  {
+    "targetDate": "2026-02-19",
+    "prediction": {
+      "date": "2026-02-19T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 67.15,
+      "portfolio_allocation": 62,
+      "reasoning": "WTI surged 1.90% to $66.43 driven by escalating US-Iran conflict fears, with 150+ military cargo planes reported and Brent spiking 4.35%, suggesting geopolitical risk premium is being rapidly priced in. While fundamentals remain bearish (demand slumped 614k bpd in December, Deutsche Bank forecasts Brent at $61.50 for 2026, and US crude stocks at ~420M barrels are adequate), the near-term momentum from geopolitical tensions and military posturing should sustain upward pressure for at least another session, targeting ~$67.15. I allocate 62% to oil to capture the geopolitical momentum while maintaining significant cash reserves given the elevated downside risk if tensions de-escalate or bearish fundamentals reassert.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 0.7600006103515682
+  },
+  {
+    "targetDate": "2026-02-20",
+    "prediction": {
+      "date": "2026-02-20T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 67.15,
+      "portfolio_allocation": 68,
+      "reasoning": "The geopolitical risk premium is significant with Trump threatening military action against Iran, which controls critical oil supply and the Strait of Hormuz chokepoint. Oil is already near a six-month high and the combination of Iran attack threats, a weakening dollar (DXY down), and relatively stable US crude inventories at ~436M barrels supports upward price momentum. I'm allocating 68% to oil given the asymmetric upside risk from potential military escalation, though I'm holding back some capital as a hedge against a sudden diplomatic resolution or demand-side weakness.",
+      "parse_status": "success"
+    },
+    "actual_close": 66.38999938964844,
+    "delta": 0.7600006103515682
+  },
+  {
+    "targetDate": "2026-02-21",
+    "prediction": {
+      "date": "2026-02-21T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 66.72,
+      "portfolio_allocation": 58,
+      "reasoning": "US-Iran tensions are providing upside support to crude prices, with oil heading for its first weekly gain and reaching multi-month highs on geopolitical risk premium. Despite the fundamental backdrop of a supply glut narrative and elevated US crude inventories at 435.8 million barrels, prices have been resilient and the weakening dollar (DXY down) provides additional tailwind for dollar-denominated commodities. I estimate a modest upward move to $66.72 given the geopolitical bid and weak dollar, and allocate 58% to oil to capture potential upside while maintaining meaningful cash reserves given the paradoxical supply-demand dynamics and elevated inventory levels that cap significant rallies.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.62999725341797,
+    "delta": 1.0900027465820301
+  },
+  {
+    "targetDate": "2026-02-24",
+    "prediction": {
+      "date": "2026-02-24T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 66.15,
+      "portfolio_allocation": 55,
+      "reasoning": "The geopolitical backdrop is significantly bullish with US-Iran tensions driving tanker costs to 6-year highs, a military operation in Venezuela disrupting supply expectations, and Middle East exports surging to over 19 million bpd suggesting front-loading ahead of potential disruptions. However, the stronger dollar (DXY up 0.18%) and elevated US crude inventories at 435.8 million barrels provide bearish counterweights that limit upside. I expect a modest rebound from yesterday's 1.03% decline as geopolitical risk premiums reassert, targeting $66.15, and allocate 55% to oil given the asymmetric upside risk from escalating Middle East and Venezuela tensions offset by inventory headwinds.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.41999816894531,
+    "delta": 0.7300018310546932
+  },
+  {
+    "targetDate": "2026-02-25",
+    "prediction": {
+      "date": "2026-02-25T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 65.18,
+      "portfolio_allocation": 35,
+      "reasoning": "OPEC+ is signaling a 137,000 bpd output increase for April, which is bearish for prices, while the EIA data shows elevated US crude stocks at 435.8 million barrels adding further downward pressure. However, geopolitical tensions around Iran-US conflict and Iran rushing to load oil onto ships provide a floor of support, preventing a sharp decline. The net effect is mildly bearish with the supply-side factors outweighing geopolitical risk premiums, so I estimate a slight decline to $65.18 and maintain a conservative 35% oil allocation given the elevated uncertainty and mixed signals.",
+      "parse_status": "success"
+    },
+    "actual_close": 65.20999908447266,
+    "delta": -0.02999908447264943
+  },
+  {
+    "targetDate": "2026-02-26",
+    "prediction": {
+      "date": "2026-02-26T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 65.48,
+      "portfolio_allocation": 42,
+      "reasoning": "Geopolitical tensions are providing modest upward pressure on crude prices, with Gulf states rushing exports amid fears of US strikes on Iran and OPEC+ using turmoil as cover for cautious output hikes. However, the stronger dollar (DXY up), elevated US crude inventories at 435.8 million barrels, and ongoing US-Iran nuclear talks that could eventually ease sanctions create offsetting bearish factors. I expect a slight bounce from yesterday's decline toward $65.48, but the mixed signals warrant a moderate allocation of 42% rather than aggressive positioning, as downside risks from a potential Iran deal or demand weakness remain significant.",
+      "parse_status": "success"
+    },
+    "actual_close": 67.0199966430664,
+    "delta": -1.5399966430664023
+  },
+  {
+    "targetDate": "2026-02-27",
+    "prediction": {
+      "date": "2026-02-27T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 67.35,
+      "portfolio_allocation": 45,
+      "reasoning": "Yesterday's 2.78% surge reflects renewed geopolitical war risk premium, particularly around Iran tensions, which tends to create short-term momentum. However, bearish fundamentals including high US crude inventories at 439M barrels, OPEC+ likely resuming output hikes, and soft demand outlook cap significant upside, suggesting only modest follow-through today. I estimate a slight gain to $67.35 as geopolitical risk keeps a bid under prices, but allocate only 45% given the tug-of-war between bullish geopolitical catalysts and bearish supply-demand fundamentals creating elevated two-way risk.",
+      "parse_status": "success"
+    },
+    "actual_close": 67.0199966430664,
+    "delta": 0.33000335693358807
+  },
+  {
+    "targetDate": "2026-02-28",
+    "prediction": {
+      "date": "2026-02-28T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 69.85,
+      "portfolio_allocation": 72,
+      "reasoning": "The US-Israeli attack on Iran represents a major geopolitical escalation threatening supply from the world's 4th largest OPEC producer and the critical Strait of Hormuz chokepoint, which should drive a significant risk premium into crude prices. Yesterday's 2.78% jump to $67.02 likely only partially prices in the supply disruption risk, and analysts are warning of a potential $20 risk premium; I expect continued upward momentum today with another 3-4% move as markets digest the full implications. However, the OPEC+ consideration of a larger 411k bpd output increase provides some offsetting bearish pressure, and the weakening dollar is mildly supportive, leading me to a settlement estimate of ~$69.85 with a moderately aggressive long allocation of 72% given the asymmetric upside risk from potential Hormuz disruption versus downside from OPEC+ supply response.",
+      "parse_status": "success"
+    },
+    "actual_close": 74.55999755859375,
+    "delta": -4.709997558593756
+  },
+  {
+    "targetDate": "2026-03-03",
+    "prediction": {
+      "date": "2026-03-03T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 76.8,
+      "portfolio_allocation": 72,
+      "reasoning": "The geopolitical landscape has shifted dramatically with a US-Israeli war on Iran disrupting Middle East energy exports, attacks on Saudi/Qatari oil facilities, and shipping disruptions - this is a massive supply shock scenario that will sustain upward price pressure. Yesterday's 4.67% surge to $74.56 reflects initial repricing but the conflict appears to be escalating with Trump signaling 'hardest hits' yet to come, suggesting further upside as risk premium builds. I estimate another 3% move higher to ~$76.80 as markets digest ongoing supply disruptions, though the strengthening dollar (DXY +0.68%) and India maintaining Russian oil purchases provide some offsetting headwinds; I allocate 72% to oil given strong bullish momentum but maintain 28% cash as a hedge against potential ceasefire headlines or demand destruction.",
+      "parse_status": "success"
+    },
+    "actual_close": 74.66000366210938,
+    "delta": 2.139996337890622
+  },
+  {
+    "targetDate": "2026-03-04",
+    "prediction": {
+      "date": "2026-03-04T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 75.85,
+      "portfolio_allocation": 72,
+      "reasoning": "Geopolitical tensions in the Middle East are significantly elevated, with news of Persian Gulf disruptions pushing oil above $85/bbl in recent headlines and concerns over Strait of Hormuz flows. While yesterday's close at $74.66 was relatively flat, the combination of Middle East conflict escalation, potential supply disruptions, and a weakening US Dollar (DXY down 0.28%) creates strong upward pressure on crude prices. US crude inventories at 439.3 million barrels are moderate and the rig count at 479 suggests constrained domestic production growth, supporting a bullish move toward $75.85 today, warranting a 72% allocation to capture the geopolitical risk premium.",
+      "parse_status": "success"
+    },
+    "actual_close": 81.01000213623047,
+    "delta": -5.160002136230474
+  },
+  {
+    "targetDate": "2026-03-05",
+    "prediction": {
+      "date": "2026-03-05T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 82.75,
+      "portfolio_allocation": 72,
+      "reasoning": "The massive 8.51% surge yesterday was driven by a severe geopolitical escalation involving US-Israeli military strikes on Iran, effective closure of the Strait of Hormuz, and disruption of Middle Eastern crude exports - this is a genuine supply shock, not speculative froth. With US shale unable to replace lost Middle East barrels, heavy crude prices surging globally, and inventories at 439M barrels providing limited buffer against a prolonged disruption, upward momentum should continue today though at a moderating pace as some profit-taking occurs after yesterday's sharp move. I estimate another 1.5-2.5% gain to around $82.75, and allocate 72% to oil given the strong bullish fundamentals but tempered by the risk of a ceasefire announcement or diplomatic breakthrough that could trigger a sharp reversal.",
+      "parse_status": "success"
+    },
+    "actual_close": 90.9000015258789,
+    "delta": -8.150001525878906
+  },
+  {
+    "targetDate": "2026-03-06",
+    "prediction": {
+      "date": "2026-03-06T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 92.45,
+      "portfolio_allocation": 72,
+      "reasoning": "WTI surged 12.21% yesterday to $90.90, driven by a major escalation in Middle East conflict involving a US-Israel war with Iran, Strait of Hormuz disruption fears, and supply chain complications confirmed by the IEA. The momentum is strongly bullish with Asian buyers scrambling for US oil, talk of $100+ oil, and a weakening dollar providing additional tailwind. However, the pace of the rally suggests some intraday profit-taking is likely, so I estimate a more moderate gain to ~$92.45; I allocate 72% to oil to capture continued upside while maintaining a cash buffer against potential volatility reversals or ceasefire headlines.",
+      "parse_status": "success"
+    },
+    "actual_close": 90.9000015258789,
+    "delta": 1.5499984741210966
+  },
+  {
+    "targetDate": "2026-03-07",
+    "prediction": {
+      "date": "2026-03-07T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 93.5,
+      "portfolio_allocation": 72,
+      "reasoning": "WTI surged 12.21% yesterday to $90.90 amid a severe Middle East escalation involving Strait of Hormuz closure threats by Iran and active conflict spreading, which represents the steepest weekly gain since 2020. With Kuwait cutting production, physical supply disruption risk is extremely elevated, and momentum plus fear premium should push prices higher today, though the pace of gains may moderate after such a sharp move. I estimate settlement around $93.50 reflecting continued geopolitical risk premium, and allocate 72% to oil given strong bullish momentum tempered by elevated volatility risk and potential for a sharp reversal if diplomatic developments emerge.",
+      "parse_status": "success"
+    },
+    "actual_close": 94.7699966430664,
+    "delta": -1.2699966430664062
+  },
+  {
+    "targetDate": "2026-03-09",
+    "prediction": {
+      "date": "2026-03-09T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 93.5,
+      "portfolio_allocation": 35,
+      "reasoning": "WTI surged 4.26% to $94.77 amid Middle East conflict escalation involving Iran, but Trump's comments about the war ending soon suggest potential for a pullback as geopolitical risk premium partially unwinds. The strong DXY trend is a headwind for oil prices, and with crude inventories at 443M barrels providing adequate supply buffers, the market may give back some of yesterday's fear-driven gains. I'm allocating only 35% to oil given the elevated two-way risk: while conflict escalation could push prices above $100, diplomatic resolution signals and profit-taking could trigger a sharp reversal, making a defensive positioning prudent.",
+      "parse_status": "success"
+    },
+    "actual_close": 83.44999694824219,
+    "delta": 10.050003051757812
+  },
+  {
+    "targetDate": "2026-03-10",
+    "prediction": {
+      "date": "2026-03-10T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 85.9,
+      "portfolio_allocation": 72,
+      "reasoning": "Yesterday's close of $83.45 reflected an unusual -11.94% drop, but current news headlines indicate Middle East conflict escalation with Iran, supply disruptions through the Strait of Hormuz, and oil prices being quoted near $86.33 in recent trading—suggesting a strong rebound is underway. The weakening dollar (DXY down 0.35%) is supportive for oil prices, and the geopolitical risk premium is intensifying with reports of US-Israeli attacks on Iran and Gulf supply disruptions pushing prices toward $100 in some forecasts. I estimate a settlement near $85.90 as the market reprices the geopolitical risk premium higher, and allocate 72% to oil given the strong bullish catalysts, tempered slightly by elevated volatility risk from the prior session's sharp move.",
+      "parse_status": "success"
+    },
+    "actual_close": 87.25,
+    "delta": -1.3499999999999943
+  },
+  {
+    "targetDate": "2026-03-11",
+    "prediction": {
+      "date": "2026-03-11T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 89.1,
+      "portfolio_allocation": 72,
+      "reasoning": "The geopolitical backdrop is extremely bullish with active Middle East conflict involving Iran, Saudi production hikes pre-war, IEA emergency reserve releases, and oil already breaching $100 on some benchmarks per news headlines. Yesterday's 4.55% surge to $87.25 reflects strong momentum, and with ongoing supply disruption fears, Gulf flow chokepoints, and OPEC holding demand forecasts steady, further upside pressure is likely today. I estimate settlement around $89.10 reflecting continued risk premium buildup, though the pace of gains may moderate slightly as emergency reserves partially offset supply fears; allocating 72% to oil to capture upside while maintaining some cash buffer given extreme volatility and potential for sudden ceasefire headlines.",
+      "parse_status": "success"
+    },
+    "actual_close": 95.7300033569336,
+    "delta": -6.630003356933599
+  },
+  {
+    "targetDate": "2026-03-12",
+    "prediction": {
+      "date": "2026-03-12T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 98.5,
+      "portfolio_allocation": 72,
+      "reasoning": "The Middle East war has caused the largest oil supply disruption in history with Gulf countries cutting at least 10 million bpd, which is an extraordinarily bullish supply shock far exceeding any previous disruption including the 1973 embargo or Gulf War. Yesterday's 9.72% surge to $95.73 reflects panic buying but the fundamentals suggest further upside as emergency stock releases have failed to calm markets, and US inventories at 443 million barrels provide limited buffer against a 10 million bpd shortfall. I estimate continued upward momentum toward $98.50 today as the market digests the IEA's dire assessment, though I allocate 72% rather than maximum given extreme volatility risk, potential for diplomatic breakthroughs, and the possibility of demand destruction at these elevated price levels.",
+      "parse_status": "success"
+    },
+    "actual_close": 98.71,
+    "delta": -0.20999999999999375
+  },
+  {
+    "targetDate": "2026-03-14",
+    "prediction": {
+      "date": "2026-03-14T00:00:00.000Z",
+      "model": "anthropic/claude-opus-4.6",
+      "predict_target_price": 101.25,
+      "portfolio_allocation": 72,
+      "reasoning": "WTI surged 3.11% to $98.71 driven by an unprecedented Middle East supply disruption of ~10 million bpd as reported by the IEA, which is the largest oil supply disruption in history and creates extreme upward price pressure. OPEC holding demand forecasts steady while supply is severely constrained supports further price appreciation, and the expected EIA draw of 1.2M barrels adds modest bullish support. However, a strengthening dollar (DXY up 0.13%) and reduced US oil dependence provide minor headwinds; I estimate prices will push above $100 toward $101.25 on continued geopolitical risk premium, warranting a 72% allocation given strong bullish fundamentals tempered by elevated volatility risk at these levels.",
+      "parse_status": "success"
+    }
+  }
+]

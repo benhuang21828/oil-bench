@@ -11,37 +11,54 @@ export default async function Home() {
   const newsDir = path.join(process.cwd(), 'data', 'raw', 'news');
   const fundamentalsDir = path.join(process.cwd(), 'data', 'raw', 'fundamentals');
 
-  // Load all model predictions
+  // Load all model prediction folders
   const dEntries = await fs.readdir(predictionsDir, { withFileTypes: true });
   const modelFolders = dEntries.filter(e => e.isDirectory()).map(e => e.name);
-  
-  const modelDataMap = new Map<string, DailyPredictionOutput[]>();
+
+  // Map of ModelName -> Map of TargetDate -> Array of DailyPredictionOutput (from different runs)
+  const modelDataMap = new Map<string, Map<string, DailyPredictionOutput[]>>();
   const availableModels: string[] = [];
-  let masterPredictions: DailyPredictionOutput[] = [];
+  let masterDates: Set<string> = new Set();
+  // We need to keep a lookup table for quick actual_close retrieval
+  const actualCloseMap = new Map<string, number>();
 
   for (const folder of modelFolders) {
+    const runsPath = path.join(predictionsDir, folder, 'runs');
     try {
-      const data = await fs.readFile(path.join(predictionsDir, folder, 'predictions.json'), 'utf8');
-      const parsed = JSON.parse(data) as DailyPredictionOutput[];
-      if (parsed.length > 0) {
-         const mName = parsed[0].prediction?.model || folder;
-         modelDataMap.set(mName, parsed);
-         availableModels.push(mName);
-         if (parsed.length > masterPredictions.length) {
-             masterPredictions = parsed;
+      const runFiles = await fs.readdir(runsPath);
+      const dateMap = new Map<string, DailyPredictionOutput[]>();
+      let modelNameStr = folder.replace('_', '/'); // Fallback string handling
+      
+      for (const runFile of runFiles) {
+         if (!runFile.endsWith('.json')) continue;
+         const data = await fs.readFile(path.join(runsPath, runFile), 'utf8');
+         const parsed = JSON.parse(data) as DailyPredictionOutput[];
+         
+         for (const p of parsed) {
+            if (p.actual_close === undefined || p.prediction?.parse_status === 'failed') continue;
+            
+            if (!dateMap.has(p.targetDate)) dateMap.set(p.targetDate, []);
+            dateMap.get(p.targetDate)!.push(p);
+            
+            masterDates.add(p.targetDate);
+            actualCloseMap.set(p.targetDate, p.actual_close);
+            modelNameStr = p.prediction.model; 
          }
+      }
+      
+      if (dateMap.size > 0) {
+         modelDataMap.set(modelNameStr, dateMap);
+         availableModels.push(modelNameStr);
       }
     } catch(e) {}
   }
-
-  // We only want to plot days where we have an actual_close
-  const validPredictions = masterPredictions.filter(p => p.actual_close !== undefined);
   
   // Format data for Recharts
-  const chartData: ChartDataPoint[] = await Promise.all(validPredictions.map(async (p) => {
-    const targetDate = p.targetDate; // Day N
+  const sortedMasterDates = Array.from(masterDates).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
+  
+  const chartData: ChartDataPoint[] = await Promise.all(sortedMasterDates.map(async (targetDate) => {
     
-    // Read context for Day N that the LLM used!
+    // Read context for Day N that the LLM used
     let news: any[] = [];
     let eiaSummary = "";
     
@@ -57,44 +74,59 @@ export default async function Home() {
       eiaSummary = fundJson.eiaSummary;
     } catch(e) {}
 
-    // Find the next available price date (Day N+1) which is exactly what we are evaluating!
-    // Since we filtered by actual_close existing, we know we evaluated it. We'll plot the datapoint
-    // AT Day N+1, because that's when the "Actual Settlement" occurred, and we are comparing the Target at N+1.
-    
-    // To find the N+1 date label
+    // Find the next available price date (Day N+1)
     const priceFiles = await fs.readdir(pricesDir);
-    const sortedDates = priceFiles
+    const sortedRawDates = priceFiles
       .filter(f => f.endsWith('.json'))
       .map(f => f.replace('.json', ''))
       .sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
     
-    const currentIndex = sortedDates.indexOf(targetDate);
-    const nextDate = currentIndex > -1 && currentIndex < sortedDates.length - 1 ? sortedDates[currentIndex + 1] : targetDate;
+    const currentIndex = sortedRawDates.indexOf(targetDate);
+    const nextDate = currentIndex > -1 && currentIndex < sortedRawDates.length - 1 ? sortedRawDates[currentIndex + 1] : targetDate;
 
+    // Aggregate multi-run predictions for this specific Day N
     const predictionsObj: Record<string, any> = {};
     for (const m of availableModels) {
-       const modelPreds = modelDataMap.get(m);
-       const specificPred = modelPreds?.find(mp => mp.targetDate === targetDate);
-       if (specificPred && specificPred.actual_close !== undefined) {
+       const runsForDate = modelDataMap.get(m)?.get(targetDate);
+       
+       if (runsForDate && runsForDate.length > 0) {
+          let sumPrice = 0;
+          let sumAlloc = 0;
+          let sumDelta = 0;
+          let minPrice = Infinity;
+          let maxPrice = -Infinity;
+          const numRuns = runsForDate.length;
+          
+          runsForDate.forEach(r => {
+             const price = r.prediction.predict_target_price;
+             sumPrice += price;
+             sumAlloc += (r.prediction.portfolio_allocation ?? 50);
+             sumDelta += (r.delta as number);
+             if (price < minPrice) minPrice = price;
+             if (price > maxPrice) maxPrice = price;
+          });
+          
           predictionsObj[m] = {
-            predict_target_price: specificPred.prediction.predict_target_price,
-            portfolio_allocation: specificPred.prediction.portfolio_allocation ?? 50,
-            reasoning: specificPred.prediction.reasoning,
-            delta: specificPred.delta as number,
+            predict_target_price: sumPrice / numRuns,
+            portfolio_allocation: sumAlloc / numRuns,
+            delta: sumDelta / numRuns,
+            reasoning: runsForDate[0].prediction.reasoning, // Use Run 1's reasoning as representative
+            predict_target_range: [minPrice, maxPrice],
+            runsCount: numRuns
           };
        }
     }
 
     return {
-      date: nextDate, // Plot this point on N+1's timeline!
-      actual_close: p.actual_close as number,
+      date: nextDate, // Plot this point AT N+1's timeline!
+      actual_close: actualCloseMap.get(targetDate) as number,
       predictions: predictionsObj,
       news,
       eiaSummary
     };
   }));
 
-  // Sort chronologically
+  // Sort chronologically just in case
   chartData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   return (
@@ -182,6 +214,24 @@ export default async function Home() {
             </h4>
             <p className="text-sm text-slate-400 leading-relaxed">
               Ending balance of a $10,000 algorithmic portfolio based entirely on the LLM's daily asset allocation decisions (0-100% Oil) over the benchmark period. <br/><span className="text-emerald-400/80 mt-2 block font-medium">Higher is better.</span>
+            </p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-xl">
+            <h4 className="text-slate-200 font-semibold mb-3 flex items-center gap-2">
+              PnL Spread Output
+              <span className="text-slate-500 text-[10px] bg-white/5 rounded-full px-1.5 border border-white/10 font-bold tracking-wider">(?)</span>
+            </h4>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              The pure mathematical difference between the highest performing simulated algorithmic run and the lowest performing algorithmic run for the same model. <br/><span className="text-emerald-400/80 mt-2 block font-medium">Lower is better.</span>
+            </p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-md rounded-2xl border border-white/10 p-6 shadow-xl md:col-span-2">
+            <h4 className="text-slate-200 font-semibold mb-3 flex items-center gap-2">
+              Internal Determinism Score
+              <span className="text-slate-500 text-[10px] bg-white/5 rounded-full px-1.5 border border-white/10 font-bold tracking-wider">(?)</span>
+            </h4>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              The average max-min spread of the predicted target price strictly calculated on an individual intra-day basis. Meaning, regardless of whether the model is objectively right or wrong about the market that day, how consistently does it stick to its own thesis? <br/><span className="text-emerald-400/80 mt-2 block font-medium">Lower indicates high determinism. Higher indicates an erratic wildcard.</span>
             </p>
           </div>
         </div>

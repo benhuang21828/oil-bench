@@ -9,9 +9,20 @@ async function delay(ms: number) {
 }
 
 async function run() {
+  const model = process.env.LLM_MODEL_NAME || "google/gemini-2.5-flash";
   const pricesDir = path.join(process.cwd(), 'data', 'raw', 'prices');
-  let files: string[] = [];
+  const metadataPath = path.join(process.cwd(), 'data', 'models-metadata.json');
 
+  // Load model metadata for filtering by cutoff
+  let metadata: Record<string, any> = {};
+  try {
+    metadata = JSON.parse(await fs.readFile(metadataPath, 'utf8'));
+  } catch (e) {
+    console.warn("Could not read models-metadata.json");
+  }
+  const cutoffDate = metadata[model]?.trainingCutoff || "1970-01-01";
+
+  let files: string[] = [];
   try {
     files = await fs.readdir(pricesDir);
   } catch (e) {
@@ -23,10 +34,11 @@ async function run() {
   const startDateArg = args.find(a => a.startsWith('--start-date='));
   const startDate = startDateArg ? startDateArg.split('=')[1] : null;
 
-  // Filter for JSON and sort chronological
+  // Filter for JSON, sort chronological, and filter by cutoff date
   let dates = files
     .filter(f => f.endsWith('.json'))
     .map(f => f.replace('.json', ''))
+    .filter(d => d >= cutoffDate)
     .sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
 
   if (startDate) {
@@ -34,7 +46,7 @@ async function run() {
       console.log(`Skipping to start date: ${startDate}`);
   }
 
-  console.log(`Found ${dates.length} historical dates to process for inference.`);
+  console.log(`Found ${dates.length} historical dates to process for inference for ${model} (post-cutoff ${cutoffDate}).`);
 
   for (const dateFmt of dates) {
     console.log(`\n============================`);
@@ -46,7 +58,11 @@ async function run() {
       // Wait for inference
       const prediction = await runInference(prompt, dateFmt);
 
-      console.log(`[SUCCESS] Prediction target price $${prediction.predict_target_price} saved for ${dateFmt}`);
+      if (prediction.parse_status === "failed") {
+          console.log(`[WARN] Prediction for ${dateFmt} failed to parse JSON properly.`);
+      } else {
+          console.log(`[SUCCESS] Prediction target price $${prediction.predict_target_price} saved for ${dateFmt}`);
+      }
 
       // Respect OpenRouter rate limits (a few seconds between calls is polite for free or standard tiers)
       await delay(2000);

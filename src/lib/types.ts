@@ -38,6 +38,7 @@ export interface PredictionResult {
   predict_target_price: number;
   portfolio_allocation: number;
   reasoning: string;
+  parse_status: "success" | "failed";
 }
 
 export interface DailyPredictionOutput {

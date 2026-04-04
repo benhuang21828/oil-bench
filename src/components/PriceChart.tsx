@@ -23,6 +23,8 @@ export interface ChartDataPoint {
     portfolio_allocation: number;
     reasoning: string;
     delta: number;
+    predict_target_range?: [number, number];
+    runsCount?: number;
   }>;
   news?: { title: string; snippet: string }[];
   eiaSummary?: string;
@@ -189,7 +191,12 @@ export default function PriceChart({ data, models }: PriceChartProps) {
                           </p>
                           <div className="text-right">
                             <p className="text-white font-mono text-sm">${pred.predict_target_price.toFixed(2)}</p>
-                            <p className="text-xs text-slate-400">Target</p>
+                            <p className="text-xs text-slate-400">Mean Target {pred.runsCount ? `(${pred.runsCount} runs)` : ''}</p>
+                            {pred.predict_target_range && (
+                              <p className="text-[10px] text-slate-500 mt-1 font-mono tracking-tighter">
+                                [${pred.predict_target_range[0].toFixed(2)} — ${pred.predict_target_range[1].toFixed(2)}]
+                              </p>
+                            )}
                           </div>
                         </div>
                         <div className="text-sm text-slate-300 italic leading-relaxed flex-1">
