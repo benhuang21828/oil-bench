@@ -1,7 +1,17 @@
 {
-  "name": "temp-app",
+  "name": "oil-bench",
   "version": "0.1.0",
-  "private": true,
+  "description": "Automated benchmark for LLM crude oil price prediction",
+  "author": "Benjamin Huang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benhuang21828/oil-bench"
+  },
+  "bugs": {
+    "url": "https://github.com/benhuang21828/oil-bench/issues"
+  },
+  "homepage": "https://benhuang21828.github.io/oil-bench/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
